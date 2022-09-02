@@ -1,0 +1,295 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .85);
+    z-index: 1;
+}
+
+.modal-main {
+    position:fixed;
+    background: var(--white);
+    height: auto;
+    padding: 1.5rem;
+    width: 40%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .modal-main {
+        min-width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .modal-main {
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .modal-main {
+        min-width: 98%;
+    }
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.modal-main .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal-main .modal-header > .MuiSvgIcon-root {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.modal-main .modal-header .title {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.modal-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-main form button {
+    max-width: fit-content;
+} 
+
+.modal-main form .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-main form .file {
+    border: none;
+    width: fit-content;
+}
+
+.modal-main form .form-group, .modal-main form .custom-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 672px) {
+    .modal-main form .form-group {
+        flex-direction: column;
+    }
+}
+
+.modal-main form .heading {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.modal-main .options-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.modal-main form .sizes {
+    flex: 1;
+}
+
+.modal-main form .sizes .form-group {
+    width: 100%;
+}
+
+.modal-main form .sizes .form-group:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+    width: 100%;
+    flex: 1;
+}
+
+.input-container .input {
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    border: 1px solid var(--border);
+    outline-width: 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    letter-spacing: 1.2px;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.input-container label {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.4px;
+}
+
+.input-container label span {
+    color: tomato;
+}
+
+.input-container .input[type="file"] {
+    border: none;
+    width: fit-content;
+}
+
+
+.input-container .textarea {
+    border: 1px solid var(--border);
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: rgb(68, 68, 68);
+    outline-width: 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    letter-spacing: 1.2px;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.input-container label {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.4px;
+}
+
+@media screen and (max-width: 930px) {
+    .input-container .input {
+        width: 100% !important;
+    }
+}
+
+.modal form img {
+    width: 100px;
+    height: 100px;
+}
+
+.modal .content {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.modal .modal-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.modal .modal-main .select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+    width: 100%;
+}
+
+.modal .modal-main .select-container select {
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    border: 1px solid var(--border);
+    outline-width: 0;
+    padding: .5rem;
+    border-radius: .3rem;
+    letter-spacing: 1.2px;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.modal .modal-main .select-container label {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.4px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-buttons button {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    font-size: 1.1rem;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    font-weight: 500;
+    border: none;
+    padding: .4rem .5rem .3rem .5rem;
+    border-radius: .3rem;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+}
+
+.nav-buttons button:hover {
+    opacity: .9;
+}
+
+.nav-buttons span {
+    font-weight: 500;
+}
+
+.nav-buttons .MuiSvgIcon-root {
+    color: var(--white);
+}
+
