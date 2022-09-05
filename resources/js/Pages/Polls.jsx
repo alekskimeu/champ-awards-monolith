@@ -9,11 +9,17 @@ import image from "../assets/header.jpg";
 import year from "../assets/year.png";
 
 import Loader from "../components/common/Loader";
+import { Inertia } from "@inertiajs/inertia";
 
-const Polls = ({ participants, categories }) => {
-	const [search, setSearch] = useState("");
+const Polls = ({ participants, categories, category }) => {
+    const [search, setSearch] = useState("");
 
-	return (
+    const filterCategories = (e) => {
+        const name = e.target.value;
+        name === "All" ? Inertia.get("/") : Inertia.get(`/categories/${name}`);
+    };
+
+    return (
         <Container>
             <Wrapper>
                 <Header>
@@ -53,19 +59,23 @@ const Polls = ({ participants, categories }) => {
                                 onChange={(e) => setSearch(e.target.value)}
                             />
                         </Search>
-                        <Select>
-                            <Option style={{ backgroundColor: "white" }}>
-                                Category
+                        <Select onChange={filterCategories}>
+                            {category && (
+                                <Option style={{ backgroundColor: "white" }}>
+                                    {category && category[0].name}
+                                </Option>
+                            )}
+                            <Option
+                                style={{ backgroundColor: "white" }}
+                                value="All"
+                            >
+                                All
                             </Option>
                             {categories.map((category) => (
                                 <Option
                                     style={{ backgroundColor: "white" }}
                                     key={category.id}
-                                    onSelect={() =>
-                                        categories.filter(
-                                            (item) => item.id === category.id
-                                        )
-                                    }
+                                    value={category.name}
                                 >
                                     {category.name}
                                 </Option>

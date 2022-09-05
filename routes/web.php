@@ -21,6 +21,7 @@ use Laravel\Socialite\Facades\Socialite;
 */
 
 Route::get('/', [PollController::class, 'index']);
+Route::get('/categories/{name}', [PollController::class, 'category']);
 Route::post('/polls/vote/{id}', [PollController::class, 'vote']);
 
 // Google Auth

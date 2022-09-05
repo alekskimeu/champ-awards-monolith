@@ -18,6 +18,18 @@ class PollController extends Controller
         );
     }
 
+    public function category($name)
+    {
+        $category = Category::where('name', $name)->get();
+        return Inertia::render(
+            'Polls',
+            [
+                'participants' => Participant::where('category_id', $category[0]->id)->get(),
+                'category' => $category, 'categories' => Category::all()
+            ]
+        );
+    }
+
     // Google Auth Redirect
     public function googleRedirect()
     {

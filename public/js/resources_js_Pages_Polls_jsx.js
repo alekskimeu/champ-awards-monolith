@@ -13233,12 +13233,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _components_client_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/client/Card */ "./resources/js/components/client/Card.jsx");
 /* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
 /* harmony import */ var _assets_year_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/year.png */ "./resources/js/assets/year.png");
 /* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -13265,39 +13266,49 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Polls = function Polls(_ref) {
   var participants = _ref.participants,
-      categories = _ref.categories;
+      categories = _ref.categories,
+      category = _ref.category;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       search = _useState2[0],
       setSearch = _useState2[1];
 
+  var filterCategories = function filterCategories(e) {
+    var name = e.target.value;
+    name === "All" ? _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.get("/") : _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.get("/categories/".concat(name));
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Year, {
     src: _assets_year_png__WEBPACK_IMPORTED_MODULE_3__["default"],
     width: "50"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Countdown, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "10"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Days")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Hours")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Minutes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Seconds")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Countdown, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "10"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Days")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Hours")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Minutes")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Unit, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Amount, null, "00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "Seconds")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
     type: "search",
     placeholder: "Search",
     onChange: function onChange(e) {
       return setSearch(e.target.value);
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
+    onChange: filterCategories
+  }, category && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
     style: {
       backgroundColor: "white"
     }
-  }, "Category"), categories.map(function (category) {
+  }, category && category[0].name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
+    style: {
+      backgroundColor: "white"
+    },
+    value: "All"
+  }, "All"), categories.map(function (category) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
       style: {
         backgroundColor: "white"
       },
       key: category.id,
-      onSelect: function onSelect() {
-        return categories.filter(function (item) {
-          return item.id === category.id;
-        });
-      }
+      value: category.name
     }, category.name);
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, participants.length > 0 ? participants.filter(function (user) {
     return user.firstName.includes(search) || user.lastName.includes(search);
@@ -13312,25 +13323,25 @@ var Polls = function Polls(_ref) {
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 3rem 1rem;\n\tmin-height: 100vh;\n\tposition: relative;\n\n\t&::after {\n\t\tposition: absolute;\n\t\tcontent: \"\";\n\t\tz-index: -1;\n\t\ttop: 0;\n\t\tbottom: 0;\n\t\tleft: 0;\n\t\tright: 0;\n\t\tbackground-image: linear-gradient(\n\t\t\t\t0deg,\n\t\t\t\trgba(0, 0, 0, 0.9),\n\t\t\t\trgba(0, 0, 0, 0.9)\n\t\t\t),\n\t\t\turl(", ");\n\t\tbackground-repeat: no-repeat;\n\t\tbackground-position: center center;\n\t\tbackground-size: cover;\n\t}\n"])), _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tmax-width: 1360px;\n\tmargin: 0 auto;\n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tpadding-bottom: 1.5rem;\n\tborder-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n\t@media screen and (max-width: 800px) {\n\t\tflex-direction: column;\n\t}\n"])));
-var Left = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tgap: 1rem;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\tfont-size: 2rem;\n\tfont-weight: 700;\n\tcolor: var(--white);\n"])));
-var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tmargin-bottom: 2.5rem;\n"])));
-var Category = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\tcolor: var(--white);\n\topacity: 0.8;\n\n\t@media screen and (max-width: 624px) {\n\t\tdisplay: none;\n\t}\n"])));
-var Select = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].select(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n\toutline: none;\n\tborder: none;\n\tcursor: pointer;\n\tpadding: 0.5rem;\n\tborder-radius: 0.3rem;\n\tfont-weight: 600;\n"])));
-var Option = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].option(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\toutline: none;\n\tborder: none;\n\tcursor: pointer;\n\tpadding: 0.5rem;\n\tborder-radius: 0.3rem;\n\tfont-weight: 600;\n"])));
-var Year = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral([""])));
-var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n\twidth: fit-content;\n\tfont-size: 1.4rem;\n\topacity: 0.7;\n\tcolor: var(--white);\n\ttext-align: center;\n\tmargin: 0 auto 1rem auto;\n\tpadding-bottom: 0.1rem;\n\tborder-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
-var Countdown = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(4, 1fr);\n\talign-items: center;\n\tgap: 1rem;\n"])));
-var Unit = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n\tbackground-color: #e4e3e3;\n\tbox-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);\n\tpadding: 0.5rem 0.6rem;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n\ttext-align: center;\n\tborder-radius: 0.3rem;\n"])));
-var Amount = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h1(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n\tfont-size: 2rem;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n\topacity: 0.7;\n\tfont-weight: 600;\n\tfont-size: 1rem;\n"])));
-var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n\tmargin-top: 2rem;\n"])));
-var Search = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\tmin-width: 20vw;\n\tborder-radius: 0.3rem;\n\tpadding-left: 0.5rem;\n"])));
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].input(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n\tpadding: 0.7rem 0.8rem;\n\tborder: none;\n\toutline: none;\n\tfont-size: 1rem;\n\twidth: 100%;\n\tborder-top-right-radius: 0.3rem;\n\tborder-bottom-right-radius: 0.3rem;\n\tmargin-left: 0.4rem;\n"])));
-var Cards = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n\twidth: 100%;\n\ttop: 12rem;\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 3rem 1rem;\n\tmin-height: 100vh;\n\tposition: relative;\n\n\t&::after {\n\t\tposition: absolute;\n\t\tcontent: \"\";\n\t\tz-index: -1;\n\t\ttop: 0;\n\t\tbottom: 0;\n\t\tleft: 0;\n\t\tright: 0;\n\t\tbackground-image: linear-gradient(\n\t\t\t\t0deg,\n\t\t\t\trgba(0, 0, 0, 0.9),\n\t\t\t\trgba(0, 0, 0, 0.9)\n\t\t\t),\n\t\t\turl(", ");\n\t\tbackground-repeat: no-repeat;\n\t\tbackground-position: center center;\n\t\tbackground-size: cover;\n\t}\n"])), _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tmax-width: 1360px;\n\tmargin: 0 auto;\n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tpadding-bottom: 1.5rem;\n\tborder-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n\t@media screen and (max-width: 800px) {\n\t\tflex-direction: column;\n\t}\n"])));
+var Left = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tgap: 1rem;\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\tfont-size: 2rem;\n\tfont-weight: 700;\n\tcolor: var(--white);\n"])));
+var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tmargin-bottom: 2.5rem;\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\tcolor: var(--white);\n\topacity: 0.8;\n\n\t@media screen and (max-width: 624px) {\n\t\tdisplay: none;\n\t}\n"])));
+var Select = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].select(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n\toutline: none;\n\tborder: none;\n\tcursor: pointer;\n\tpadding: 0.5rem;\n\tborder-radius: 0.3rem;\n\tfont-weight: 600;\n"])));
+var Option = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].option(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\toutline: none;\n\tborder: none;\n\tcursor: pointer;\n\tpadding: 0.5rem;\n\tborder-radius: 0.3rem;\n\tfont-weight: 600;\n"])));
+var Year = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral([""])));
+var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n\twidth: fit-content;\n\tfont-size: 1.4rem;\n\topacity: 0.7;\n\tcolor: var(--white);\n\ttext-align: center;\n\tmargin: 0 auto 1rem auto;\n\tpadding-bottom: 0.1rem;\n\tborder-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
+var Countdown = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(4, 1fr);\n\talign-items: center;\n\tgap: 1rem;\n"])));
+var Unit = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n\tbackground-color: #e4e3e3;\n\tbox-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);\n\tpadding: 0.5rem 0.6rem;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n\ttext-align: center;\n\tborder-radius: 0.3rem;\n"])));
+var Amount = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h1(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n\tfont-size: 2rem;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].p(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n\topacity: 0.7;\n\tfont-weight: 600;\n\tfont-size: 1rem;\n"])));
+var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n\tmargin-top: 2rem;\n"])));
+var Search = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\tmin-width: 20vw;\n\tborder-radius: 0.3rem;\n\tpadding-left: 0.5rem;\n"])));
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].input(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n\tpadding: 0.7rem 0.8rem;\n\tborder: none;\n\toutline: none;\n\tfont-size: 1rem;\n\twidth: 100%;\n\tborder-top-right-radius: 0.3rem;\n\tborder-bottom-right-radius: 0.3rem;\n\tmargin-left: 0.4rem;\n"])));
+var Cards = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n\twidth: 100%;\n\ttop: 12rem;\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Polls);
 
 /***/ }),
