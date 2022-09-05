@@ -40,20 +40,23 @@ class ParticipantController extends Controller
 
     public function update(Request $request, $id) {
         $formData = $request->validate([
-            'name'=>'required',
-            'date'=>'required',
-            'description'=>'required',
+            'category_id' => 'required',
+            'event_id' => 'required',
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'age' => 'required',
+            'gender' => 'required',
         ]);
 
-        if($request->hasFile('image')) {
-            $formData['image'] = $request->file('image')->store('images', 'public');
+        if ($request->hasFile('photo')) {
+            $formData['photo'] = $request->file('photo')->store('images', 'public');
         }
 
         $event = Participant::findOrFail($id);
 
         $event->update($formData);
 
-        return Redirect('/participants');
+        return back();
     }
 
     public function destroy($id) {

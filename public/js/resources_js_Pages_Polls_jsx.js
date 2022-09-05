@@ -13292,19 +13292,22 @@ var Polls = function Polls(_ref) {
       style: {
         backgroundColor: "white"
       },
-      key: category._id // onClick={() =>
-      // 	setCategories(
-      // 		categories.filter((item) => item.name === category.name)
-      // 	)
-      // }
-
+      key: category.id,
+      onSelect: function onSelect() {
+        return categories.filter(function (item) {
+          return item.id === category.id;
+        });
+      }
     }, category.name);
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, participants.length > 0 ? participants.filter(function (user) {
     return user.firstName.includes(search) || user.lastName.includes(search);
   }).map(function (user) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
       user: user,
-      key: user.index
+      key: user.index,
+      category: categories.filter(function (category) {
+        return category.id === user.category_id;
+      })
     });
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
 };
@@ -13416,7 +13419,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Card = function Card(_ref) {
-  var user = _ref.user;
+  var user = _ref.user,
+      category = _ref.category;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     isOpen: false,
@@ -13428,10 +13432,6 @@ var Card = function Card(_ref) {
       confirmDialog = _useState2[0],
       setConfirmDialog = _useState2[1];
 
-  var handleVoting = function handleVoting() {
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_3__.Inertia.post("/polls/vote/".concat(user.id));
-  };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
     src: "/storage/".concat(user.photo),
     width: "70",
@@ -13440,20 +13440,20 @@ var Card = function Card(_ref) {
     variant: "determinate",
     value: user.votes
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Percentage, null, user.votes / 100, "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, {
-    onClick: handleVoting
-  }, "Vote ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_HowToVote__WEBPACK_IMPORTED_MODULE_5__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "Junior")));
+    href: "/auth/google/redirect"
+  }, "Vote ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_HowToVote__WEBPACK_IMPORTED_MODULE_5__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, category[0].name)));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  border: 1px solid rgba(231, 231, 231, 0.2);\n  border-radius: 0.3rem;\n  padding: 1.2rem;\n  color: var(--white);\n  margin-bottom: 1.5rem;\n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  gap: 1.5rem;\n  position: relative;\n"])));
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  border-radius: 50%;\n  border: 2px solid var(--white);\n  padding: 0.1rem;\n"])));
-var Content = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  gap: 0.3rem;\n"])));
-var Name = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-size: 1.2rem;\n  font-weight: 700;\n"])));
-var Gender = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h3(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  font-weight: 600;\n  margin-bottom: .2rem;\n"])));
-var Category = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  position: absolute;\n  right: 0;\n  font-size: .7rem;\n  opacity: .6;\n  font-weight: 600;\n  border: 2px solid var(--primary);\n  padding: 0.2rem 1rem .1rem;\n  border-radius: 1rem;\n  color: var(--primary);\n"])));
-var Percentage = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  font-size: 1.2rem;\n  font-weight: 600;\n  margin-top: .2rem;\n"])));
-var Votes = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  opacity: 0.6;\n  font-weight: 600;\n  font-size: 1.05rem;\n"])));
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n\tgap: .5rem;\n  cursor: pointer;\n  width: fit-content;\n  margin-top: .5rem;\n  padding: 0.3rem .5rem;\n  font-weight: 500;\n  font-size: .9rem;\n  border-radius: .3rem;\n  color: var(--primary);\n  border: 1px solid var(--primary);  \n  background-color: transparent;\n  transition: all .5s ease;\n\n  &:hover {\n    color: #A7CAED;\n    border: 1px solid #A7CAED;\n  }\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    border: 1px solid rgba(231, 231, 231, 0.2);\n    border-radius: 0.3rem;\n    padding: 1.2rem;\n    color: var(--white);\n    margin-bottom: 1.5rem;\n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1.5rem;\n    position: relative;\n"])));
+var Image = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].img(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    border-radius: 50%;\n    border: 2px solid var(--white);\n    padding: 0.1rem;\n"])));
+var Content = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    gap: 0.3rem;\n"])));
+var Name = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-size: 1.2rem;\n    font-weight: 700;\n"])));
+var Gender = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h3(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    font-size: 1rem;\n    font-weight: 600;\n    margin-bottom: 0.2rem;\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 0;\n    font-size: 0.7rem;\n    opacity: 0.6;\n    font-weight: 600;\n    border: 2px solid var(--primary);\n    padding: 0.2rem 1rem 0.1rem;\n    border-radius: 1rem;\n    color: var(--primary);\n"])));
+var Percentage = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h2(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    font-size: 1.2rem;\n    font-weight: 600;\n    margin-top: 0.2rem;\n"])));
+var Votes = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    opacity: 0.6;\n    font-weight: 600;\n    font-size: 1.05rem;\n"])));
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].a(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n    cursor: pointer;\n    width: fit-content;\n    margin-top: 0.5rem;\n    padding: 0.3rem 0.5rem;\n    font-weight: 500;\n    font-size: 0.9rem;\n    border-radius: 0.3rem;\n    color: var(--primary);\n    border: 1px solid var(--primary);\n    background-color: transparent;\n    transition: all 0.5s ease;\n\n    &:hover {\n        color: #a7caed;\n        border: 1px solid #a7caed;\n    }\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);
 
 /***/ }),

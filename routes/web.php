@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PollController;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,10 @@ use App\Http\Controllers\PollController;
 
 Route::get('/', [PollController::class, 'index']);
 Route::post('/polls/vote/{id}', [PollController::class, 'vote']);
+
+// Google Auth
+Route::get('/auth/google/redirect', [PollController::class, 'googleRedirect']);
+Route::get('/auth/google/callback', [PollController::class, 'googleCallback']);
 
 // Admin
 Route::group(['middleware' => 'guest'], function () {

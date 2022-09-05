@@ -23,107 +23,154 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
     };
 
 	return (
-		<Container>
-			<Form onSubmit={handleSubmit} encType="multipart/form-data">
-				{participant && <Image src={`/storage/images/${participant.image}`} width="100" height="100" />}
-				<FormGroup>
-					<FormInput
-						type="text"
-						label="First Name"
-						value={participant ? participant.firstName : data.firstName}
-						required
-						onChange={(e) => setData("firstName", e.target.value)}
-					/>
-					<FormInput
-						type="text"
-						label="Last Name"
-						value={participant ? participant.lastName : data.lastName}
-						required
-						onChange={(e) => setData("lastName", e.target.value)}
-					/>
-				</FormGroup>
-				<FormGroup>
-					<FormInput
-						type="number"
-						label="Age"
-						value={participant ? participant.age : data.age}
-						required
-						onChange={(e) => setData("age", e.target.value)}
-					/>
-					<InputContainer>
-						<Label>
-							Gender
-							<Required>*</Required>
-						</Label>
-						<RadioContainer>
-							<Radio
-								type="radio"
-								value="Male"
-								name="gender"
-								onChange={(e) => setData("gender", e.target.value)}
-								checked={participant && participant.gender === "Male"}
-							/>{" "}
-							Male
-							<Radio
-								type="radio"
-								value="Female"
-								name="gender"
-								onChange={(e) => setData("gender", e.target.value)}
-								checked={participant && participant.gender === "Female"}
-							/>{" "}
-							Female
-						</RadioContainer>
-					</InputContainer>
-				</FormGroup>
-				<FormGroup>
-					<InputContainer>
-						<Label>
-							Event
-							<Required>*</Required>
-						</Label>
+        <Container>
+            <Form onSubmit={handleSubmit} encType="multipart/form-data">
+                {participant && (
+                    <Image
+                        src={`/storage/${participant.photo}`}
+                        width="100"
+                        height="100"
+                    />
+                )}
+                <FormGroup>
+                    <FormInput
+                        type="text"
+                        label="First Name"
+                        value={
+                            participant ? participant.firstName : data.firstName
+                        }
+                        required
+                        onChange={(e) => setData("firstName", e.target.value)}
+                    />
+                    <FormInput
+                        type="text"
+                        label="Last Name"
+                        value={
+                            participant ? participant.lastName : data.lastName
+                        }
+                        required
+                        onChange={(e) => setData("lastName", e.target.value)}
+                    />
+                </FormGroup>
+                <FormGroup>
+                    <FormInput
+                        type="number"
+                        label="Age"
+                        value={participant ? participant.age : data.age}
+                        required
+                        onChange={(e) => setData("age", e.target.value)}
+                    />
+                    <InputContainer>
+                        <Label>
+                            Gender
+                            <Required>*</Required>
+                        </Label>
+                        <RadioContainer>
+                            <Radio
+                                type="radio"
+                                value={
+                                    participant ? participant.gender : "Male"
+                                }
+                                name="gender"
+                                onChange={(e) =>
+                                    setData("gender", e.target.value)
+                                }
+                                checked={
+                                    participant && participant.gender === "Male"
+                                }
+                            />{" "}
+                            Male
+                            <Radio
+                                type="radio"
+                                value={
+                                    participant ? participant.gender : "Female"
+                                }
+                                name="gender"
+                                onChange={(e) =>
+                                    setData("gender", e.target.value)
+                                }
+                                checked={
+                                    participant &&
+                                    participant.gender === "Female"
+                                }
+                            />{" "}
+                            Female
+                        </RadioContainer>
+                    </InputContainer>
+                </FormGroup>
+                <FormGroup>
+                    <InputContainer>
+                        <Label>
+                            Event
+                            <Required>*</Required>
+                        </Label>
 
-						<Select
-							required
-							name="event_id"
-							onChange={(e) => setData("event_id", e.target.value)}
-							value={participant ? participant.event_id : data.event_id}
-						>
-						<Option>Event</Option>	
-							{events && events.map(event => (
-								<Option key={event.id} value={event.id}>{event.name}</Option>
-							))}
-						</Select>
-					</InputContainer>
-					<InputContainer>
-						<Label>
-							Category
-							<Required>*</Required>
-						</Label>
+                        <Select
+                            required
+                            name="event_id"
+                            onChange={(e) =>
+                                setData("event_id", e.target.value)
+                            }
+                            value={
+                                participant
+                                    ? participant.event_id
+                                    : data.event_id
+                            }
+                        >
+                            <Option>Event</Option>
+                            {events &&
+                                events.map((event) => (
+                                    <Option key={event.id} value={event.id}>
+                                        {event.name}
+                                    </Option>
+                                ))}
+                        </Select>
+                    </InputContainer>
+                    <InputContainer>
+                        <Label>
+                            Category
+                            <Required>*</Required>
+                        </Label>
 
-						<Select
-							required
-							onChange={(e) => setData("category_id", e.target.value)}
-							name="category_id"
-							value={participant ? participant.category_id : data.category_id}
-						>					
-						<Option>Category</Option>	
-							{categories && categories.map(category => (
-								<Option key={category.id} value={category.id}>{category.name}</Option>
-							))}
-						</Select>
-					</InputContainer>
-				</FormGroup>
-				<FormGroup>
-					<FormInput type="file" label="Photo" name="photo"
-						onChange={(e) => setData("photo", e.target.files[0])}
-					/>
-				</FormGroup>
-				<InputContainer>
-					<Button>{participant ? "Update" : "Submit"}</Button>
-				</InputContainer>
-			</Form>
-		</Container>
-	);
+                        <Select
+                            required
+                            onChange={(e) =>
+                                setData("category_id", e.target.value)
+                            }
+                            name="category_id"
+                            value={
+                                participant
+                                    ? participant.category_id
+                                    : data.category_id
+                            }
+                        >
+                            <Option>Category</Option>
+                            {categories &&
+                                categories.map((category) => (
+                                    <Option
+                                        key={category.id}
+                                        value={category.id}
+                                    >
+                                        {category.name}
+                                    </Option>
+                                ))}
+                        </Select>
+                    </InputContainer>
+                </FormGroup>
+                <FormGroup>
+                    <FormInput
+                        type="file"
+                        label="Photo"
+                        name="photo"
+                        onChange={(e) => setData("photo", e.target.files[0])}
+                    />
+                </FormGroup>
+                <InputContainer>
+                    <Button>{participant ? "Update" : "Submit"}</Button>
+                </InputContainer>
+            </Form>
+        </Container>
+    );
 };
 
 const Container = styled.div`

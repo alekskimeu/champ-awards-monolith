@@ -9,46 +9,58 @@ import ConfirmDialog from "../ConfirmDialog";
 import ContestantForm from "./ContestantForm";
 import Modal from "./Modal";
 
-const Participant = ({ participant, categories, events }) => {
-	const [show, setShow] = useState(false);
+const Participant = ({ participant, category, categories, events }) => {
+    const [show, setShow] = useState(false);
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
-	return (
-		<>
-			<Container>
-				<Header>
-					<Image src={`/storage/${participant.photo}`} width="60" height="60" />
-					<Content>
-						<Name>
-							{participant.firstName} {participant.lastName}
-						</Name>
-						<Age>{participant.age} yrs</Age>
-						<Gender>{participant.gender} </Gender>
-						<Action>
-							<Button>
-								<EditIcon onClick={showModal} />
-							</Button>
-							<Button>
-								<DeleteIcon />
-							</Button>
-						</Action>
-					</Content>
-					<Category>{participant.category}</Category> 
-				</Header>
-			</Container>
+    return (
+        <>
+            <Container>
+                <Header>
+                    <Image
+                        src={`/storage/${participant.photo}`}
+                        width="60"
+                        height="60"
+                    />
+                    <Content>
+                        <Name>
+                            {participant.firstName} {participant.lastName}
+                        </Name>
+                        <Age>{participant.age} yrs</Age>
+                        <Gender>{participant.gender} </Gender>
+                        <Action>
+                            <Button>
+                                <EditIcon onClick={showModal} />
+                            </Button>
+                            <Button>
+                                <DeleteIcon />
+                            </Button>
+                        </Action>
+                    </Content>
+                    <Category>{category[0].name}</Category>
+                </Header>
+            </Container>
 
-			<Modal show={show} handleClose={handleClose} title="Update Contestant">
-				<ContestantForm participant={participant} events={events} categories={categories} />
-			</Modal>
-		</>
-	);
+            <Modal
+                show={show}
+                handleClose={handleClose}
+                title="Update Contestant"
+            >
+                <ContestantForm
+                    participant={participant}
+                    events={events}
+                    categories={categories}
+                />
+            </Modal>
+        </>
+    );
 };
 
 const Container = styled.div`

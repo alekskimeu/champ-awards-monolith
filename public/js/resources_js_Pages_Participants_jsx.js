@@ -13082,7 +13082,9 @@ var Participants = function Participants(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Participant__WEBPACK_IMPORTED_MODULE_2__["default"], (_React$createElement = {
       participant: participant,
       key: participant.id
-    }, _defineProperty(_React$createElement, "participant", participant), _defineProperty(_React$createElement, "events", events), _defineProperty(_React$createElement, "categories", categories), _React$createElement));
+    }, _defineProperty(_React$createElement, "participant", participant), _defineProperty(_React$createElement, "events", events), _defineProperty(_React$createElement, "category", categories.filter(function (category) {
+      return category.id === participant.category_id;
+    })), _defineProperty(_React$createElement, "categories", categories), _React$createElement));
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
     show: show,
     handleClose: handleClose,
@@ -13201,7 +13203,7 @@ var ContestantForm = function ContestantForm(_ref) {
     onSubmit: handleSubmit,
     encType: "multipart/form-data"
   }, participant && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
-    src: "/storage/images/".concat(participant.image),
+    src: "/storage/".concat(participant.photo),
     width: "100",
     height: "100"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_common_FormInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -13230,7 +13232,7 @@ var ContestantForm = function ContestantForm(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Gender", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(RadioContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
-    value: "Male",
+    value: participant ? participant.gender : "Male",
     name: "gender",
     onChange: function onChange(e) {
       return setData("gender", e.target.value);
@@ -13238,7 +13240,7 @@ var ContestantForm = function ContestantForm(_ref) {
     checked: participant && participant.gender === "Male"
   }), " ", "Male", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
-    value: "Female",
+    value: participant ? participant.gender : "Female",
     name: "gender",
     onChange: function onChange(e) {
       return setData("gender", e.target.value);
@@ -13471,6 +13473,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Participant = function Participant(_ref) {
   var participant = _ref.participant,
+      category = _ref.category,
       categories = _ref.categories,
       events = _ref.events;
 
@@ -13493,7 +13496,7 @@ var Participant = function Participant(_ref) {
     height: "60"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, participant.firstName, " ", participant.lastName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Age, null, participant.age, " yrs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Gender, null, participant.gender, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Action, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: showModal
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_6__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, participant.category))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Delete__WEBPACK_IMPORTED_MODULE_6__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, category[0].name))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     show: show,
     handleClose: handleClose,
     title: "Update Contestant"
@@ -13592,7 +13595,7 @@ var Sidebar = function Sidebar() {
   }, "Logout ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_7__["default"], null))));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tflex: 0.5;\n\tpadding: 1.5rem 2rem 3rem 2rem;\n\theight: 100vh;\n\tbackground-color: var(--black);\n\tposition: fixed;\n\tleft: 0;\n\tmin-width: 15vw;\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    flex: 0.5;\n    padding: 1.5rem 2rem 3rem 2rem;\n    height: 100vh;\n    background-color: var(--black);\n    position: fixed;\n    left: 0;\n    min-width: 15vw;\n"])));
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tfont-size: 1.6rem;\n\tmargin-bottom: 2rem;\n"])));
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tfont-size: 1.3rem;\n\tmargin-bottom: 1rem;\n\tcolor: var(--white);\n"])));
 var Menu = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-between;\n\theight: 90%;\n"])));

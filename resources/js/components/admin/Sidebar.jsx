@@ -48,13 +48,13 @@ const Sidebar = () => {
 };
 
 const Container = styled.div`
-	flex: 0.5;
-	padding: 1.5rem 2rem 3rem 2rem;
-	height: 100vh;
-	background-color: var(--black);
-	position: fixed;
-	left: 0;
-	min-width: 15vw;
+    flex: 0.5;
+    padding: 1.5rem 2rem 3rem 2rem;
+    height: 100vh;
+    background-color: var(--black);
+    position: fixed;
+    left: 0;
+    min-width: 15vw;
 `;
 
 const Logo = styled.h1`

@@ -14,79 +14,90 @@ const Polls = ({ participants, categories }) => {
 	const [search, setSearch] = useState("");
 
 	return (
-		<Container>
-			<Wrapper>
-				<Header>
-					<Left>
-						<Title>Champ Awards</Title>
-						<Year src={year} width="50" />
-					</Left>
-					<Countdown>
-						<Unit>
-							<Amount>10</Amount>
-							<Description>Days</Description>
-						</Unit>
-						<Unit>
-							<Amount>00</Amount>
-							<Description>Hours</Description>
-						</Unit>
-						<Unit>
-							<Amount>00</Amount>
-							<Description>Minutes</Description>
-						</Unit>
-						<Unit>
-							<Amount>00</Amount>
-							<Description>Seconds</Description>
-						</Unit>
-					</Countdown>
-				</Header>
+        <Container>
+            <Wrapper>
+                <Header>
+                    <Left>
+                        <Title>Champ Awards</Title>
+                        <Year src={year} width="50" />
+                    </Left>
+                    <Countdown>
+                        <Unit>
+                            <Amount>10</Amount>
+                            <Description>Days</Description>
+                        </Unit>
+                        <Unit>
+                            <Amount>00</Amount>
+                            <Description>Hours</Description>
+                        </Unit>
+                        <Unit>
+                            <Amount>00</Amount>
+                            <Description>Minutes</Description>
+                        </Unit>
+                        <Unit>
+                            <Amount>00</Amount>
+                            <Description>Seconds</Description>
+                        </Unit>
+                    </Countdown>
+                </Header>
 
-				<PollContainer>
-					<Subtitle>Vote for your favorite contestant</Subtitle>
-					<HeaderWrapper>
-						<Category>All</Category>
-						<Search>
-							<SearchRoundedIcon />
-							<Input
-								type="search"
-								placeholder="Search"
-								onChange={(e) => setSearch(e.target.value)}
-							/>
-						</Search>
-						<Select>
-							<Option style={{ backgroundColor: "white" }}>Category</Option>
-							{categories.map((category) => (
-								<Option
-									style={{ backgroundColor: "white" }}
-									key={category._id}
-									// onClick={() =>
-									// 	setCategories(
-									// 		categories.filter((item) => item.name === category.name)
-									// 	)
-									// }
-								>
-									{category.name}
-								</Option>
-							))}
-						</Select>
-					</HeaderWrapper>
-					<Cards>
-						{participants.length > 0 ? (
-							participants
-								.filter(
-									(user) =>
-										user.firstName.includes(search) ||
-										user.lastName.includes(search)
-								)
-								.map((user) => <Card user={user} key={user.index} />)
-							) : (
-							<Loader />
-						)}
-					</Cards>
-				</PollContainer>
-			</Wrapper>
-		</Container>
-	);
+                <PollContainer>
+                    <Subtitle>Vote for your favorite contestant</Subtitle>
+                    <HeaderWrapper>
+                        <Category>All</Category>
+                        <Search>
+                            <SearchRoundedIcon />
+                            <Input
+                                type="search"
+                                placeholder="Search"
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+                        </Search>
+                        <Select>
+                            <Option style={{ backgroundColor: "white" }}>
+                                Category
+                            </Option>
+                            {categories.map((category) => (
+                                <Option
+                                    style={{ backgroundColor: "white" }}
+                                    key={category.id}
+                                    onSelect={() =>
+                                        categories.filter(
+                                            (item) => item.id === category.id
+                                        )
+                                    }
+                                >
+                                    {category.name}
+                                </Option>
+                            ))}
+                        </Select>
+                    </HeaderWrapper>
+                    <Cards>
+                        {participants.length > 0 ? (
+                            participants
+                                .filter(
+                                    (user) =>
+                                        user.firstName.includes(search) ||
+                                        user.lastName.includes(search)
+                                )
+                                .map((user) => (
+                                    <Card
+                                        user={user}
+                                        key={user.index}
+                                        category={categories.filter(
+                                            (category) =>
+                                                category.id === user.category_id
+                                        )}
+                                    />
+                                ))
+                        ) : (
+                            <Loader />
+                        )}
+                    </Cards>
+                </PollContainer>
+            </Wrapper>
+        </Container>
+    );
 };
 
 const Container = styled.div`

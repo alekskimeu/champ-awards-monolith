@@ -20,65 +20,85 @@ const Dashboard = ({participants, events, categories}) => {
 	};
 
 	return (
-		<Layout>
-			<Content>
-				<EventsContainer>
-					<SectionHeader>
-						<Title>Top Categories</Title>
-						<Link href="/categories" className="header-nav">
-							All Categories
-						</Link>
-					</SectionHeader>
-					<Cards>
-						{categories && categories
-							.filter((category) => category.name.includes(search))
-							.slice(0, 3)
-							.map((category) => (
-								<Category category={category} key={category.id} />
-							))}
-					</Cards>
-				</EventsContainer>
+        <Layout>
+            <Content>
+                <EventsContainer>
+                    <SectionHeader>
+                        <Title>Top Categories</Title>
+                        <Link href="/categories" className="header-nav">
+                            All Categories
+                        </Link>
+                    </SectionHeader>
+                    <Cards>
+                        {categories &&
+                            categories
+                                .filter((category) =>
+                                    category.name.includes(search)
+                                )
+                                .slice(0, 3)
+                                .map((category) => (
+                                    <Category
+                                        category={category}
+                                        key={category.id}
+                                    />
+                                ))}
+                    </Cards>
+                </EventsContainer>
 
-				<EventsContainer>
-					<SectionHeader>
-						<Title>Top Events</Title>
-						<Link href="/events" className="header-nav">
-							All Events
-						</Link>
-					</SectionHeader>
-					<Cards>
-						{events && events
-							.filter((event) => event.name.includes(search))
-							.slice(0, 3)
-							.map((event) => (
-								<Event event={event} key={event.id} />
-							))}
-					</Cards>
-				</EventsContainer>
+                <EventsContainer>
+                    <SectionHeader>
+                        <Title>Top Events</Title>
+                        <Link href="/events" className="header-nav">
+                            All Events
+                        </Link>
+                    </SectionHeader>
+                    <Cards>
+                        {events &&
+                            events
+                                .filter((event) => event.name.includes(search))
+                                .slice(0, 3)
+                                .map((event) => (
+                                    <Event event={event} key={event.id} />
+                                ))}
+                    </Cards>
+                </EventsContainer>
 
-				<ParticipantsContainer>
-					<SectionHeader>
-						<Title>Top Participants</Title>
-						<Link href="/participants" className="header-nav">
-							All Participants
-						</Link>
-					</SectionHeader>
-					<Cards>
-						{participants && participants
-							.filter(
-								(participant) =>
-									participant.firstName.includes(search) ||
-									participant.lastName.includes(search)
-							)
-							.slice(0, 3)
-							.map((participant) => (
-								<Participant events={events} categories={categories} participant={participant} key={participant.id} />
-							))}
-					</Cards>
-				</ParticipantsContainer>
-			</Content>
-		</Layout>
-	);
+                <ParticipantsContainer>
+                    <SectionHeader>
+                        <Title>Top Participants</Title>
+                        <Link href="/participants" className="header-nav">
+                            All Participants
+                        </Link>
+                    </SectionHeader>
+                    <Cards>
+                        {participants &&
+                            participants
+                                .filter(
+                                    (participant) =>
+                                        participant.firstName.includes(
+                                            search
+                                        ) ||
+                                        participant.lastName.includes(search)
+                                )
+                                .slice(0, 3)
+                                .map((participant) => (
+                                    <Participant
+                                        events={events}
+                                        categories={categories}
+                                        participant={participant}
+                                        key={participant.id}
+                                        category={categories.filter(
+                                            (category) =>
+                                                category.id ===
+                                                participant.category_id
+                                        )}
+                                    />
+                                ))}
+                    </Cards>
+                </ParticipantsContainer>
+            </Content>
+        </Layout>
+    );
 };
 
 const Content = styled.div`

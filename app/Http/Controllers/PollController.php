@@ -6,8 +6,9 @@ use App\Models\Category;
 use App\Models\Participant;
 use App\Models\Voter;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use Laravel\Socialite\Facades\Socialite;
 
 class PollController extends Controller
 {
@@ -17,20 +18,42 @@ class PollController extends Controller
         );
     }
 
+    // Google Auth Redirect
+    public function googleRedirect()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    // Google Auth callback
+    public function googleCallback()
+    {
+
+        $email = Socialite::driver('google')->user()->email;
+
+        $voter = Voter::where('email', $email)->get();
+
+        if ($voter) {
+            return Redirect('/')->withErrors('You already voted!');
+        } else {
+            // Handle voting
+            // $participant = Participant::findOrFail($id);
+            // $participant->votes += 1;
+            // $participant->save();
+            return back();
+        }
+    }
+
+    // Handle voting
     public function vote(Request $request, $id) {
         
         // $this->validate($request, [
         //     'email' => ['required', 'email', Rule::unique('voters', 'email')]
         // ]);
 
-        $participant = Participant::findOrFail($id);
 
         // Voter::create(["kimeualeks@gmail.com"]);
 
-        $participant->votes += 1;
+        
 
-        $participant->save();
-
-        return back();
     }
 }

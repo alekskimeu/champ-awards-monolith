@@ -24,38 +24,56 @@ const Participants = ({ participants, events, categories }) => {
 	};
 
 	return (
-		<Layout>
-			<Content>
-				<CardsHeader>
-					<Title>Participants</Title>
-					<Search>
-						<SearchRoundedIcon />
-						<Input
-							type="search"
-							placeholder="Search Contestant"
-							onChange={(e) => setSearch(e.target.value)}
-						/>
-					</Search>
-					<Button onClick={showModal}>New Contestant</Button>
-				</CardsHeader>
-				<Cards>
-					{participants
-							.filter(
-								(participant) =>
-									participant.firstName.includes(search) ||
-									participant.lastName.includes(search)
-							)
-						.map((participant) => <Participant participant={participant} key={participant.id}
-							participant={participant} events={events} categories={categories} />)
-					}
-				</Cards>
+        <Layout>
+            <Content>
+                <CardsHeader>
+                    <Title>Participants</Title>
+                    <Search>
+                        <SearchRoundedIcon />
+                        <Input
+                            type="search"
+                            placeholder="Search Contestant"
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                    </Search>
+                    <Button onClick={showModal}>New Contestant</Button>
+                </CardsHeader>
+                <Cards>
+                    {participants
+                        .filter(
+                            (participant) =>
+                                participant.firstName.includes(search) ||
+                                participant.lastName.includes(search)
+                        )
+                        .map((participant) => (
+                            <Participant
+                                participant={participant}
+                                key={participant.id}
+                                participant={participant}
+                                events={events}
+                                category={categories.filter(
+                                    (category) =>
+                                        category.id === participant.category_id
+                                )}
+                                categories={categories}
+                            />
+                        ))}
+                </Cards>
 
-				<Modal show={show} handleClose={handleClose} title="Add Contestant">
-					<ContestantForm setShow={setShow} categories={categories} events={events} />
-				</Modal>
-			</Content>
-		</Layout>
-	);
+                <Modal
+                    show={show}
+                    handleClose={handleClose}
+                    title="Add Contestant"
+                >
+                    <ContestantForm
+                        setShow={setShow}
+                        categories={categories}
+                        events={events}
+                    />
+                </Modal>
+            </Content>
+        </Layout>
+    );
 };
 
 const Content = styled.div`
