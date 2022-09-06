@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import LinearProgress from '@mui/material/LinearProgress';
-import HowToVoteIcon from '@mui/icons-material/HowToVote';
+import React, { useState } from "react";
+import LinearProgress from "@mui/material/LinearProgress";
+import HowToVoteIcon from "@mui/icons-material/HowToVote";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import image from '../../assets/user.jpg';
-import ConfirmDialog from '../ConfirmDialog';
-import { Inertia } from '@inertiajs/inertia';
+import image from "../../assets/user.jpg";
+import ConfirmDialog from "../ConfirmDialog";
+import { Inertia } from "@inertiajs/inertia";
 
 const Card = ({ user, category }) => {
     const [confirmDialog, setConfirmDialog] = useState({
@@ -28,7 +28,7 @@ const Card = ({ user, category }) => {
                     <LinearProgress variant="determinate" value={user.votes} />
                     <Percentage>{user.votes / 100}%</Percentage>
                     {/* <Votes>{user.votes} Votes</Votes> */}
-                    <Button href="/auth/google/redirect">
+                    <Button href={`/auth/google/redirect/${user.id}`}>
                         Vote <HowToVoteIcon />
                     </Button>
                 </Content>

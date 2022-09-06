@@ -22,10 +22,9 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', [PollController::class, 'index']);
 Route::get('/categories/{name}', [PollController::class, 'category']);
-Route::post('/polls/vote/{id}', [PollController::class, 'vote']);
 
 // Google Auth
-Route::get('/auth/google/redirect', [PollController::class, 'googleRedirect']);
+Route::get('/auth/google/redirect/{id}', [PollController::class, 'googleRedirect']);
 Route::get('/auth/google/callback', [PollController::class, 'googleCallback']);
 
 // Admin
@@ -36,8 +35,11 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/admin/login', [AdminController::class, 'authenticate']);
 });
 
+Route::post('/polls/vote/{id}', [PollController::class, 'vote'])->middleware('google');
 
 Route::group(['middleware' => 'auth'], function () {
+
+
     Route::get('/admin', [AdminController::class, 'index']);
     Route::post('/admin/logout', [AdminController::class, 'logout']);
 

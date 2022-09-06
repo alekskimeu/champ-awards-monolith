@@ -6,7 +6,6 @@ use App\Models\Category;
 use App\Models\Participant;
 use App\Models\Voter;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -33,6 +32,7 @@ class PollController extends Controller
     // Google Auth Redirect
     public function googleRedirect()
     {
+        
         return Socialite::driver('google')->redirect();
     }
 
