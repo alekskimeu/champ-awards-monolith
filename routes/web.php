@@ -35,7 +35,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/admin/login', [AdminController::class, 'authenticate']);
 });
 
-Route::post('/polls/vote/{id}', [PollController::class, 'vote'])->middleware('google');
+Route::post('/polls/vote/{id}', [PollController::class, 'vote']);
 
 Route::group(['middleware' => 'auth'], function () {
 

@@ -13272,7 +13272,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Polls = function Polls(_ref) {
   var participants = _ref.participants,
       categories = _ref.categories,
-      category = _ref.category;
+      category = _ref.category,
+      error = _ref.error;
+  console.log(error);
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13286,9 +13288,16 @@ var Polls = function Polls(_ref) {
 
   var filterCategories = function filterCategories(e) {
     var id = e.target.value;
-    id === 0 ? setUsers(participants) : setUsers(participants.filter(function (user) {
-      return user.category_id === id;
-    }));
+
+    if (id === 0) {
+      console.log("All");
+      return;
+    } else {
+      console.log("Some");
+      setUsers(participants.filter(function (user) {
+        return user.category_id === id;
+      }));
+    }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Year, {
@@ -13452,7 +13461,7 @@ var Card = function Card(_ref) {
     variant: "determinate",
     value: user.votes
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Percentage, null, user.votes / 100, "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, {
-    href: "/auth/google/redirect/".concat(user.id)
+    href: "auth/google/redirect/".concat(user.id)
   }, "Vote ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_HowToVote__WEBPACK_IMPORTED_MODULE_5__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, category[0].name)));
 };
 

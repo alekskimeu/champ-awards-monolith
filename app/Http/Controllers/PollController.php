@@ -6,6 +6,8 @@ use App\Models\Category;
 use App\Models\Participant;
 use App\Models\Voter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -30,42 +32,37 @@ class PollController extends Controller
     }
 
     // Google Auth Redirect
-    public function googleRedirect()
+    public function googleRedirect($id)
     {
-        
+
+        Session::put('id', $id);
         return Socialite::driver('google')->redirect();
     }
 
     // Google Auth callback
-    public function googleCallback()
+    public function googleCallback(Request $request)
     {
+        $id = Session::get('id');
 
         $email = Socialite::driver('google')->user()->email;
 
         $voter = Voter::where('email', $email)->get();
 
-        if ($voter) {
-            return Redirect('/')->withErrors('You already voted!');
+        if ($voter->count() > 0) {
+            return redirect('/')->with('error', 'You already voted!');
         } else {
+
+            // Store voter email
+            $voter = new Voter();
+            $voter->email = $email;
+            $voter->save();
+
             // Handle voting
-            // $participant = Participant::findOrFail($id);
-            // $participant->votes += 1;
-            // $participant->save();
-            return back();
+            $participant = Participant::findOrFail($id);
+            $participant->votes += 1;
+            $participant->save();
+            return redirect('/')->with('message', 'Voted successfully!');
         }
     }
 
-    // Handle voting
-    public function vote(Request $request, $id) {
-        
-        // $this->validate($request, [
-        //     'email' => ['required', 'email', Rule::unique('voters', 'email')]
-        // ]);
-
-
-        // Voter::create(["kimeualeks@gmail.com"]);
-
-        
-
-    }
 }

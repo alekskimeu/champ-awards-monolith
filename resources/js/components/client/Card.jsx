@@ -28,7 +28,7 @@ const Card = ({ user, category }) => {
                     <LinearProgress variant="determinate" value={user.votes} />
                     <Percentage>{user.votes / 100}%</Percentage>
                     {/* <Votes>{user.votes} Votes</Votes> */}
-                    <Button href={`/auth/google/redirect/${user.id}`}>
+                    <Button href={`auth/google/redirect/${user.id}`}>
                         Vote <HowToVoteIcon />
                     </Button>
                 </Content>

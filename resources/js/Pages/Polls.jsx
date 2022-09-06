@@ -12,15 +12,20 @@ import Loader from "../components/common/Loader";
 import { Inertia } from "@inertiajs/inertia";
 import Countdown from "../components/client/Countdown";
 
-const Polls = ({ participants, categories, category }) => {
+const Polls = ({ participants, categories, category, error }) => {
+    console.log(error);
     const [search, setSearch] = useState("");
     const [users, setUsers] = useState(participants);
 
     const filterCategories = (e) => {
         const id = e.target.value;
-        id === 0
-            ? setUsers(participants)
-            : setUsers(participants.filter((user) => user.category_id === id));
+        if (id === 0) {
+            console.log("All");
+            return;
+        } else {
+            console.log("Some");
+            setUsers(participants.filter((user) => user.category_id === id));
+        }
     };
 
     return (
