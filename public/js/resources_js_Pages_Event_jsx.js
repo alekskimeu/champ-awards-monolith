@@ -12566,13 +12566,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_admin_Modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/admin/Modal */ "./resources/js/components/admin/Modal.jsx");
-/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/admin/Layout */ "./resources/js/components/admin/Layout.jsx");
-/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
-/* harmony import */ var _components_admin_EventForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/admin/EventForm */ "./resources/js/components/admin/EventForm.jsx");
-/* harmony import */ var _components_admin_Participant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/admin/Participant */ "./resources/js/components/admin/Participant.jsx");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _components_admin_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/admin/Modal */ "./resources/js/components/admin/Modal.jsx");
+/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _components_admin_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/admin/Layout */ "./resources/js/components/admin/Layout.jsx");
+/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
+/* harmony import */ var _components_admin_EventForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/admin/EventForm */ "./resources/js/components/admin/EventForm.jsx");
+/* harmony import */ var _components_admin_Participant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/admin/Participant */ "./resources/js/components/admin/Participant.jsx");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -12600,9 +12601,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Event = function Event(_ref) {
   var event = _ref.event,
-      participants = _ref.participants;
+      participants = _ref.participants,
+      categories = _ref.categories,
+      events = _ref.events;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -12627,47 +12631,54 @@ var Event = function Event(_ref) {
     setShow(true);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ImageContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, {
+    title: event.name
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ImageContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
     src: "/storage/".concat(event.image),
     alt: event.name
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Details, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, event.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventDate, null, event.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, event.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cta, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, {
     onClick: showModal
-  }, "Edit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, "Delete")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ParticipantsContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SectionHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
+  }, "Edit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, "Delete")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ParticipantsContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SectionHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
     type: "search",
     placeholder: "Search Participant",
     onChange: function onChange(e) {
       return setSearch(e.target.value);
     }
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, participants.map(function (participant) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Participant__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, participants && participants.map(function (participant) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Participant__WEBPACK_IMPORTED_MODULE_6__["default"], {
       participant: participant,
-      key: participant.id
+      key: participant.id,
+      category: categories.map(function (category) {
+        return category.id === participant.category_id;
+      }),
+      categories: categories,
+      events: events
     });
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     show: show,
     handleClose: handleClose,
     title: "Add Event"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_EventForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_EventForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
     event: event
-  }))));
+  })))));
 };
 
-var Content = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 1rem 3rem;\n\tmargin-top: 2rem;\n\twidth: 100%;\n"])));
-var Cards = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
-var EventContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tgap: 3rem;\n"])));
-var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tflex: 0.5;\n\theight: 350px;\n\tborder-radius: 0.5rem;\n"])));
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\twidth: 100%;\n\theight: 100%;\n\tobject-fit: contain;\n\tborder-radius: 0.5rem;\n"])));
-var Details = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tflex: 1;\n"])));
-var EventDate = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\topacity: 0.8;\n\tfont-size: 1.2rem;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n\tfont-size: 1.25rem;\n\tmargin-top: 1rem;\n"])));
-var Cta = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tgap: 1rem;\n\tmargin-top: 1rem;\n"])));
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tborder: none;\n\tgap: 0.5rem;\n\tcursor: pointer;\n\twidth: fit-content;\n\tmargin-top: 0.5rem;\n\tpadding: 0.6rem;\n\tfont-weight: 600;\n\tfont-size: 0.9rem;\n\tborder-radius: 0.3rem;\n\tcolor: var(--white);\n\ttransition: all 0.5s ease;\n\n\t&:first-child {\n\t\tbackground-color: var(--primary);\n\t}\n\n\t&:last-child {\n\t\tbackground-color: var(--danger);\n\t}\n\n\t&:hover {\n\t\topacity: 0.9;\n\t}\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n\tfont-size: 1.3rem;\n"])));
-var Search = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\twidth: 20vw;\n\tborder-radius: 0.5rem;\n\tpadding-left: 0.8rem;\n"])));
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].input(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n\tbackground-color: #e9e9e9;\n\twidth: 100%;\n\tborder: none;\n\tpadding: 0.9rem;\n\toutline: none;\n\tborder-radius: 0.5rem;\n\tfont-size: 1rem;\n"])));
-var ParticipantsContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n\tmargin-top: 3rem;\n"])));
-var SectionHeader = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n\tmargin-bottom: 2rem;\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n"])));
-var Participants = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1rem;\n"])));
+var Content = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 1rem 3rem;\n\tmargin-top: 2rem;\n\twidth: 100%;\n"])));
+var Cards = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
+var EventContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tgap: 3rem;\n"])));
+var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tflex: 0.5;\n\theight: 350px;\n\tborder-radius: 0.5rem;\n"])));
+var Image = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\twidth: 100%;\n\theight: 100%;\n\tobject-fit: contain;\n\tborder-radius: 0.5rem;\n"])));
+var Details = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tflex: 1;\n"])));
+var EventDate = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h3(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\topacity: 0.8;\n\tfont-size: 1.2rem;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n\tfont-size: 1.25rem;\n\tmargin-top: 1rem;\n"])));
+var Cta = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tgap: 1rem;\n\tmargin-top: 1rem;\n"])));
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tborder: none;\n\tgap: 0.5rem;\n\tcursor: pointer;\n\twidth: fit-content;\n\tmargin-top: 0.5rem;\n\tpadding: 0.6rem;\n\tfont-weight: 600;\n\tfont-size: 0.9rem;\n\tborder-radius: 0.3rem;\n\tcolor: var(--white);\n\ttransition: all 0.5s ease;\n\n\t&:first-child {\n\t\tbackground-color: var(--primary);\n\t}\n\n\t&:last-child {\n\t\tbackground-color: var(--danger);\n\t}\n\n\t&:hover {\n\t\topacity: 0.9;\n\t}\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n\tfont-size: 1.3rem;\n"])));
+var Search = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\twidth: 20vw;\n\tborder-radius: 0.5rem;\n\tpadding-left: 0.8rem;\n"])));
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].input(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n\tbackground-color: #e9e9e9;\n\twidth: 100%;\n\tborder: none;\n\tpadding: 0.9rem;\n\toutline: none;\n\tborder-radius: 0.5rem;\n\tfont-size: 1rem;\n"])));
+var ParticipantsContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n\tmargin-top: 3rem;\n"])));
+var SectionHeader = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n\tmargin-bottom: 2rem;\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n"])));
+var Participants = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1rem;\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Event);
 
 /***/ }),
@@ -12755,7 +12766,15 @@ var ContestantForm = function ContestantForm(_ref) {
       data = _useForm.data,
       setData = _useForm.setData,
       post = _useForm.post,
-      progress = _useForm.progress; // TODO: Close modal after form submission
+      progress = _useForm.progress;
+
+  var handleMale = function handleMale() {
+    setData("gender", "Male");
+  };
+
+  var handleFemale = function handleFemale() {
+    setData("gender", "Female");
+  }; // TODO: Close modal after form submission
 
 
   var handleSubmit = function handleSubmit(e) {
@@ -12797,20 +12816,16 @@ var ContestantForm = function ContestantForm(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Gender", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(RadioContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
-    value: participant ? participant.gender : "Male",
+    defaultValue: participant ? participant.gender : "Male",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Male"
+    onChange: handleMale,
+    defaultChecked: participant && participant.gender === "Male"
   }), " ", "Male", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
     value: participant ? participant.gender : "Female",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Female"
+    onChange: handleFemale,
+    defaultChecked: participant && participant.gender === "Female"
   }), " ", "Female"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Event", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
     required: true,
     name: "event_id",

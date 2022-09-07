@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Head } from "@inertiajs/inertia-react";
 import styled from "styled-components";
 import Layout from "../components/admin/Layout";
 import Event from "../components/admin/Event";
@@ -11,48 +12,66 @@ import Modal from "../components/admin/Modal";
 import EventForm from "../components/admin/EventForm";
 import Loader from "../components/common/Loader";
 
-const Events = ({events}) => {
-	const [search, setSearch] = useState("");
+const Events = ({ events, participants, categories }) => {
+    const [search, setSearch] = useState("");
 
-	const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
-	return (
-		<Layout>
-			<Content>
-				<CardsHeader>
-					<Title>Events</Title>
-					<Search>
-						<SearchRoundedIcon />
-						<Input
-							type="search"
-							placeholder="Search Event"
-							onChange={(e) => setSearch(e.target.value)}
-						/>
-					</Search>
-					<Button onClick={showModal}>New Event</Button>
-				</CardsHeader>
-				<Cards>
-					{events && 
-						events
-							.filter((event) => event.name.includes(search))
-							.map((event) => <Event event={event} key={event.id} />)
-				}
-				</Cards>
+    return (
+        <>
+            <Head title="Events" />
+            <Layout>
+                <Content>
+                    <CardsHeader>
+                        <Title>Events</Title>
+                        <Search>
+                            <SearchRoundedIcon />
+                            <Input
+                                type="search"
+                                placeholder="Search Event"
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+                        </Search>
+                        <Button onClick={showModal}>New Event</Button>
+                    </CardsHeader>
+                    <Cards>
+                        {events &&
+                            events
+                                .filter((event) =>
+                                    event.name
+                                        .toLowerCase()
+                                        .includes(search.toLowerCase())
+                                )
+                                .map((event) => (
+                                    <Event
+                                        event={event}
+                                        key={event.id}
+                                        participants={participants}
+                                        events={events}
+                                        categories={categories}
+                                    />
+                                ))}
+                    </Cards>
 
-				<Modal show={show} handleClose={handleClose} title="Add Event">
-					<EventForm setShow={setShow} />
-				</Modal>
-			</Content>
-		</Layout>
-	);
+                    <Modal
+                        show={show}
+                        handleClose={handleClose}
+                        title="Add Event"
+                    >
+                        <EventForm setShow={setShow} />
+                    </Modal>
+                </Content>
+            </Layout>
+        </>
+    );
 };
 
 const Content = styled.div`

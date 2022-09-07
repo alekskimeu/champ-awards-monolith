@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { usePage } from "@inertiajs/inertia-react";
+import { Head } from "@inertiajs/inertia-react";
+
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import styled from "styled-components";
 import Card from "../components/client/Card";
@@ -6,94 +9,104 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
 import image from "../assets/header.jpg";
-import year from "../assets/year.png";
 
 import Loader from "../components/common/Loader";
 import { Inertia } from "@inertiajs/inertia";
 import Countdown from "../components/client/Countdown";
 
-const Polls = ({ participants, categories, category, error }) => {
-    console.log(error);
+const Polls = ({ participants, categories, category }) => {
+    const { flash } = usePage().props;
+
     const [search, setSearch] = useState("");
     const [users, setUsers] = useState(participants);
 
     const filterCategories = (e) => {
         const id = e.target.value;
-        if (id === 0) {
-            console.log("All");
-            return;
+
+        if (id === "0") {
+            setUsers(participants);
         } else {
-            console.log("Some");
-            setUsers(participants.filter((user) => user.category_id === id));
+            setUsers(participants.filter((user) => user.category_id === +id));
         }
     };
 
     return (
-        <Container>
-            <Wrapper>
-                <Header>
-                    <Left>
-                        <Title>Champ Awards</Title>
-                        <Year src={year} width="50" />
-                    </Left>
-                    <Countdown />
-                </Header>
+        <>
+            <Head>
+                <title>Champ Awards</title>
+                <meta
+                    name="description"
+                    content="Vote for Champ Awards finalists"
+                />
+            </Head>
+            <Container>
+                {flash.message && <Message>{flash.message}</Message>}
+                <Wrapper>
+                    <Header>
+                        <Left>
+                            <Title>Champ Awards</Title>
+                        </Left>
+                        <Countdown />
+                    </Header>
 
-                <PollContainer>
-                    <Subtitle>Vote for your favorite contestant</Subtitle>
-                    <HeaderWrapper>
-                        <Category>All</Category>
-                        <Search>
-                            <SearchRoundedIcon />
-                            <Input
-                                type="search"
-                                placeholder="Search"
-                                onChange={(e) => setSearch(e.target.value)}
-                            />
-                        </Search>
-                        <Select onChange={filterCategories}>
-                            <Option
-                                style={{ backgroundColor: "white" }}
-                                value={0}
-                            >
-                                All
-                            </Option>
-                            {categories.map((category) => (
+                    <PollContainer>
+                        <Subtitle>Vote for your favorite contestant</Subtitle>
+                        <HeaderWrapper>
+                            <Category>All</Category>
+                            <Search>
+                                <SearchRoundedIcon />
+                                <Input
+                                    type="search"
+                                    placeholder="Search"
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                            </Search>
+                            <Select onChange={filterCategories}>
                                 <Option
                                     style={{ backgroundColor: "white" }}
-                                    key={category.id}
-                                    value={category.id}
+                                    value={0}
                                 >
-                                    {category.name}
+                                    All
                                 </Option>
-                            ))}
-                        </Select>
-                    </HeaderWrapper>
-                    <Cards>
-                        {users.length > 0 ? (
-                            users
-                                .filter(
-                                    (user) =>
-                                        user.firstName.includes(search) ||
-                                        user.lastName.includes(search)
-                                )
-                                .map((user) => (
-                                    <Card
-                                        user={user}
-                                        key={user.index}
-                                        category={categories.filter(
-                                            (category) =>
-                                                category.id === user.category_id
-                                        )}
-                                    />
-                                ))
-                        ) : (
-                            <Loader />
-                        )}
-                    </Cards>
-                </PollContainer>
-            </Wrapper>
-        </Container>
+                                {categories.map((category) => (
+                                    <Option
+                                        style={{ backgroundColor: "white" }}
+                                        key={category.id}
+                                        value={category.id}
+                                    >
+                                        {category.name}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </HeaderWrapper>
+                        <Cards>
+                            {users ? (
+                                users
+                                    .filter((user) =>
+                                        user.firstName
+                                            .concat(user.lastName)
+                                            .toLowerCase()
+                                            .includes(search.toLowerCase())
+                                    )
+                                    .map((user) => (
+                                        <Card
+                                            user={user}
+                                            key={user.index}
+                                            category={categories.filter(
+                                                (category) =>
+                                                    category.id ===
+                                                    user.category_id
+                                            )}
+                                        />
+                                    ))
+                            ) : (
+                                <Loader />
+                            )}
+                        </Cards>
+                    </PollContainer>
+                </Wrapper>
+            </Container>
+        </>
     );
 };
 
@@ -120,6 +133,19 @@ const Container = styled.div`
         background-position: center center;
         background-size: cover;
     }
+`;
+
+const Message = styled.div`
+    letter-spacing: 1.8px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    font-weight: 600;
+    border-radius: 0.1rem;
+    transition: all 0.5s ease;
 `;
 
 const Wrapper = styled.div`
@@ -187,11 +213,9 @@ const Option = styled.option`
     font-weight: 600;
 `;
 
-const Year = styled.img``;
-
 const Subtitle = styled.h2`
     width: fit-content;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     opacity: 0.7;
     color: var(--white);
     text-align: center;

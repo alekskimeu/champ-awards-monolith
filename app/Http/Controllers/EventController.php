@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Event;
@@ -12,7 +13,9 @@ class EventController extends Controller
     public function index() {
         return Inertia::render('Events', 
             [
-                'events' => Event::all()
+                'events' => Event::all(),
+                'categories' => Category::all(),
+                'participants' => Participant::all()
             ]);
     }
 
@@ -36,6 +39,8 @@ class EventController extends Controller
         return Inertia::render('Event', 
             [
                 'participants' => Participant::where('event_id', $id)->get(),
+                'events' => Event::all(),
+                'categories' => Category::all(),
                 'event' => Event::findOrFail($id)
             ]);
     }

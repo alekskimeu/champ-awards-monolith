@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Head } from "@inertiajs/inertia-react";
 import Modal from "../components/admin/Modal";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import styled from "styled-components";
@@ -10,65 +11,83 @@ import image from "../assets/header.jpg";
 import EventForm from "../components/admin/EventForm";
 import Participant from "../components/admin/Participant";
 
-const Event = ({ event, participants }) => {
+const Event = ({ event, participants, categories, events }) => {
+    const [search, setSearch] = useState("");
+    const [users, setUsers] = useState([]);
+    const [show, setShow] = useState(false);
 
-	const [search, setSearch] = useState("");
-	const [users, setUsers] = useState([]);
-	const [show, setShow] = useState(false);
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    return (
+        <>
+            <Head title={event.name} />
+            <Layout>
+                <Content>
+                    <EventContainer>
+                        <ImageContainer>
+                            <Image
+                                src={`/storage/${event.image}`}
+                                alt={event.name}
+                            />
+                        </ImageContainer>
+                        <Details>
+                            <Title>{event.name}</Title>
+                            <EventDate>{event.date}</EventDate>
+                            <Description>{event.description}</Description>
+                            <Cta>
+                                <Button onClick={showModal}>Edit</Button>
+                                <Button>Delete</Button>
+                            </Cta>
+                        </Details>
+                    </EventContainer>
 
-	return (
-		<Layout>
-			<Content>
-				<EventContainer>
-					<ImageContainer>
-						<Image src={`/storage/${event.image}`} alt={event.name} />
-					</ImageContainer>
-					<Details>
-						<Title>{event.name}</Title>
-						<EventDate>{event.date}</EventDate>
-						<Description>
-							{event.description}
-						</Description>
-						<Cta>
-							<Button onClick={showModal}>Edit</Button>
-							<Button>Delete</Button>
-						</Cta>
-					</Details>
-				</EventContainer>
+                    <ParticipantsContainer>
+                        <SectionHeader>
+                            <Title>Participants</Title>
+                            <Search>
+                                <SearchRoundedIcon />
+                                <Input
+                                    type="search"
+                                    placeholder="Search Participant"
+                                    onChange={(e) => setSearch(e.target.value)}
+                                />
+                            </Search>
+                        </SectionHeader>
+                        <Participants>
+                            {participants &&
+                                participants.map((participant) => (
+                                    <Participant
+                                        participant={participant}
+                                        key={participant.id}
+                                        category={categories.map(
+                                            (category) =>
+                                                category.id ===
+                                                participant.category_id
+                                        )}
+                                        categories={categories}
+                                        events={events}
+                                    />
+                                ))}
+                        </Participants>
+                    </ParticipantsContainer>
 
-				<ParticipantsContainer>
-					<SectionHeader>
-						<Title>Participants</Title>
-						<Search>
-							<SearchRoundedIcon />
-							<Input
-								type="search"
-								placeholder="Search Participant"
-								onChange={(e) => setSearch(e.target.value)}
-							/>
-						</Search>
-					</SectionHeader>
-					<Participants>
-						{participants.map((participant) => (
-							<Participant participant={participant} key={participant.id} />
-						))}
-					</Participants>
-				</ParticipantsContainer>
-
-				<Modal show={show} handleClose={handleClose} title="Add Event">
-					{<EventForm event={event} />}
-				</Modal>
-			</Content>
-		</Layout>
-	);
+                    <Modal
+                        show={show}
+                        handleClose={handleClose}
+                        title="Add Event"
+                    >
+                        {<EventForm event={event} />}
+                    </Modal>
+                </Content>
+            </Layout>
+        </>
+    );
 };
 
 const Content = styled.div`

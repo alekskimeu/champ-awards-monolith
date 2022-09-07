@@ -13233,11 +13233,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_client_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/client/Card */ "./resources/js/components/client/Card.jsx");
-/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
-/* harmony import */ var _assets_year_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/year.png */ "./resources/js/assets/year.png");
+/* harmony import */ var _components_client_Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/client/Card */ "./resources/js/components/client/Card.jsx");
+/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
 /* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 /* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
@@ -13269,12 +13269,12 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Polls = function Polls(_ref) {
   var participants = _ref.participants,
       categories = _ref.categories,
-      category = _ref.category,
-      error = _ref.error;
-  console.log(error);
+      category = _ref.category;
+  var flash = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.flash;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13289,21 +13289,19 @@ var Polls = function Polls(_ref) {
   var filterCategories = function filterCategories(e) {
     var id = e.target.value;
 
-    if (id === 0) {
-      console.log("All");
-      return;
+    if (id === "0") {
+      setUsers(participants);
     } else {
-      console.log("Some");
       setUsers(participants.filter(function (user) {
-        return user.category_id === id;
+        return user.category_id === +id;
       }));
     }
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Year, {
-    src: _assets_year_png__WEBPACK_IMPORTED_MODULE_3__["default"],
-    width: "50"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
+    name: "description",
+    content: "Vote for Champ Awards finalists"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
     type: "search",
     placeholder: "Search",
     onChange: function onChange(e) {
@@ -13324,30 +13322,30 @@ var Polls = function Polls(_ref) {
       key: category.id,
       value: category.id
     }, category.name);
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, users.length > 0 ? users.filter(function (user) {
-    return user.firstName.includes(search) || user.lastName.includes(search);
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, users ? users.filter(function (user) {
+    return user.firstName.concat(user.lastName).toLowerCase().includes(search.toLowerCase());
   }).map(function (user) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
       user: user,
       key: user.index,
       category: categories.filter(function (category) {
         return category.id === user.category_id;
       })
     });
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 3rem 1rem;\n    min-height: 100vh;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 1360px;\n    margin: 0 auto;\n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    padding-bottom: 1.5rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n    @media screen and (max-width: 800px) {\n        flex-direction: column;\n    }\n"])));
-var Left = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    font-size: 2rem;\n    font-weight: 700;\n    color: var(--white);\n"])));
-var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n"])));
-var Category = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    color: var(--white);\n    opacity: 0.8;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
-var Select = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].select(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
-var Option = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].option(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
-var Year = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral([""])));
-var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.4rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 3rem 1rem;\n    min-height: 100vh;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var Message = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    letter-spacing: 1.8px;\n    position: absolute;\n    top: 1rem;\n    right: 1rem;\n    background-color: var(--primary);\n    color: var(--white);\n    padding: 0.3rem 0.8rem;\n    font-weight: 600;\n    border-radius: 0.1rem;\n    transition: all 0.5s ease;\n"])));
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    max-width: 1360px;\n    margin: 0 auto;\n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    padding-bottom: 1.5rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n    @media screen and (max-width: 800px) {\n        flex-direction: column;\n    }\n"])));
+var Left = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    font-size: 2rem;\n    font-weight: 700;\n    color: var(--white);\n"])));
+var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    color: var(--white);\n    opacity: 0.8;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
+var Select = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].select(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
+var Option = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].option(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
+var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
 var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    margin-top: 2rem;\n"])));
 var Search = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #e9e9e9;\n    min-width: 20vw;\n    border-radius: 0.3rem;\n    padding-left: 0.5rem;\n"])));
 var Input = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].input(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    padding: 0.7rem 0.8rem;\n    border: none;\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-top-right-radius: 0.3rem;\n    border-bottom-right-radius: 0.3rem;\n    margin-left: 0.4rem;\n"])));
@@ -13648,21 +13646,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/user.jpg?b5273b07acd43d5d52cc996c81303c3e");
-
-/***/ }),
-
-/***/ "./resources/js/assets/year.png":
-/*!**************************************!*\
-  !*** ./resources/js/assets/year.png ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/year.png?627e3c0d8bf0375e1931bb923e507480");
 
 /***/ }),
 

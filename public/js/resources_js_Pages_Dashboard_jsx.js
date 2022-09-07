@@ -12597,6 +12597,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Dashboard = function Dashboard(_ref) {
   var participants = _ref.participants,
       events = _ref.events,
@@ -12615,7 +12616,9 @@ var Dashboard = function Dashboard(_ref) {
     setShow(true);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventsContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SectionHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Top Categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, {
+    title: "Dashboard"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventsContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SectionHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Top Categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: "/categories",
     className: "header-nav"
   }, "All Categories")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, categories && categories.filter(function (category) {
@@ -12633,7 +12636,10 @@ var Dashboard = function Dashboard(_ref) {
   }).slice(0, 3).map(function (event) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Event__WEBPACK_IMPORTED_MODULE_4__["default"], {
       event: event,
-      key: event.id
+      key: event.id,
+      participants: participants,
+      categories: categories,
+      events: events
     });
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ParticipantsContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SectionHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Top Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: "/participants",
@@ -12650,7 +12656,7 @@ var Dashboard = function Dashboard(_ref) {
         return category.id === participant.category_id;
       })
     });
-  })))));
+  }))))));
 };
 
 var Content = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 1rem 3rem;\n\ttop: 12rem;\n\twidth: 100%;\n"])));
@@ -12946,7 +12952,15 @@ var ContestantForm = function ContestantForm(_ref) {
       data = _useForm.data,
       setData = _useForm.setData,
       post = _useForm.post,
-      progress = _useForm.progress; // TODO: Close modal after form submission
+      progress = _useForm.progress;
+
+  var handleMale = function handleMale() {
+    setData("gender", "Male");
+  };
+
+  var handleFemale = function handleFemale() {
+    setData("gender", "Female");
+  }; // TODO: Close modal after form submission
 
 
   var handleSubmit = function handleSubmit(e) {
@@ -12988,20 +13002,16 @@ var ContestantForm = function ContestantForm(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Gender", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(RadioContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
-    value: participant ? participant.gender : "Male",
+    defaultValue: participant ? participant.gender : "Male",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Male"
+    onChange: handleMale,
+    defaultChecked: participant && participant.gender === "Male"
   }), " ", "Male", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
     value: participant ? participant.gender : "Female",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Female"
+    onChange: handleFemale,
+    defaultChecked: participant && participant.gender === "Female"
   }), " ", "Female"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Event", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
     required: true,
     name: "event_id",
@@ -13105,7 +13115,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Event = function Event(_ref) {
-  var event = _ref.event;
+  var event = _ref.event,
+      participants = _ref.participants,
+      categories = _ref.categories,
+      events = _ref.events;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13128,7 +13141,9 @@ var Event = function Event(_ref) {
     src: "/storage/".concat(event.image),
     width: "80",
     height: "80"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, event.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventDate, null, "Fri Jan 26 2023"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, "10 Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Action, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, event.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventDate, null, "Fri Jan 26 2023"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, participants.filter(function (participant) {
+    return participant.event_id === event.id;
+  }).length, " Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Action, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: "/events/".concat(event.id),
     className: "btn-more"
   }, "Details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cta, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -13139,9 +13154,7 @@ var Event = function Event(_ref) {
     show: show,
     handleClose: handleClose,
     title: "Update Event"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_EventForm__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    event: event
-  })));
+  }));
 };
 
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tborder: 1px solid rgba(231, 231, 231, 0.2);\n\tbackground-color: #161616;\n\tborder-radius: 0.3rem;\n\tpadding: 1.2rem;\n\tcolor: var(--white);\n\tmargin-bottom: 1.5rem;\n"])));

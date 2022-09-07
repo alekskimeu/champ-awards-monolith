@@ -39,6 +39,7 @@ class ParticipantController extends Controller
     }
 
     public function update(Request $request, $id) {
+        
         $formData = $request->validate([
             'category_id' => 'required',
             'event_id' => 'required',

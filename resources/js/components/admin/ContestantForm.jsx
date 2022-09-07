@@ -15,14 +15,24 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
         photo: participant ? participant.photo : null,
     });
 
+    const handleMale = () => {
+        setData("gender", "Male");
+    };
+
+    const handleFemale = () => {
+        setData("gender", "Female");
+    };
+
     // TODO: Close modal after form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        participant ? post(`/participants/${participant.id}`, data) : post("/participants", data);
-		setShow(false);
+        participant
+            ? post(`/participants/${participant.id}`, data)
+            : post("/participants", data);
+        setShow(false);
     };
 
-	return (
+    return (
         <Container>
             <Form onSubmit={handleSubmit} encType="multipart/form-data">
                 {participant && (
@@ -68,14 +78,12 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
                         <RadioContainer>
                             <Radio
                                 type="radio"
-                                value={
+                                defaultValue={
                                     participant ? participant.gender : "Male"
                                 }
                                 name="gender"
-                                onChange={(e) =>
-                                    setData("gender", e.target.value)
-                                }
-                                checked={
+                                onChange={handleMale}
+                                defaultChecked={
                                     participant && participant.gender === "Male"
                                 }
                             />{" "}
@@ -86,10 +94,8 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
                                     participant ? participant.gender : "Female"
                                 }
                                 name="gender"
-                                onChange={(e) =>
-                                    setData("gender", e.target.value)
-                                }
-                                checked={
+                                onChange={handleFemale}
+                                defaultChecked={
                                     participant &&
                                     participant.gender === "Female"
                                 }

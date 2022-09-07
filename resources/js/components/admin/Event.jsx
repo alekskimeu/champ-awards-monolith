@@ -12,53 +12,66 @@ import ContestantForm from "./ContestantForm";
 import Modal from "./Modal";
 import EventForm from "./EventForm";
 
-const Event = ({ event }) => {
-	const [show, setShow] = useState(false);
+const Event = ({ event, participants, categories, events }) => {
+    const [show, setShow] = useState(false);
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
-	const handleDelete = () => {
+    const handleDelete = () => {
         Inertia.delete(`/events/${event.id}`);
     };
 
+    return (
+        <>
+            <Container>
+                <Header>
+                    <Image
+                        src={`/storage/${event.image}`}
+                        width="80"
+                        height="80"
+                    />
+                    <Content>
+                        <Name>{event.name}</Name>
+                        <EventDate>Fri Jan 26 2023</EventDate>
+                        <Participants>
+                            {
+                                participants.filter(
+                                    (participant) =>
+                                        participant.event_id === event.id
+                                ).length
+                            } Participants
+                        </Participants>
+                        <Action>
+                            <Link
+                                href={`/events/${event.id}`}
+                                className="btn-more"
+                            >
+                                Details
+                            </Link>
+                            <Cta>
+                                <Button>
+                                    <EditIcon onClick={showModal} />
+                                </Button>
+                                <Button onClick={handleDelete}>
+                                    <DeleteIcon />
+                                </Button>
+                            </Cta>
+                        </Action>
+                    </Content>
+                </Header>
+            </Container>
 
-	return (
-		<>
-			<Container>
-				<Header>
-					<Image src={`/storage/${event.image}`} width="80" height="80" />
-					<Content>
-						<Name>{event.name}</Name>
-						<EventDate>Fri Jan 26 2023</EventDate>
-						<Participants>
-							10 Participants
-						</Participants>
-						<Action>
-							<Link href={`/events/${event.id}`} className="btn-more">Details</Link>
-							<Cta>
-								<Button>
-									<EditIcon onClick={showModal} />
-								</Button>
-								<Button onClick={handleDelete}>
-									<DeleteIcon />
-								</Button>
-							</Cta>
-						</Action>
-					</Content>
-				</Header>
-			</Container>
-
-			<Modal show={show} handleClose={handleClose} title="Update Event">
-				{<EventForm event={event} />}
-			</Modal>
-		</>
-	);
+            <Modal show={show} handleClose={handleClose} title="Update Event">
+                {/* {<EventForm event={event} />} */}
+            </Modal>
+        </>
+    );
 };
 
 const Container = styled.div`

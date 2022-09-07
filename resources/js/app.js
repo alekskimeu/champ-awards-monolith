@@ -6,8 +6,9 @@ import { InertiaProgress } from '@inertiajs/progress'
 InertiaProgress.init()
 
 createInertiaApp({
-    resolve: name => import(`./Pages/${name}`),
+    title: (title) => `${title} - Champ Awards`,
+    resolve: (name) => import(`./Pages/${name}`),
     setup({ el, App, props }) {
-    render(<App {...props} />, el)
-  },
-})
+        render(<App {...props} />, el);
+    },
+});

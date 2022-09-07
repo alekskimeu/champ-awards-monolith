@@ -13007,13 +13007,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_admin_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/admin/Layout */ "./resources/js/components/admin/Layout.jsx");
-/* harmony import */ var _components_admin_Event__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/admin/Event */ "./resources/js/components/admin/Event.jsx");
-/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
-/* harmony import */ var _components_admin_Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/admin/Modal */ "./resources/js/components/admin/Modal.jsx");
-/* harmony import */ var _components_admin_EventForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/admin/EventForm */ "./resources/js/components/admin/EventForm.jsx");
-/* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/admin/Layout */ "./resources/js/components/admin/Layout.jsx");
+/* harmony import */ var _components_admin_Event__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/admin/Event */ "./resources/js/components/admin/Event.jsx");
+/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
+/* harmony import */ var _components_admin_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/admin/Modal */ "./resources/js/components/admin/Modal.jsx");
+/* harmony import */ var _components_admin_EventForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/admin/EventForm */ "./resources/js/components/admin/EventForm.jsx");
+/* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -13041,8 +13042,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Events = function Events(_ref) {
-  var events = _ref.events;
+  var events = _ref.events,
+      participants = _ref.participants,
+      categories = _ref.categories;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13062,7 +13066,9 @@ var Events = function Events(_ref) {
     setShow(true);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CardsHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, {
+    title: "Events"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CardsHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
     type: "search",
     placeholder: "Search Event",
     onChange: function onChange(e) {
@@ -13071,28 +13077,31 @@ var Events = function Events(_ref) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, {
     onClick: showModal
   }, "New Event")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, events && events.filter(function (event) {
-    return event.name.includes(search);
+    return event.name.toLowerCase().includes(search.toLowerCase());
   }).map(function (event) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Event__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Event__WEBPACK_IMPORTED_MODULE_3__["default"], {
       event: event,
-      key: event.id
+      key: event.id,
+      participants: participants,
+      events: events,
+      categories: categories
     });
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
     show: show,
     handleClose: handleClose,
     title: "Add Event"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_EventForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_EventForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
     setShow: setShow
-  }))));
+  })))));
 };
 
-var Content = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 1rem 3rem;\n\ttop: 12rem;\n\twidth: 100%;\n"])));
-var Cards = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
-var CardsHeader = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tmargin-bottom: 2.5rem;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral([""])));
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tborder: none;\n\tcursor: pointer;\n\twidth: fit-content;\n\tmargin-top: 0.5rem;\n\tpadding: 0.9rem;\n\tfont-weight: 500;\n\tfont-size: 1rem;\n\tborder-radius: 0.3rem;\n\tcolor: var(--white);\n\tbackground-color: var(--primary);\n\ttransition: all 0.5s ease;\n\n\t&:hover {\n\t\topacity: calc() 0.9;\n\t}\n"])));
-var Search = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\twidth: 30vw;\n\tborder-radius: 0.5rem;\n\tpadding-left: 0.8rem;\n"])));
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].input(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\tbackground-color: #e9e9e9;\n\twidth: 100%;\n\tborder: none;\n\tpadding: 0.9rem;\n\toutline: none;\n\tborder-radius: 0.5rem;\n\tfont-size: 1rem;\n"])));
+var Content = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tpadding: 1rem 3rem;\n\ttop: 12rem;\n\twidth: 100%;\n"])));
+var Cards = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n\tgap: 1.5rem;\n\n\t@media screen and (max-width: 1000px) {\n\t\tgrid-template-columns: repeat(2, 1fr);\n\t}\n\n\t@media screen and (max-width: 700px) {\n\t\tgrid-template-columns: 1fr;\n\t}\n"])));
+var CardsHeader = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tjustify-content: space-between;\n\talign-items: center;\n\tgap: 2rem;\n\tmargin-bottom: 2.5rem;\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral([""])));
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tborder: none;\n\tcursor: pointer;\n\twidth: fit-content;\n\tmargin-top: 0.5rem;\n\tpadding: 0.9rem;\n\tfont-weight: 500;\n\tfont-size: 1rem;\n\tborder-radius: 0.3rem;\n\tcolor: var(--white);\n\tbackground-color: var(--primary);\n\ttransition: all 0.5s ease;\n\n\t&:hover {\n\t\topacity: calc() 0.9;\n\t}\n"])));
+var Search = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tbackground-color: #e9e9e9;\n\twidth: 30vw;\n\tborder-radius: 0.5rem;\n\tpadding-left: 0.8rem;\n"])));
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].input(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\tbackground-color: #e9e9e9;\n\twidth: 100%;\n\tborder: none;\n\tpadding: 0.9rem;\n\toutline: none;\n\tborder-radius: 0.5rem;\n\tfont-size: 1rem;\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Events);
 
 /***/ }),
@@ -13180,7 +13189,15 @@ var ContestantForm = function ContestantForm(_ref) {
       data = _useForm.data,
       setData = _useForm.setData,
       post = _useForm.post,
-      progress = _useForm.progress; // TODO: Close modal after form submission
+      progress = _useForm.progress;
+
+  var handleMale = function handleMale() {
+    setData("gender", "Male");
+  };
+
+  var handleFemale = function handleFemale() {
+    setData("gender", "Female");
+  }; // TODO: Close modal after form submission
 
 
   var handleSubmit = function handleSubmit(e) {
@@ -13222,20 +13239,16 @@ var ContestantForm = function ContestantForm(_ref) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Gender", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(RadioContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
-    value: participant ? participant.gender : "Male",
+    defaultValue: participant ? participant.gender : "Male",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Male"
+    onChange: handleMale,
+    defaultChecked: participant && participant.gender === "Male"
   }), " ", "Male", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Radio, {
     type: "radio",
     value: participant ? participant.gender : "Female",
     name: "gender",
-    onChange: function onChange(e) {
-      return setData("gender", e.target.value);
-    },
-    checked: participant && participant.gender === "Female"
+    onChange: handleFemale,
+    defaultChecked: participant && participant.gender === "Female"
   }), " ", "Female"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Event", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
     required: true,
     name: "event_id",
@@ -13339,7 +13352,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Event = function Event(_ref) {
-  var event = _ref.event;
+  var event = _ref.event,
+      participants = _ref.participants,
+      categories = _ref.categories,
+      events = _ref.events;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13362,7 +13378,9 @@ var Event = function Event(_ref) {
     src: "/storage/".concat(event.image),
     width: "80",
     height: "80"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, event.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventDate, null, "Fri Jan 26 2023"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, "10 Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Action, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, event.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EventDate, null, "Fri Jan 26 2023"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Participants, null, participants.filter(function (participant) {
+    return participant.event_id === event.id;
+  }).length, " Participants"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Action, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: "/events/".concat(event.id),
     className: "btn-more"
   }, "Details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cta, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Edit__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -13373,9 +13391,7 @@ var Event = function Event(_ref) {
     show: show,
     handleClose: handleClose,
     title: "Update Event"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_EventForm__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    event: event
-  })));
+  }));
 };
 
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tborder: 1px solid rgba(231, 231, 231, 0.2);\n\tbackground-color: #161616;\n\tborder-radius: 0.3rem;\n\tpadding: 1.2rem;\n\tcolor: var(--white);\n\tmargin-bottom: 1.5rem;\n"])));

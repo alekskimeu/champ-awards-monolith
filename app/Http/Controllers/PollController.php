@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Participant;
 use App\Models\Voter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
@@ -14,8 +15,9 @@ use Laravel\Socialite\Facades\Socialite;
 class PollController extends Controller
 {
     public function index() {
-        return Inertia::render('Polls', 
-        ['participants' => Participant::all(), 'categories' => Category::all()]
+        return Inertia::render(
+            'Polls',
+            ['participants' => DB::table('participants')->orderBy('votes', 'desc')->get(), 'categories' => Category::all()]
         );
     }
 
@@ -49,7 +51,7 @@ class PollController extends Controller
         $voter = Voter::where('email', $email)->get();
 
         if ($voter->count() > 0) {
-            return redirect('/')->with('error', 'You already voted!');
+            return redirect('/')->with(['message' => 'You already voted!']);
         } else {
 
             // Store voter email
@@ -61,7 +63,7 @@ class PollController extends Controller
             $participant = Participant::findOrFail($id);
             $participant->votes += 1;
             $participant->save();
-            return redirect('/')->with('message', 'Voted successfully!');
+            return redirect('/')->with(['message' => 'Voted successfully!']);
         }
     }
 

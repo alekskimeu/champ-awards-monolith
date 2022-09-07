@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Head } from "@inertiajs/inertia-react";
+
 import styled from "styled-components";
 import Layout from "../components/admin/Layout";
 import Participant from "../components/admin/Participant";
@@ -26,40 +28,48 @@ const Categories = ({categories}) => {
 	};
 
 	return (
-		<Layout>
-			<Content>
-				<CardsHeader>
-					<Title>Categories</Title>
-					<Search>
-						<SearchRoundedIcon />
-						<Input
-							type="search"
-							placeholder="Search Category"
-							onChange={(e) => setSearch(e.target.value)}
-						/>
-					</Search>
-					<Button onClick={showModal}>New Category</Button>
-				</CardsHeader>
-				<Cards>
-					{
-						categories
-							.filter(
-								(category) =>
-									category.name.includes(search) ||
-									category.description.includes(search)
-							)
-							.map((category) => (
-								<Category category={category} key={category.id} />
-							))
-					}
-				</Cards>
+        <>
+            <Head title="Categories" />
+            <Layout>
+                <Content>
+                    <CardsHeader>
+                        <Title>Categories</Title>
+                        <Search>
+                            <SearchRoundedIcon />
+                            <Input
+                                type="search"
+                                placeholder="Search Category"
+                                onChange={(e) => setSearch(e.target.value)}
+                            />
+                        </Search>
+                        <Button onClick={showModal}>New Category</Button>
+                    </CardsHeader>
+                    <Cards>
+                        {categories
+                            .filter(
+                                (category) =>
+                                    category.name.includes(search) ||
+                                    category.description.includes(search)
+                            )
+                            .map((category) => (
+                                <Category
+                                    category={category}
+                                    key={category.id}
+                                />
+                            ))}
+                    </Cards>
 
-				<Modal show={show} handleClose={handleClose} title="Add Category">
-					{<CategoryForm setShow={setShow} />}
-				</Modal>
-			</Content>
-		</Layout>
-	);
+                    <Modal
+                        show={show}
+                        handleClose={handleClose}
+                        title="Add Category"
+                    >
+                        {<CategoryForm setShow={setShow} />}
+                    </Modal>
+                </Content>
+            </Layout>
+        </>
+    );
 };
 
 const Content = styled.div`
