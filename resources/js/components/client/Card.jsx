@@ -27,7 +27,6 @@ const Card = ({ user, category }) => {
                     <Gender>{user.gender}</Gender>
                     <LinearProgress variant="determinate" value={user.votes} />
                     <Percentage>{user.votes / 100}%</Percentage>
-                    {/* <Votes>{user.votes} Votes</Votes> */}
                     <Button href={`auth/google/redirect/${user.id}`}>
                         Vote <HowToVoteIcon />
                     </Button>
@@ -77,13 +76,17 @@ const Gender = styled.h3`
 const Category = styled.p`
     position: absolute;
     right: 0;
-    font-size: 0.7rem;
-    opacity: 0.6;
-    font-weight: 600;
-    border: 2px solid var(--primary);
-    padding: 0.2rem 1rem 0.1rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 700;
+    background-color: var(--primary);
+    padding: 0.4rem 1rem;
     border-radius: 1rem;
-    color: var(--primary);
+    color: var(--white);
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `;
 
 const Percentage = styled.h2`

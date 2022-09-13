@@ -73,7 +73,12 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+
+    @media screen and (max-width: 400px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 const Unit = styled.div`
@@ -86,16 +91,30 @@ const Unit = styled.div`
     justify-content: center;
     text-align: center;
     border-radius: 0.3rem;
+
+    @media screen and (max-width: 400px) {
+        &:last-child {
+            display: none;
+        }
+    }
 `;
 
 const Amount = styled.h1`
     font-size: 2rem;
+
+    @media screen and (max-width: 624px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const Description = styled.p`
     opacity: 0.7;
     font-weight: 600;
     font-size: 1rem;
+
+    @media screen and (max-width: 624px) {
+        font-size: 0.8rem;
+    }
 `;
 
 export default Countdown;

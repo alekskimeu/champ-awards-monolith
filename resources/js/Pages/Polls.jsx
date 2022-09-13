@@ -156,7 +156,7 @@ const Message = styled.div`
 `;
 
 const Wrapper = styled.div`
-    max-width: 1360px;
+    max-width: 1600px;
     margin: 0 auto;
 `;
 
@@ -191,15 +191,22 @@ const HeaderWrapper = styled.div`
     align-items: center;
     gap: 2rem;
     margin-bottom: 2.5rem;
+
+    @media screen and (max-width: 500px) {
+        justify-content: center;
+    }
 `;
 
 const Categories = styled.div`
     display: flex;
     gap: 1rem;
+
+    @media screen and (max-width: 624px) {
+        display: none;
+    }
 `;
 
 const Category = styled.h2`
-    cursor: pointer;
     opacity: 0.8;
     font-size: 0.9rem;
     border: 1px solid var(--primary);
@@ -211,12 +218,6 @@ const Category = styled.h2`
 
     &:hover {
         opacity: 1;
-        background-color: var(--primary);
-        color: var(--white);
-    }
-
-    @media screen and (max-width: 624px) {
-        display: none;
     }
 `;
 
@@ -227,6 +228,10 @@ const Select = styled.select`
     padding: 0.5rem;
     border-radius: 0.3rem;
     font-weight: 600;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `;
 
 const Option = styled.option`
