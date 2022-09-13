@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Event;
 use App\Models\Participant;
+use App\Models\School;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,18 +14,18 @@ class ParticipantController extends Controller
         return Inertia::render('Participants', 
             [
                 'participants' => Participant::all(),
-                'events' => Event::all(),
-                'categories' => Category::all()
+                'subcategories' => Subcategory::all(),
+                'schools' => School::all()
             ]);
     }
 
     public function store(Request $request) {
         $formData = $request->validate([
-            'category_id'=> 'required',
-            'event_id'=> 'required',
+            'school_id' => 'required',
+            'subcategory_id' => 'required',
+
             'firstName'=>'required',
-            'lastName'=>'required',
-            'age'=>'required',
+            'lastName' => 'required',
             'gender'=> 'required',
         ]);
 
@@ -39,15 +39,16 @@ class ParticipantController extends Controller
     }
 
     public function update(Request $request, $id) {
-        
+
         $formData = $request->validate([
-            'category_id' => 'required',
-            'event_id' => 'required',
+            'school_id' => 'required',
+            'subcategory_id' => 'required',
+
             'firstName' => 'required',
             'lastName' => 'required',
-            'age' => 'required',
             'gender' => 'required',
         ]);
+
 
         if ($request->hasFile('photo')) {
             $formData['photo'] = $request->file('photo')->store('images', 'public');

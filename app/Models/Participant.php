@@ -11,13 +11,16 @@ class Participant extends Model
 
     protected $table="participants";
 
-    protected $fillable = ['category_id', 'event_id', 'firstName', 'lastName', 'age', 'gender', 'photo'];
+    protected $fillable = ['subcategory_id', 'school_id', 'firstName', 'lastName', 'gender', 'photo'];
 
-    public function category() {
-        return $this->belongsTo(Category::class);
+    public function subcategory()
+    {
+        return $this->belongsTo(Subcategory::class);
     }
 
-    public function event() {
-        return $this->belongsTo(Event::class);
+    public function school()
+    {
+        return $this->belongsTo(School::class);
     }
+
 }

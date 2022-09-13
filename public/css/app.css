@@ -11,6 +11,14 @@
   --black: #000000;
   --primary: rgb(31, 118, 210);
   --danger: rgb(216, 24, 24);
+
+  --secondary-bg: #0e1220;
+  --primary-bg: #080c1b;
+
+  --border: rgba(107, 107, 107, 0.2);
+
+  --card-bg: #1c2949;
+
 }
 
 h1,h2,h3,h4,h5,h6,p,a,button,span {

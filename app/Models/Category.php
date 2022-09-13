@@ -15,4 +15,8 @@ class Category extends Model
     public function participants() {
         return $this->hasMany(Participant::class);
     }
+
+    public function subcategories() {
+        return $this->hasMany(Subcategory::class);
+    }
 }

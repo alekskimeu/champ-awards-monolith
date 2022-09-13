@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ParticipantController;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\PollController;
-use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +38,6 @@ Route::group(['middleware' => 'guest'], function () {
 Route::post('/polls/vote/{id}', [PollController::class, 'vote']);
 
 Route::group(['middleware' => 'auth'], function () {
-
-
     Route::get('/admin', [AdminController::class, 'index']);
     Route::post('/admin/logout', [AdminController::class, 'logout']);
 
@@ -49,12 +47,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/categories/{id}', [CategoryController::class, 'update']);
     Route::delete('/categories/{id}', [CategoryController::class, 'destroy']);
 
-    // Events 
-    Route::get('/events', [EventController::class, 'index']);
-    Route::post('/events', [EventController::class, 'store']);
-    Route::get('/events/{id}', [EventController::class, 'show']);
-    Route::post('/events/{id}', [EventController::class, 'update']);
-    Route::delete('/events/{id}', [EventController::class, 'destroy']);
+    // Categories 
+    Route::get('/schools', [SchoolController::class, 'index']);
+    Route::post('/schools', [SchoolController::class, 'store']);
+    Route::post('/schools/{id}', [SchoolController::class, 'update']);
+    Route::delete('/schools/{id}', [SchoolController::class, 'destroy']);
+
+    // Subcategories 
+    Route::get('/subcategories', [SubcategoryController::class, 'index']);
+    Route::post('/subcategories', [SubcategoryController::class, 'store']);
+    Route::get('/subcategories/{id}', [SubcategoryController::class, 'show']);
+    Route::post('/subcategories/{id}', [SubcategoryController::class, 'update']);
+    Route::delete('/subcategories/{id}', [SubcategoryController::class, 'destroy']);
 
     // Participants 
     Route::get('/participants', [ParticipantController::class, 'index']);

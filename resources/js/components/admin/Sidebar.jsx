@@ -6,10 +6,13 @@ import { Link } from '@inertiajs/inertia-react'
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import DashboardIcon from "@mui/icons-material/Dashboard";
+import LayersIcon from '@mui/icons-material/Layers';
 import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import GroupIcon from "@mui/icons-material/Group";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
+import SchoolIcon from '@mui/icons-material/School';
 import CategoryIcon from '@mui/icons-material/Category';
+
 
 const Sidebar = () => {
 	const handleLogout = () => {
@@ -17,41 +20,45 @@ const Sidebar = () => {
 	}
 
 	return (
-		<Container>
-			<Logo>Coach Michael</Logo>
-			<Title>Menu</Title>
-			<Menu>
-				<Links>
-					<Link className="sidebar-link" href="/admin">
-						<DashboardIcon style={{ opacity: 0.8 }} />
-						Dashboard
-					</Link>
-					<Link className="sidebar-link" href="/events">
-						<EventAvailableIcon style={{ opacity: 0.8 }} />
-						Events
-					</Link>
-					<Link className="sidebar-link" href="/categories">
-						<CategoryIcon style={{ opacity: 0.8 }} />
-						Categories
-					</Link>
-					<Link className="sidebar-link" href="/participants">
-						<GroupIcon style={{ opacity: 0.8 }} />
-						Participants
-					</Link>
-				</Links>
-				<Button onClick={handleLogout}>
-					Logout <LogoutIcon />
-				</Button>
-			</Menu>
-		</Container>
-	);
+        <Container>
+            <Logo>Champ Awards</Logo>
+            <Title>Menu</Title>
+            <Menu>
+                <Links>
+                    <Link className="sidebar-link" href="/admin">
+                        <DashboardIcon style={{ opacity: 0.8 }} />
+                        Dashboard
+                    </Link>
+                    <Link className="sidebar-link" href="/schools">
+                        <SchoolIcon style={{ opacity: 0.8 }} />
+                        Schools
+                    </Link>
+                    <Link className="sidebar-link" href="/categories">
+                        <LayersIcon style={{ opacity: 0.8 }} />
+                        Categories
+                    </Link>
+                    <Link className="sidebar-link" href="/subcategories">
+                        <CategoryIcon style={{ opacity: 0.8 }} />
+                        Subcategories
+                    </Link>
+                    <Link className="sidebar-link" href="/participants">
+                        <GroupIcon style={{ opacity: 0.8 }} />
+                        Participants
+                    </Link>
+                </Links>
+                <Button onClick={handleLogout}>
+                    Logout <LogoutIcon />
+                </Button>
+            </Menu>
+        </Container>
+    );
 };
 
 const Container = styled.div`
     flex: 0.5;
     padding: 1.5rem 2rem 3rem 2rem;
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--primary-bg);
     position: fixed;
     left: 0;
     min-width: 15vw;

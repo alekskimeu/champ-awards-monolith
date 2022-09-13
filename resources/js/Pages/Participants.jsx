@@ -11,7 +11,7 @@ import Modal from "../components/admin/Modal";
 import ContestantForm from "../components/admin/ContestantForm";
 import Loader from "../components/common/Loader";
 
-const Participants = ({ participants, events, categories }) => {
+const Participants = ({ participants, subcategories, categories, schools }) => {
     const [search, setSearch] = useState("");
 
     const [show, setShow] = useState(false);
@@ -54,13 +54,12 @@ const Participants = ({ participants, events, categories }) => {
                                     participant={participant}
                                     key={participant.id}
                                     participant={participant}
-                                    events={events}
-                                    category={categories.filter(
-                                        (category) =>
-                                            category.id ===
-                                            participant.category_id
+                                    subcategory={subcategories.filter(
+                                        (subcategory) =>
+                                            subcategory.id ===
+                                            participant.subcategory_id
                                     )}
-                                    categories={categories}
+                                    subcategories={subcategories}
                                 />
                             ))}
                     </Cards>
@@ -73,7 +72,8 @@ const Participants = ({ participants, events, categories }) => {
                         <ContestantForm
                             setShow={setShow}
                             categories={categories}
-                            events={events}
+                            subcategories={subcategories}
+                            schools={schools}
                         />
                     </Modal>
                 </Content>
@@ -110,7 +110,10 @@ const CardsHeader = styled.div`
 	margin-bottom: 2.5rem;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+    color: var(--white);
+    opacity: 0.9;
+`;
 
 const Button = styled.button`
 	display: flex;

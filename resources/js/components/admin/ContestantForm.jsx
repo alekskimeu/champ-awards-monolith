@@ -4,14 +4,13 @@ import { useForm } from "@inertiajs/inertia-react";
 
 import FormInput from "../common/FormInput";
 
-const ContestantForm = ({ participant, events, categories, setShow }) => {
-	const { data, setData, post, progress } = useForm({
+const ContestantForm = ({ participant, schools, subcategories, setShow }) => {
+    const { data, setData, post, progress } = useForm({
         firstName: participant ? participant.firstName : "",
         lastName: participant ? participant.lastName : "",
-        age: participant ? participant.age : "",
-		gender: participant ? participant.gender : "",
-        category_id: participant ? participant.category_id : "",
-        event_id: participant ? participant.event_id : "",
+        gender: participant ? participant.gender : "",
+        subcategory_id: participant ? participant.subcategory_id : "",
+        school_id: participant ? participant.school_id : "",
         photo: participant ? participant.photo : null,
     });
 
@@ -63,13 +62,6 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <FormInput
-                        type="number"
-                        label="Age"
-                        value={participant ? participant.age : data.age}
-                        required
-                        onChange={(e) => setData("age", e.target.value)}
-                    />
                     <InputContainer>
                         <Label>
                             Gender
@@ -103,35 +95,35 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
                             Female
                         </RadioContainer>
                     </InputContainer>
-                </FormGroup>
-                <FormGroup>
                     <InputContainer>
                         <Label>
-                            Event
+                            School
                             <Required>*</Required>
                         </Label>
 
                         <Select
                             required
-                            name="event_id"
+                            name="school_id"
                             onChange={(e) =>
-                                setData("event_id", e.target.value)
+                                setData("school_id", e.target.value)
                             }
                             value={
                                 participant
-                                    ? participant.event_id
-                                    : data.event_id
+                                    ? participant.school_id
+                                    : data.school_id
                             }
                         >
-                            <Option>Event</Option>
-                            {events &&
-                                events.map((event) => (
-                                    <Option key={event.id} value={event.id}>
-                                        {event.name}
+                            <Option>School</Option>
+                            {schools &&
+                                schools.map((school) => (
+                                    <Option key={school.id} value={school.id}>
+                                        {school.name}
                                     </Option>
                                 ))}
                         </Select>
                     </InputContainer>
+                </FormGroup>
+                <FormGroup>
                     <InputContainer>
                         <Label>
                             Category
@@ -141,29 +133,27 @@ const ContestantForm = ({ participant, events, categories, setShow }) => {
                         <Select
                             required
                             onChange={(e) =>
-                                setData("category_id", e.target.value)
+                                setData("subcategory_id", e.target.value)
                             }
-                            name="category_id"
+                            name="subcategory_id"
                             value={
                                 participant
-                                    ? participant.category_id
-                                    : data.category_id
+                                    ? participant.subcategory_id
+                                    : data.subcategory_id
                             }
                         >
                             <Option>Category</Option>
-                            {categories &&
-                                categories.map((category) => (
+                            {subcategories &&
+                                subcategories.map((subcategory) => (
                                     <Option
-                                        key={category.id}
-                                        value={category.id}
+                                        key={subcategory.id}
+                                        value={subcategory.id}
                                     >
-                                        {category.name}
+                                        {subcategory.name}
                                     </Option>
                                 ))}
                         </Select>
                     </InputContainer>
-                </FormGroup>
-                <FormGroup>
                     <FormInput
                         type="file"
                         label="Photo"

@@ -100,7 +100,10 @@ const CardsHeader = styled.div`
 	margin-bottom: 2.5rem;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+	color: var(--white);
+    opacity: .9;
+`;
 
 const Button = styled.button`
 	display: flex;

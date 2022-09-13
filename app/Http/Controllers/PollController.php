@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Participant;
+use App\Models\Subcategory;
 use App\Models\Voter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -17,7 +17,11 @@ class PollController extends Controller
     public function index() {
         return Inertia::render(
             'Polls',
-            ['participants' => DB::table('participants')->orderBy('votes', 'desc')->get(), 'categories' => Category::all()]
+            [
+                'participants' => DB::table('participants')->orderBy('votes', 'desc')->get(),
+                'categories' => Category::all(),
+                'subcategories' => Subcategory::all()
+            ]
         );
     }
 

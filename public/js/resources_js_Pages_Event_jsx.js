@@ -13223,8 +13223,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_icons_material_Logout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/Logout */ "./node_modules/@mui/icons-material/Logout.js");
 /* harmony import */ var _mui_icons_material_Dashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/icons-material/Dashboard */ "./node_modules/@mui/icons-material/Dashboard.js");
 /* harmony import */ var _mui_icons_material_Group__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Group */ "./node_modules/@mui/icons-material/Group.js");
-/* harmony import */ var _mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/EventAvailable */ "./node_modules/@mui/icons-material/EventAvailable.js");
-/* harmony import */ var _mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Category */ "./node_modules/@mui/icons-material/Category.js");
+/* harmony import */ var _mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/EventAvailable */ "./node_modules/@mui/icons-material/EventAvailable.js");
+/* harmony import */ var _mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/Category */ "./node_modules/@mui/icons-material/Category.js");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -13254,19 +13254,19 @@ var Sidebar = function Sidebar() {
     }
   }), "Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
     className: "sidebar-link",
-    href: "/events"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    style: {
-      opacity: 0.8
-    }
-  }), "Events"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    className: "sidebar-link",
     href: "/categories"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_4__["default"], {
     style: {
       opacity: 0.8
     }
   }), "Categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    className: "sidebar-link",
+    href: "/subcategories"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_EventAvailable__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    style: {
+      opacity: 0.8
+    }
+  }), "Subcategories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
     className: "sidebar-link",
     href: "/participants"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Group__WEBPACK_IMPORTED_MODULE_6__["default"], {

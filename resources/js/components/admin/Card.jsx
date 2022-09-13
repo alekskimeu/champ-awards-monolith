@@ -52,12 +52,12 @@ const Card = ({ user }) => {
 };
 
 const Container = styled.div`
-	border: 1px solid rgba(231, 231, 231, 0.2);
-	background-color: #161616;
-	border-radius: 0.3rem;
-	padding: 1.2rem;
-	color: var(--white);
-	margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    background-color: var(--primary-bg);
+    border-radius: 0.3rem;
+    padding: 1.2rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
 `;
 
 const Header = styled.div`
@@ -79,7 +79,8 @@ const Content = styled.div`
 
 const Name = styled.h1`
 	font-size: 1.3rem;
-	font-weight: 700;
+	font-weight: 600;
+    opacity: .8;
 `;
 
 const Percentage = styled.h2`

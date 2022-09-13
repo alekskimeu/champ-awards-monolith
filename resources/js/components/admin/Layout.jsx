@@ -22,9 +22,11 @@ const Main = styled.div`
 `;
 
 const Content = styled.div`
-	padding-top: 6rem;
-	margin-left: 15vw;
-	flex: 1;
+    padding-top: 6rem;
+    margin-left: 15vw;
+    flex: 1;
+    min-height: 100vh;
+    background-color: var(--secondary-bg);
 `;
 
 export default Layout;

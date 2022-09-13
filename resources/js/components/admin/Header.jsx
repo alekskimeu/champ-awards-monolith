@@ -24,17 +24,17 @@ const Header = () => {
 };
 
 const Container = styled.div`
-	padding: 1rem 3rem;
-	height: 5rem;
-	background-color: var(--black);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	padding-left: 15vw;
-	width: 100%;
-	z-index: 1;
+    padding: 1rem 3rem;
+    height: 5rem;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding-left: 15vw;
+    width: 100%;
+    z-index: 1;
 `;
 
 const Search = styled.div`

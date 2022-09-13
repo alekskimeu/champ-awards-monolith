@@ -14,19 +14,21 @@ import Loader from "../components/common/Loader";
 import { Inertia } from "@inertiajs/inertia";
 import Countdown from "../components/client/Countdown";
 
-const Polls = ({ participants, categories, category }) => {
+const Polls = ({ participants, categories, category, subcategories }) => {
     const { flash } = usePage().props;
 
     const [search, setSearch] = useState("");
     const [users, setUsers] = useState(participants);
 
-    const filterCategories = (e) => {
+    const filterSubcategories = (e) => {
         const id = e.target.value;
 
         if (id === "0") {
             setUsers(participants);
         } else {
-            setUsers(participants.filter((user) => user.category_id === +id));
+            setUsers(
+                participants.filter((user) => user.subcategory_id === +id)
+            );
         }
     };
 
@@ -52,7 +54,12 @@ const Polls = ({ participants, categories, category }) => {
                     <PollContainer>
                         <Subtitle>Vote for your favorite contestant</Subtitle>
                         <HeaderWrapper>
-                            <Category>All</Category>
+                            <Categories>
+                                <Category>All</Category>
+                                {categories.map((category) => (
+                                    <Category key={category.id}>{category.name}</Category>
+                                ))}
+                            </Categories>
                             <Search>
                                 <SearchRoundedIcon />
                                 <Input
@@ -61,20 +68,20 @@ const Polls = ({ participants, categories, category }) => {
                                     onChange={(e) => setSearch(e.target.value)}
                                 />
                             </Search>
-                            <Select onChange={filterCategories}>
+                            <Select onChange={filterSubcategories}>
                                 <Option
                                     style={{ backgroundColor: "white" }}
                                     value={0}
                                 >
                                     All
                                 </Option>
-                                {categories.map((category) => (
+                                {subcategories.map((subcategory) => (
                                     <Option
                                         style={{ backgroundColor: "white" }}
-                                        key={category.id}
-                                        value={category.id}
+                                        key={subcategory.id}
+                                        value={subcategory.id}
                                     >
-                                        {category.name}
+                                        {subcategory.name}
                                     </Option>
                                 ))}
                             </Select>
@@ -92,10 +99,10 @@ const Polls = ({ participants, categories, category }) => {
                                         <Card
                                             user={user}
                                             key={user.index}
-                                            category={categories.filter(
-                                                (category) =>
-                                                    category.id ===
-                                                    user.category_id
+                                            category={subcategories.filter(
+                                                (subcategory) =>
+                                                    subcategory.id ===
+                                                    user.subcategory_id
                                             )}
                                         />
                                     ))
@@ -186,9 +193,27 @@ const HeaderWrapper = styled.div`
     margin-bottom: 2.5rem;
 `;
 
+const Categories = styled.div`
+    display: flex;
+    gap: 1rem;
+`;
+
 const Category = styled.h2`
-    color: var(--white);
+    cursor: pointer;
     opacity: 0.8;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 0.3rem 2rem;
+    border-radius: 5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+        opacity: 1;
+        background-color: var(--primary);
+        color: var(--white);
+    }
 
     @media screen and (max-width: 624px) {
         display: none;

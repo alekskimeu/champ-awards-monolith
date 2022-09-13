@@ -9,7 +9,12 @@ import ConfirmDialog from "../ConfirmDialog";
 import ContestantForm from "./ContestantForm";
 import Modal from "./Modal";
 
-const Participant = ({ participant, category, categories, events }) => {
+const Participant = ({
+    participant,
+    subcategory,
+    subcategories,
+    categories,
+}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => {
@@ -33,7 +38,6 @@ const Participant = ({ participant, category, categories, events }) => {
                         <Name>
                             {participant.firstName} {participant.lastName}
                         </Name>
-                        <Age>{participant.age} yrs</Age>
                         <Gender>{participant.gender} </Gender>
                         <Action>
                             <Button>
@@ -44,7 +48,7 @@ const Participant = ({ participant, category, categories, events }) => {
                             </Button>
                         </Action>
                     </Content>
-                    <Category>{category[0].name}</Category>
+                    <Category>{subcategory[0].name}</Category>
                 </Header>
             </Container>
 
@@ -55,7 +59,7 @@ const Participant = ({ participant, category, categories, events }) => {
             >
                 <ContestantForm
                     participant={participant}
-                    events={events}
+                    subcategories={subcategories}
                     categories={categories}
                 />
             </Modal>
@@ -64,12 +68,12 @@ const Participant = ({ participant, category, categories, events }) => {
 };
 
 const Container = styled.div`
-	border: 1px solid rgba(231, 231, 231, 0.2);
-	background-color: #161616;
-	border-radius: 0.3rem;
-	padding: 1.2rem;
-	color: var(--white);
-	margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    background-color: var(--primary-bg);
+    border-radius: 0.3rem;
+    padding: 1.2rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
 `;
 
 const Header = styled.div`
@@ -91,8 +95,9 @@ const Content = styled.div`
 `;
 
 const Name = styled.h1`
-	font-size: 1.1rem;
-	font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.8;
 `;
 
 const Age = styled.p`

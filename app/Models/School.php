@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class School extends Model
 {
     use HasFactory;
 
-    protected $table="events";
+    protected $table = "schools";
 
-    protected $fillable = ['name', 'date', 'description', 'image'];
+    protected $fillable = ['participant_id', 'name', 'description'];
 
-    public function participants() {
+    public function participant()
+    {
         return $this->hasMany(Participant::class);
     }
 }

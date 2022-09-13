@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 
 use App\Models\Category;
-use App\Models\Event;
+use App\Models\Subcategory;
 use App\Models\Participant;
+use App\Models\School;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -15,9 +16,10 @@ class AdminController extends Controller
     public function index() {
         return Inertia::render('Dashboard', 
             [
-                'categories' => Category::all(), 
-                'participants' => Participant::all(), 
-                'events' => Event::all()
+                'categories' => Category::all(),
+                'subcategories' => Subcategory::all(), 
+                'participants' => Participant::all(),
+                'schools' => School::all(),         
             ]);
     }
 

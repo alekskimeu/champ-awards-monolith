@@ -15,21 +15,19 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('category_id')->unsigned();
-            $table->bigInteger('event_id')->unsigned();
+            $table->bigInteger('subcategory_id')->unsigned();
+            $table->bigInteger('school_id')->unsigned();
 
             $table->string('firstName');
             $table->string('lastName');
-            $table->integer('age');
             $table->string('gender');
             $table->string('photo');
             $table->integer('votes')->default(0);
 
             $table->timestamps();
 
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
-
+            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
         });
     }
 

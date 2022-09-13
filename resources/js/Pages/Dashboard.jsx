@@ -4,26 +4,26 @@ import { Link } from '@inertiajs/inertia-react'
 import styled from "styled-components";
 import Layout from "../components/admin/Layout";
 import Participant from "../components/admin/Participant";
-import Event from "../components/admin/Event";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 
 import Category from "../components/admin/Category";
+import School from "../components/admin/School";
+import Subcategory from "../components/admin/Subcategory";
 
-const Dashboard = ({participants, events, categories}) => {
-	const [search, setSearch] = useState("");
+const Dashboard = ({ participants, categories, subcategories, schools }) => {
+    const [search, setSearch] = useState("");
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
     return (
         <>
             <Head title="Dashboard" />
-
             <Layout>
                 <Content>
                     <EventsContainer>
@@ -51,65 +51,51 @@ const Dashboard = ({participants, events, categories}) => {
 
                     <EventsContainer>
                         <SectionHeader>
-                            <Title>Top Events</Title>
-                            <Link href="/events" className="header-nav">
-                                All Events
+                            <Title>Top Schools</Title>
+                            <Link href="/schools" className="header-nav">
+                                All Schools
                             </Link>
                         </SectionHeader>
                         <Cards>
-                            {events &&
-                                events
-                                    .filter((event) =>
-                                        event.name.includes(search)
+                            {schools &&
+                                schools
+                                    .filter((school) =>
+                                        school.name.includes(search)
                                     )
                                     .slice(0, 3)
-                                    .map((event) => (
-                                        <Event
-                                            event={event}
-                                            key={event.id}
-                                            participants={participants}
-                                            categories={categories}
-                                            events={events}
+                                    .map((school) => (
+                                        <School
+                                            school={school}
+                                            key={school.id}
                                         />
                                     ))}
                         </Cards>
                     </EventsContainer>
 
-                    <ParticipantsContainer>
+                    <EventsContainer>
                         <SectionHeader>
-                            <Title>Top Participants</Title>
-                            <Link href="/participants" className="header-nav">
-                                All Participants
+                            <Title>Top Subcategories</Title>
+                            <Link href="/subcategories" className="header-nav">
+                                All Subcategories
                             </Link>
                         </SectionHeader>
                         <Cards>
-                            {participants &&
-                                participants
-                                    .filter(
-                                        (participant) =>
-                                            participant.firstName.includes(
-                                                search
-                                            ) ||
-                                            participant.lastName.includes(
-                                                search
-                                            )
+                            {subcategories &&
+                                subcategories
+                                    .filter((subcategory) =>
+                                        subcategory.name.includes(search)
                                     )
                                     .slice(0, 3)
-                                    .map((participant) => (
-                                        <Participant
-                                            events={events}
+                                    .map((subcategory) => (
+                                        <Subcategory
+                                            subcategory={subcategory}
+                                            key={subcategory.id}
+                                            participants={participants}
                                             categories={categories}
-                                            participant={participant}
-                                            key={participant.id}
-                                            category={categories.filter(
-                                                (category) =>
-                                                    category.id ===
-                                                    participant.category_id
-                                            )}
                                         />
                                     ))}
                         </Cards>
-                    </ParticipantsContainer>
+                    </EventsContainer>
                 </Content>
             </Layout>
         </>
@@ -125,8 +111,6 @@ const Content = styled.div`
 const EventsContainer = styled.div`
 	margin-bottom: 2rem;
 `;
-
-const ParticipantsContainer = styled.div``;
 
 const SectionHeader = styled.div`
 	margin-bottom: 1rem;
@@ -152,6 +136,7 @@ const Cards = styled.div`
 
 const Title = styled.h2`
 	font-size: 1.2rem;
+    color: var(--white);
 `;
 
 const Button = styled.button`
