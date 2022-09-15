@@ -9,7 +9,7 @@ const ContestantForm = ({ participant, schools, subcategories, setShow }) => {
         firstName: participant ? participant.firstName : "",
         lastName: participant ? participant.lastName : "",
         gender: participant ? participant.gender : "",
-        subcategory_id: participant ? participant.subcategory_id : "",
+        award_id: participant ? participant.award_id : "",
         school_id: participant ? participant.school_id : "",
         photo: participant ? participant.photo : null,
     });
@@ -133,13 +133,13 @@ const ContestantForm = ({ participant, schools, subcategories, setShow }) => {
                         <Select
                             required
                             onChange={(e) =>
-                                setData("subcategory_id", e.target.value)
+                                setData("award_id", e.target.value)
                             }
-                            name="subcategory_id"
+                            name="award_id"
                             value={
                                 participant
-                                    ? participant.subcategory_id
-                                    : data.subcategory_id
+                                    ? participant.award_id
+                                    : data.award_id
                             }
                         >
                             <Option>Category</Option>

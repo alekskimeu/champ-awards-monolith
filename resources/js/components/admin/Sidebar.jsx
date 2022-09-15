@@ -11,8 +11,7 @@ import DynamicFeedIcon from "@mui/icons-material/DynamicFeed";
 import GroupIcon from "@mui/icons-material/Group";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import SchoolIcon from '@mui/icons-material/School';
-import CategoryIcon from '@mui/icons-material/Category';
-
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 
 const Sidebar = () => {
 	const handleLogout = () => {
@@ -37,9 +36,9 @@ const Sidebar = () => {
                         <LayersIcon style={{ opacity: 0.8 }} />
                         Categories
                     </Link>
-                    <Link className="sidebar-link" href="/subcategories">
-                        <CategoryIcon style={{ opacity: 0.8 }} />
-                        Subcategories
+                    <Link className="sidebar-link" href="/awards">
+                        <EmojiEventsIcon style={{ opacity: 0.8 }} />
+                        Awards
                     </Link>
                     <Link className="sidebar-link" href="/participants">
                         <GroupIcon style={{ opacity: 0.8 }} />

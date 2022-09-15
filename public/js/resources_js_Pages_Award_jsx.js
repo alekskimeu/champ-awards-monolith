@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Subcategory_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Award_jsx"],{
 
 /***/ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js":
 /*!***********************************************************************!*\
@@ -12575,10 +12575,10 @@ function useIsFocusVisible() {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Subcategory.jsx":
-/*!********************************************!*\
-  !*** ./resources/js/Pages/Subcategory.jsx ***!
-  \********************************************/
+/***/ "./resources/js/Pages/Award.jsx":
+/*!**************************************!*\
+  !*** ./resources/js/Pages/Award.jsx ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12594,7 +12594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _components_admin_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/admin/Layout */ "./resources/js/components/admin/Layout.jsx");
 /* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../components/admin/SubcategoryForm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _components_admin_AwardForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/admin/AwardForm */ "./resources/js/components/admin/AwardForm.jsx");
 /* harmony import */ var _components_admin_Participant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/admin/Participant */ "./resources/js/components/admin/Participant.jsx");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
 
@@ -12624,7 +12624,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Subcategory = function Subcategory(_ref) {
+var Award = function Award(_ref) {
   var subcategory = _ref.subcategory,
       participants = _ref.participants,
       subcategories = _ref.subcategories,
@@ -12675,8 +12675,8 @@ var Subcategory = function Subcategory(_ref) {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
     show: show,
     handleClose: handleClose,
-    title: "Add Subcategory"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../components/admin/SubcategoryForm'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+    title: "Add Award"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_admin_AwardForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
     subcategory: subcategory,
     categories: categories
   })))));
@@ -12689,16 +12689,16 @@ var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].d
 var Image = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n    border-radius: 0.5rem;\n"])));
 var Details = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    flex: 1;\n"])));
 var EventDate = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h3(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    opacity: 0.9;\n    font-size: 1.2rem;\n    color: var(--white);\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    font-size: 1.25rem;\n    margin-top: 1rem;\n    color: var(--white);\n    opacity: .8;\n"])));
+var Description = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    font-size: 1.25rem;\n    margin-top: 1rem;\n    color: var(--white);\n    opacity: 0.8;\n"])));
 var Cta = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n    margin-top: 1rem;\n"])));
 var Button = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    border: none;\n    gap: 0.5rem;\n    cursor: pointer;\n    width: fit-content;\n    margin-top: 0.5rem;\n    padding: 0.6rem;\n    font-weight: 600;\n    font-size: 0.9rem;\n    border-radius: 0.3rem;\n    color: var(--white);\n    transition: all 0.5s ease;\n\n    &:first-child {\n        background-color: var(--primary);\n    }\n\n    &:last-child {\n        background-color: var(--danger);\n    }\n\n    &:hover {\n        opacity: 0.9;\n    }\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    font-size: 1.3rem;\n    color: var(--white);\n    opacity: .9;\n"])));
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    font-size: 1.3rem;\n    color: var(--white);\n    opacity: 0.9;\n"])));
 var Search = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    background-color: #e9e9e9;\n    width: 20vw;\n    border-radius: 0.5rem;\n    padding-left: 0.8rem;\n"])));
 var Input = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].input(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    background-color: #e9e9e9;\n    width: 100%;\n    border: none;\n    padding: 0.9rem;\n    outline: none;\n    border-radius: 0.5rem;\n    font-size: 1rem;\n"])));
 var ParticipantsContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    margin-top: 3rem;\n"])));
 var SectionHeader = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    margin-bottom: 2rem;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n"])));
 var Participants = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1rem;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Subcategory);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Award);
 
 /***/ }),
 
@@ -12742,6 +12742,103 @@ var Button = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].button(_t
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/AwardForm.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/admin/AwardForm.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _common_FormInput__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common/FormInput */ "./resources/js/components/common/FormInput.jsx");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var AwardForm = function AwardForm(_ref) {
+  var subcategory = _ref.subcategory,
+      setShow = _ref.setShow,
+      categories = _ref.categories;
+
+  var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
+    name: subcategory ? subcategory.name : "",
+    category_id: subcategory ? subcategory.category_id : "",
+    description: subcategory ? subcategory.description : ""
+  }),
+      data = _useForm.data,
+      setData = _useForm.setData,
+      post = _useForm.post,
+      progress = _useForm.progress; // TODO: Close modal after form submission
+
+
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    subcategory ? post("/awards/".concat(subcategory.id), data) : post("/awards", data);
+    setShow(false);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Form, {
+    onSubmit: handleSubmit,
+    encType: "multipart/form-data"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_common_FormInput__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    type: "text",
+    label: "Award",
+    value: subcategory ? subcategory.name : data.name,
+    onChange: function onChange(e) {
+      return setData("name", e.target.value);
+    },
+    required: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Category", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
+    name: "category_id",
+    onChange: function onChange(e) {
+      return setData("category_id", e.target.value);
+    },
+    value: subcategory ? subcategory.category_id : data.category_id
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, null, "Category"), categories.map(function (category) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
+      value: category.id,
+      key: category.id
+    }, category.name);
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Description", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Textarea, {
+    placeholder: "Description",
+    name: "description",
+    rows: "5",
+    onChange: function onChange(e) {
+      return setData("description", e.target.value);
+    },
+    defaultValue: subcategory ? subcategory.description : data.description,
+    required: true
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Button, null, subcategory ? "Update" : "Submit"))));
+};
+
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    /* display: flex;\n\tflex-direction: column;\n\tgap: 2rem; */\n"])));
+var Form = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].form(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    gap: 2rem;\n"])));
+var FormGroup = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 3rem;\n"])));
+var InputContainer = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n"])));
+var Option = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].option(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral([""])));
+var Select = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].select(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    padding: 0.6rem;\n    border: 1px solid rgba(226, 226, 226);\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-radius: 0.3rem;\n\n    &:focus {\n        border-color: var(--primary);\n    }\n"])));
+var Label = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].label(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    font-weight: 600;\n    font-size: 1.1rem;\n"])));
+var Required = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].label(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    color: #ca0101;\n    margin-left: 0.2rem;\n"])));
+var Textarea = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].textarea(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    padding: 0.7rem 0.8rem;\n    border: 1px solid rgba(226, 226, 226);\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-radius: 0.3rem;\n\n    &:focus {\n        border-color: var(--primary);\n    }\n"])));
+var ImageContainer = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    width: 120px;\n    height: 120px;\n"])));
+var Image = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    border: 2px solid #5f5f5f;\n    border-radius: 50%;\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n"])));
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].button(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    border: none;\n    cursor: pointer;\n    width: fit-content;\n    margin-top: 0.5rem;\n    padding: 0.8rem 1.2rem;\n    font-weight: 500;\n    font-size: 1rem;\n    border-radius: 0.3rem;\n    color: var(--white);\n    background-color: var(--primary);\n    transition: all 0.5s ease;\n\n    &:hover {\n        opacity: calc() 0.9;\n    }\n"])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AwardForm);
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/ContestantForm.jsx":
 /*!**********************************************************!*\
   !*** ./resources/js/components/admin/ContestantForm.jsx ***!
@@ -12777,7 +12874,7 @@ var ContestantForm = function ContestantForm(_ref) {
     firstName: participant ? participant.firstName : "",
     lastName: participant ? participant.lastName : "",
     gender: participant ? participant.gender : "",
-    subcategory_id: participant ? participant.subcategory_id : "",
+    award_id: participant ? participant.award_id : "",
     school_id: participant ? participant.school_id : "",
     photo: participant ? participant.photo : null
   }),
@@ -12851,10 +12948,10 @@ var ContestantForm = function ContestantForm(_ref) {
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Category", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
     required: true,
     onChange: function onChange(e) {
-      return setData("subcategory_id", e.target.value);
+      return setData("award_id", e.target.value);
     },
-    name: "subcategory_id",
-    value: participant ? participant.subcategory_id : data.subcategory_id
+    name: "award_id",
+    value: participant ? participant.award_id : data.award_id
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, null, "Category"), subcategories && subcategories.map(function (subcategory) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
       key: subcategory.id,
@@ -13178,7 +13275,7 @@ var Sidebar = function Sidebar() {
     }
   }), "Categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
     className: "sidebar-link",
-    href: "/subcategories"
+    href: "/awards"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_EmojiEvents__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       opacity: 0.8

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Award;
 use App\Models\Category;
 use App\Models\Participant;
 use App\Models\School;
-use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class SubcategoryController extends Controller
+class AwardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +19,9 @@ class SubcategoryController extends Controller
     public function index()
     {
         return Inertia::render(
-            'Subcategories',
+            'Awards',
             [
-                'subcategories' => Subcategory::all(),
+                'subcategories' => Award::all(),
                 'participants' => Participant::all(),
                 'categories' => Category::all(),
                 'schools' => School::all()
@@ -37,19 +37,19 @@ class SubcategoryController extends Controller
             'description' => 'required',
         ]);
 
-        Subcategory::create($formData);
+        Award::create($formData);
 
-        return Redirect('/subcategories');
+        return Redirect('/awards');
     }
 
     public function show($id)
     {
         return Inertia::render(
-            'Subcategory',
+            'Award',
             [
-                'subcategory' => Subcategory::findOrFail($id),
+                'subcategory' => Award::findOrFail($id),
                 'participants' => Participant::all(),
-                'subcategories' => Subcategory::all(),
+                'subcategories' => Award::all(),
                 'categories' => Category::all(),
             ]
         );
@@ -63,16 +63,16 @@ class SubcategoryController extends Controller
             'description' => 'required',
         ]);
 
-        $subcategory = Subcategory::findOrFail($id);
+        $award = Award::findOrFail($id);
 
-        $subcategory->update($formData);
+        $award->update($formData);
 
-        return Redirect('/subcategories');
+        return Redirect('/awards');
     }
 
     public function destroy($id)
     {
-        Subcategory::findOrFail($id)->delete();
+        Award::findOrFail($id)->delete();
         return back();
     }
 }

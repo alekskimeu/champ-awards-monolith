@@ -8,11 +8,11 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
 import Modal from "../components/admin/Modal";
-import SubcategoryForm from "../components/admin/SubcategoryForm";
+import AwardForm from "../components/admin/AwardForm";
 import Loader from "../components/common/Loader";
-import Subcategory from "../components/admin/Subcategory";
+import Award from "../components/admin/Award";
 
-const Subcategories = ({ subcategories, participants, categories }) => {
+const Awards = ({ subcategories, participants, categories }) => {
     const [search, setSearch] = useState("");
 
     const [show, setShow] = useState(false);
@@ -27,20 +27,20 @@ const Subcategories = ({ subcategories, participants, categories }) => {
 
     return (
         <>
-            <Head title="Subcategories" />
+            <Head title="Awards" />
             <Layout>
                 <Content>
                     <CardsHeader>
-                        <Title>Subcategories</Title>
+                        <Title>Awards</Title>
                         <Search>
                             <SearchRoundedIcon />
                             <Input
                                 type="search"
-                                placeholder="Search Subcategory"
+                                placeholder="Search Awards"
                                 onChange={(e) => setSearch(e.target.value)}
                             />
                         </Search>
-                        <Button onClick={showModal}>New Subcategory</Button>
+                        <Button onClick={showModal}>New Award</Button>
                     </CardsHeader>
                     <Cards>
                         {subcategories &&
@@ -51,7 +51,7 @@ const Subcategories = ({ subcategories, participants, categories }) => {
                                         .includes(search.toLowerCase())
                                 )
                                 .map((subcategory) => (
-                                    <Subcategory
+                                    <Award
                                         subcategory={subcategory}
                                         key={subcategory.id}
                                         participants={participants}
@@ -64,9 +64,9 @@ const Subcategories = ({ subcategories, participants, categories }) => {
                     <Modal
                         show={show}
                         handleClose={handleClose}
-                        title="Add Subcategory"
+                        title="Add Award"
                     >
-                        <SubcategoryForm
+                        <AwardForm
                             setShow={setShow}
                             categories={categories}
                             subcategories={subcategories}
@@ -150,4 +150,4 @@ const Input = styled.input`
     font-size: 1rem;
 `;
 
-export default Subcategories;
+export default Awards;

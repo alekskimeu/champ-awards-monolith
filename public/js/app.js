@@ -40362,6 +40362,22 @@ module.exports = function getSideChannel() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Award": [
+		"./resources/js/Pages/Award.jsx",
+		"resources_js_Pages_Award_jsx"
+	],
+	"./Award.jsx": [
+		"./resources/js/Pages/Award.jsx",
+		"resources_js_Pages_Award_jsx"
+	],
+	"./Awards": [
+		"./resources/js/Pages/Awards.jsx",
+		"resources_js_Pages_Awards_jsx"
+	],
+	"./Awards.jsx": [
+		"./resources/js/Pages/Awards.jsx",
+		"resources_js_Pages_Awards_jsx"
+	],
 	"./Categories": [
 		"./resources/js/Pages/Categories.jsx",
 		"resources_js_Pages_Categories_jsx"
@@ -40417,22 +40433,6 @@ var map = {
 	"./Schools.jsx": [
 		"./resources/js/Pages/Schools.jsx",
 		"resources_js_Pages_Schools_jsx"
-	],
-	"./Subcategories": [
-		"./resources/js/Pages/Subcategories.jsx",
-		"resources_js_Pages_Subcategories_jsx"
-	],
-	"./Subcategories.jsx": [
-		"./resources/js/Pages/Subcategories.jsx",
-		"resources_js_Pages_Subcategories_jsx"
-	],
-	"./Subcategory": [
-		"./resources/js/Pages/Subcategory.jsx",
-		"resources_js_Pages_Subcategory_jsx"
-	],
-	"./Subcategory.jsx": [
-		"./resources/js/Pages/Subcategory.jsx",
-		"resources_js_Pages_Subcategory_jsx"
 	]
 };
 function webpackAsyncContext(req) {
@@ -40583,7 +40583,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Categories_jsx":1,"resources_js_Pages_Dashboard_jsx":1,"resources_js_Pages_Login_jsx":1,"resources_js_Pages_Participants_jsx":1,"resources_js_Pages_Polls_jsx":1,"resources_js_Pages_Register_jsx":1,"resources_js_Pages_Schools_jsx":1,"resources_js_Pages_Subcategories_jsx":1,"resources_js_Pages_Subcategory_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Award_jsx":1,"resources_js_Pages_Awards_jsx":1,"resources_js_Pages_Categories_jsx":1,"resources_js_Pages_Dashboard_jsx":1,"resources_js_Pages_Login_jsx":1,"resources_js_Pages_Participants_jsx":1,"resources_js_Pages_Polls_jsx":1,"resources_js_Pages_Register_jsx":1,"resources_js_Pages_Schools_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

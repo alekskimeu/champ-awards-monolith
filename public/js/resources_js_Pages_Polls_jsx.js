@@ -13294,7 +13294,7 @@ var Polls = function Polls(_ref) {
       setUsers(participants);
     } else {
       setUsers(participants.filter(function (user) {
-        return user.subcategory_id === +id;
+        return user.award_id === +id;
       }));
     }
   };
@@ -13302,7 +13302,7 @@ var Polls = function Polls(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
     name: "description",
     content: "Vote for Champ Awards finalists"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, "All"), categories.map(function (category) {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, categories.map(function (category) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, {
       key: category.id
     }, category.name);
@@ -13334,7 +13334,7 @@ var Polls = function Polls(_ref) {
       user: user,
       key: user.index,
       category: subcategories.filter(function (subcategory) {
-        return subcategory.id === user.subcategory_id;
+        return subcategory.id === user.award_id;
       })
     });
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));

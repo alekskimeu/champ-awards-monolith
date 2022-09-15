@@ -8,15 +8,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 import image from "../assets/header.jpg";
-import SubcategoryForm from "../components/admin/SubcategoryForm";
+import AwardForm from "../components/admin/AwardForm";
 import Participant from "../components/admin/Participant";
 
-const Subcategory = ({
-    subcategory,
-    participants,
-    subcategories,
-    categories,
-}) => {
+const Award = ({ subcategory, participants, subcategories, categories }) => {
     const [search, setSearch] = useState("");
     const [users, setUsers] = useState([]);
     const [show, setShow] = useState(false);
@@ -77,10 +72,10 @@ const Subcategory = ({
                     <Modal
                         show={show}
                         handleClose={handleClose}
-                        title="Add Subcategory"
+                        title="Add Award"
                     >
                         {
-                            <SubcategoryForm
+                            <AwardForm
                                 subcategory={subcategory}
                                 categories={categories}
                             />
@@ -144,7 +139,7 @@ const Description = styled.p`
     font-size: 1.25rem;
     margin-top: 1rem;
     color: var(--white);
-    opacity: .8;
+    opacity: 0.8;
 `;
 
 const Cta = styled.div`
@@ -184,7 +179,7 @@ const Button = styled.button`
 const Title = styled.h2`
     font-size: 1.3rem;
     color: var(--white);
-    opacity: .9;
+    opacity: 0.9;
 `;
 
 const Search = styled.div`
@@ -223,4 +218,4 @@ const Participants = styled.div`
     gap: 1rem;
 `;
 
-export default Subcategory;
+export default Award;

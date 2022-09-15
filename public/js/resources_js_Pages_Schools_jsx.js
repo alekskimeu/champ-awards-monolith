@@ -4362,40 +4362,6 @@ function useSlotProps(parameters) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/Category.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@mui/icons-material/Category.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports["default"] = void 0;
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
-
-var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-var _default = (0, _createSvgIcon.default)([/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "m12 2-5.5 9h11z"
-}, "0"), /*#__PURE__*/(0, _jsxRuntime.jsx)("circle", {
-  cx: "17.5",
-  cy: "17.5",
-  r: "4.5"
-}, "1"), /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M3 13.5h8v8H3z"
-}, "2")], 'Category');
-
-exports["default"] = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/Close.js":
 /*!***************************************************!*\
   !*** ./node_modules/@mui/icons-material/Close.js ***!
@@ -4503,6 +4469,34 @@ var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/r
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
   d: "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
 }), 'Edit');
+
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/EmojiEvents.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@mui/icons-material/EmojiEvents.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"
+}), 'EmojiEvents');
 
 exports["default"] = _default;
 
@@ -13208,7 +13202,7 @@ var ContestantForm = function ContestantForm(_ref) {
     firstName: participant ? participant.firstName : "",
     lastName: participant ? participant.lastName : "",
     gender: participant ? participant.gender : "",
-    subcategory_id: participant ? participant.subcategory_id : "",
+    award_id: participant ? participant.award_id : "",
     school_id: participant ? participant.school_id : "",
     photo: participant ? participant.photo : null
   }),
@@ -13282,10 +13276,10 @@ var ContestantForm = function ContestantForm(_ref) {
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FormGroup, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InputContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Category", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Required, null, "*")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Select, {
     required: true,
     onChange: function onChange(e) {
-      return setData("subcategory_id", e.target.value);
+      return setData("award_id", e.target.value);
     },
-    name: "subcategory_id",
-    value: participant ? participant.subcategory_id : data.subcategory_id
+    name: "award_id",
+    value: participant ? participant.award_id : data.award_id
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, null, "Category"), subcategories && subcategories.map(function (subcategory) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
       key: subcategory.id,
@@ -13762,7 +13756,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_icons_material_Layers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Layers */ "./node_modules/@mui/icons-material/Layers.js");
 /* harmony import */ var _mui_icons_material_Group__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/Group */ "./node_modules/@mui/icons-material/Group.js");
 /* harmony import */ var _mui_icons_material_School__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/School */ "./node_modules/@mui/icons-material/School.js");
-/* harmony import */ var _mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Category */ "./node_modules/@mui/icons-material/Category.js");
+/* harmony import */ var _mui_icons_material_EmojiEvents__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/EmojiEvents */ "./node_modules/@mui/icons-material/EmojiEvents.js");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -13808,12 +13802,12 @@ var Sidebar = function Sidebar() {
     }
   }), "Categories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
     className: "sidebar-link",
-    href: "/subcategories"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Category__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    href: "/awards"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_EmojiEvents__WEBPACK_IMPORTED_MODULE_6__["default"], {
     style: {
       opacity: 0.8
     }
-  }), "Subcategories"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  }), "Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
     className: "sidebar-link",
     href: "/participants"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Group__WEBPACK_IMPORTED_MODULE_7__["default"], {

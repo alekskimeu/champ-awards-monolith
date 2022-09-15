@@ -8,7 +8,7 @@ import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 
 import Category from "../components/admin/Category";
 import School from "../components/admin/School";
-import Subcategory from "../components/admin/Subcategory";
+import Award from "../components/admin/Award";
 
 const Dashboard = ({ participants, categories, subcategories, schools }) => {
     const [search, setSearch] = useState("");
@@ -28,7 +28,7 @@ const Dashboard = ({ participants, categories, subcategories, schools }) => {
                 <Content>
                     <EventsContainer>
                         <SectionHeader>
-                            <Title>Top Categories</Title>
+                            <Title>Categories</Title>
                             <Link href="/categories" className="header-nav">
                                 All Categories
                             </Link>
@@ -74,9 +74,9 @@ const Dashboard = ({ participants, categories, subcategories, schools }) => {
 
                     <EventsContainer>
                         <SectionHeader>
-                            <Title>Top Subcategories</Title>
-                            <Link href="/subcategories" className="header-nav">
-                                All Subcategories
+                            <Title>Top Awards</Title>
+                            <Link href="/awards" className="header-nav">
+                                All Awards
                             </Link>
                         </SectionHeader>
                         <Cards>
@@ -87,7 +87,7 @@ const Dashboard = ({ participants, categories, subcategories, schools }) => {
                                     )
                                     .slice(0, 3)
                                     .map((subcategory) => (
-                                        <Subcategory
+                                        <Award
                                             subcategory={subcategory}
                                             key={subcategory.id}
                                             participants={participants}

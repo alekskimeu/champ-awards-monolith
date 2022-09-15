@@ -57,7 +57,7 @@ const Participants = ({ participants, subcategories, categories, schools }) => {
                                     subcategory={subcategories.filter(
                                         (subcategory) =>
                                             subcategory.id ===
-                                            participant.subcategory_id
+                                            participant.award_id
                                     )}
                                     subcategories={subcategories}
                                 />

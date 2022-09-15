@@ -4,7 +4,7 @@ import { useForm } from "@inertiajs/inertia-react";
 
 import FormInput from "../common/FormInput";
 
-const SubcategoryForm = ({ subcategory, setShow, categories }) => {
+const AwardForm = ({ subcategory, setShow, categories }) => {
     const { data, setData, post, progress } = useForm({
         name: subcategory ? subcategory.name : "",
         category_id: subcategory ? subcategory.category_id : "",
@@ -15,8 +15,8 @@ const SubcategoryForm = ({ subcategory, setShow, categories }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         subcategory
-            ? post(`/subcategories/${subcategory.id}`, data)
-            : post("/subcategories", data);
+            ? post(`/awards/${subcategory.id}`, data)
+            : post("/awards", data);
         setShow(false);
     };
 
@@ -26,7 +26,7 @@ const SubcategoryForm = ({ subcategory, setShow, categories }) => {
                 <FormGroup>
                     <FormInput
                         type="text"
-                        label="Subcategory"
+                        label="Award"
                         value={subcategory ? subcategory.name : data.name}
                         onChange={(e) => setData("name", e.target.value)}
                         required
@@ -176,4 +176,4 @@ const Button = styled.button`
     }
 `;
 
-export default SubcategoryForm;
+export default AwardForm;

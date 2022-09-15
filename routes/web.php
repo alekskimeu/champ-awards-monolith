@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ParticipantController;
-use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\AwardController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\PollController;
 
@@ -54,11 +54,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/schools/{id}', [SchoolController::class, 'destroy']);
 
     // Subcategories 
-    Route::get('/subcategories', [SubcategoryController::class, 'index']);
-    Route::post('/subcategories', [SubcategoryController::class, 'store']);
-    Route::get('/subcategories/{id}', [SubcategoryController::class, 'show']);
-    Route::post('/subcategories/{id}', [SubcategoryController::class, 'update']);
-    Route::delete('/subcategories/{id}', [SubcategoryController::class, 'destroy']);
+    Route::get('/awards', [AwardController::class, 'index']);
+    Route::post('/awards', [AwardController::class, 'store']);
+    Route::get('/awards/{id}', [AwardController::class, 'show']);
+    Route::post('/awards/{id}', [AwardController::class, 'update']);
+    Route::delete('/awards/{id}', [AwardController::class, 'destroy']);
 
     // Participants 
     Route::get('/participants', [ParticipantController::class, 'index']);

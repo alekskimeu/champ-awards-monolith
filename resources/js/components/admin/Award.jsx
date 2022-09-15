@@ -10,9 +10,9 @@ import image from "../../assets/user.jpg";
 import ConfirmDialog from "../ConfirmDialog";
 import ContestantForm from "./ContestantForm";
 import Modal from "./Modal";
-import SubcategoryForm from "./SubcategoryForm";
+import AwardForm from "./AwardForm";
 
-const Subcategory = ({ participants, subcategory, categories }) => {
+const Award = ({ participants, subcategory, categories }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => {
@@ -24,7 +24,7 @@ const Subcategory = ({ participants, subcategory, categories }) => {
     };
 
     const handleDelete = () => {
-        Inertia.delete(`/subcategories/${subcategory.id}`);
+        Inertia.delete(`/awards/${subcategory.id}`);
     };
 
     return (
@@ -37,14 +37,13 @@ const Subcategory = ({ participants, subcategory, categories }) => {
                             {participants.length > 0 &&
                                 participants.filter(
                                     (participant) =>
-                                        participant.subcategory_id ===
-                                        subcategory.id
+                                        participant.award_id === subcategory.id
                                 ).length}{" "}
                             Participants
                         </Participants>
                         <Action>
                             <Link
-                                href={`/subcategories/${subcategory.id}`}
+                                href={`/awards/${subcategory.id}`}
                                 className="btn-more"
                             >
                                 Details
@@ -68,7 +67,7 @@ const Subcategory = ({ participants, subcategory, categories }) => {
                 title="Update Subcategory"
             >
                 {
-                    <SubcategoryForm
+                    <AwardForm
                         subcategory={subcategory}
                         categories={categories}
                     />
@@ -156,4 +155,4 @@ const Button = styled.button`
     }
 `;
 
-export default Subcategory;
+export default Award;

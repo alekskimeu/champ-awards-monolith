@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Participant;
 use App\Models\School;
-use App\Models\Subcategory;
+use App\Models\Award;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +14,7 @@ class ParticipantController extends Controller
         return Inertia::render('Participants', 
             [
                 'participants' => Participant::all(),
-                'subcategories' => Subcategory::all(),
+                'subcategories' => Award::all(),
                 'schools' => School::all()
             ]);
     }
@@ -22,7 +22,7 @@ class ParticipantController extends Controller
     public function store(Request $request) {
         $formData = $request->validate([
             'school_id' => 'required',
-            'subcategory_id' => 'required',
+            'award_id' => 'required',
 
             'firstName'=>'required',
             'lastName' => 'required',
@@ -42,7 +42,7 @@ class ParticipantController extends Controller
 
         $formData = $request->validate([
             'school_id' => 'required',
-            'subcategory_id' => 'required',
+            'award_id' => 'required',
 
             'firstName' => 'required',
             'lastName' => 'required',

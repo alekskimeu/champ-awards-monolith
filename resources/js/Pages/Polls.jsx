@@ -26,9 +26,7 @@ const Polls = ({ participants, categories, category, subcategories }) => {
         if (id === "0") {
             setUsers(participants);
         } else {
-            setUsers(
-                participants.filter((user) => user.subcategory_id === +id)
-            );
+            setUsers(participants.filter((user) => user.award_id === +id));
         }
     };
 
@@ -55,9 +53,10 @@ const Polls = ({ participants, categories, category, subcategories }) => {
                         <Subtitle>Vote for your favorite contestant</Subtitle>
                         <HeaderWrapper>
                             <Categories>
-                                <Category>All</Category>
                                 {categories.map((category) => (
-                                    <Category key={category.id}>{category.name}</Category>
+                                    <Category key={category.id}>
+                                        {category.name}
+                                    </Category>
                                 ))}
                             </Categories>
                             <Search>
@@ -102,7 +101,7 @@ const Polls = ({ participants, categories, category, subcategories }) => {
                                             category={subcategories.filter(
                                                 (subcategory) =>
                                                     subcategory.id ===
-                                                    user.subcategory_id
+                                                    user.award_id
                                             )}
                                         />
                                     ))

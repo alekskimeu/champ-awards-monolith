@@ -11,7 +11,7 @@ class Participant extends Model
 
     protected $table="participants";
 
-    protected $fillable = ['subcategory_id', 'school_id', 'firstName', 'lastName', 'gender', 'photo'];
+    protected $fillable = ['award_id', 'school_id', 'firstName', 'lastName', 'gender', 'photo'];
 
     public function subcategory()
     {

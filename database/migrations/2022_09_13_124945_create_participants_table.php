@@ -15,7 +15,7 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('subcategory_id')->unsigned();
+            $table->bigInteger('award_id')->unsigned();
             $table->bigInteger('school_id')->unsigned();
 
             $table->string('firstName');
@@ -26,7 +26,7 @@ class CreateParticipantsTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->foreign('award_id')->references('id')->on('awards')->onDelete('cascade');
             $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
         });
     }

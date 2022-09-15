@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 
 use App\Models\Category;
-use App\Models\Subcategory;
+use App\Models\Award;
 use App\Models\Participant;
 use App\Models\School;
 use App\Models\User;
@@ -17,7 +17,7 @@ class AdminController extends Controller
         return Inertia::render('Dashboard', 
             [
                 'categories' => Category::all(),
-                'subcategories' => Subcategory::all(), 
+                'subcategories' => Award::all(), 
                 'participants' => Participant::all(),
                 'schools' => School::all(),         
             ]);
