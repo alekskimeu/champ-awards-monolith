@@ -1,92 +1,279 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --white: #FFFFFF;
-  --black: #000000;
-  --primary: rgb(31, 118, 210);
-  --danger: rgb(216, 24, 24);
+    --white: #ffffff;
+    --black: #000000;
+    --primary: #e1ad33;
+    --secondary: #17403f;
+    --danger: rgb(216, 24, 24);
 
-  --secondary-bg: #0e1220;
-  --primary-bg: #080c1b;
+    --secondary-bg: #0e1220;
+    --primary-bg: #080c1b;
 
-  --border: rgba(107, 107, 107, 0.2);
+    --border: rgba(107, 107, 107, 0.2);
 
-  --card-bg: #1c2949;
-
+    --card-bg: #1c2949;
 }
 
-h1,h2,h3,h4,h5,h6,p,a,button,span {
-  line-height: 1.4;
-  letter-spacing: 2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+span {
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a.active {
-	background-color: var(--primary);
-	color: var(--white);
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 body {
-  background-color: var(--white);
-  font-family: 'Abel', sans-serif;
+    background-color: var(--white);
+    font-family: "Abel", sans-serif;
+}
+
+.nav-link {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.brand {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
 }
 
 .sidebar-link {
-	opacity: 0.8;
-	cursor: pointer;
-	font-size: 1.2rem;
-	padding: 0.6rem;
-	border-radius: 0.3rem;
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	font-weight: 600;
-	transition: all 0.5s ease;
-	color: var(--white);
+    opacity: 0.8;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    color: var(--white);
 }
 
 .header-nav {
-	font-size: 1.1rem;
-	border-radius: 0.3rem;
-	font-weight: 600;
-	transition: all 0.5s ease;
-	color: var(--primary);
-	transition: all .5s ease;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    color: var(--primary);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .header-nav:hover {
-	opacity: .9;
+    opacity: 0.9;
+}
+
+.btn-more,
+.btn-vote {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    color: var(--white);
+    background-color: var(--primary);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
 
 .btn-more {
-	font-size: 1rem;
-	border-radius: 0.3rem;
-	padding: .5rem .8rem;
-	font-weight: 600;
-	transition: all 0.5s ease;
-	color: var(--white);
-	background-color: var(--primary);
-	transition: all .5s ease;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.8rem;
 }
 
-.btn-more:hover {
-	opacity: .9;
+.btn-vote {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 2.3rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.btn-vote > i {
+    font-size: 1rem;
+}
+
+.btn-more:hover,
+.btn-vote:hover {
+    opacity: 0.9;
+}
+
+.btn-more:active,
+.btn-vote:active {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+
+.hero-btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.6rem 3rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.hero-btn:hover {
+    opacity: 0.9;
+}
+
+.learn-more {
+    color: var(--white);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.learn-more > i {
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.learn-more:hover {
+    opacity: 1;
+}
+
+.learn-more:hover i {
+    opacity: 1;
+}
+
+.vote-link {
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.6rem 3rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.btn-sponsor {
+    color: var(--white);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.btn-sponsor i {
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.btn-sponsor:hover {
+    opacity: 1;
+}
+
+.social-media-icon {
+    background-color: #575757;
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 0.3rem 0.4rem 0.1rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.footer-link {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.footer-signature {
+    color: var(--white);
+    opacity: 1;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.footer-signature:hover {
+    opacity: 0.8;
 }

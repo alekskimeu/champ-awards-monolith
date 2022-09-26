@@ -20,7 +20,8 @@ use App\Http\Controllers\PollController;
 |
 */
 
-Route::get('/', [PollController::class, 'index']);
+Route::inertia('/', 'Home');
+Route::get('/vote', [PollController::class, 'vote']);
 Route::get('/categories/{name}', [PollController::class, 'category']);
 
 // Google Auth
@@ -66,4 +67,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/participants/{id}', [ParticipantController::class, 'update']);
     Route::delete('/participants/{id}', [ParticipantController::class, 'destroy']);
 });
-

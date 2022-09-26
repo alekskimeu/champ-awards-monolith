@@ -13234,13 +13234,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/icons-material/SearchRounded */ "./node_modules/@mui/icons-material/SearchRounded.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _components_client_Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/client/Card */ "./resources/js/components/client/Card.jsx");
-/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/header.jpg */ "./resources/js/assets/header.jpg");
-/* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
+/* harmony import */ var _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/header.webp */ "./resources/js/assets/header.webp");
+/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/logo.png */ "./resources/js/assets/logo.png");
+/* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
@@ -13256,6 +13257,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -13302,11 +13305,18 @@ var Polls = function Polls(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
     name: "description",
     content: "Vote for Champ Awards finalists"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, categories.map(function (category) {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    href: "/",
+    className: "brand"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Logo, {
+    src: _assets_logo_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+    alt: "Champ Awards",
+    width: "50"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Subtitle, null, "Vote for your favorite contestant"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, categories.map(function (category) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, {
       key: category.id
     }, category.name);
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Search, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_SearchRounded__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Input, {
     type: "search",
     placeholder: "Search",
     onChange: function onChange(e) {
@@ -13337,25 +13347,25 @@ var Polls = function Polls(_ref) {
         return subcategory.id === user.award_id;
       })
     });
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_5__["default"], null))))));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 3rem 1rem;\n    min-height: 100vh;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]);
-var Message = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    letter-spacing: 1.8px;\n    position: absolute;\n    top: 1rem;\n    right: 1rem;\n    background-color: var(--primary);\n    color: var(--white);\n    padding: 0.3rem 0.8rem;\n    font-weight: 600;\n    border-radius: 0.1rem;\n    transition: all 0.5s ease;\n"])));
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: 0 auto;\n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    padding-bottom: 1.5rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n    @media screen and (max-width: 800px) {\n        flex-direction: column;\n    }\n"])));
-var Left = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    font-size: 2rem;\n    font-weight: 700;\n    color: var(--white);\n"])));
-var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n\n    @media screen and (max-width: 500px) {\n        justify-content: center;\n    }\n"])));
-var Categories = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
-var Category = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    opacity: 0.8;\n    font-size: 0.9rem;\n    border: 1px solid var(--primary);\n    color: var(--primary);\n    font-weight: 600;\n    padding: 0.3rem 2rem;\n    border-radius: 5rem;\n    transition: all 0.5s ease;\n\n    &:hover {\n        opacity: 1;\n    }\n"])));
-var Select = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].select(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n\n    @media screen and (max-width: 500px) {\n        display: none;\n    }\n"])));
-var Option = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].option(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
-var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
-var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    margin-top: 2rem;\n"])));
-var Search = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #e9e9e9;\n    min-width: 20vw;\n    border-radius: 0.3rem;\n    padding-left: 0.5rem;\n"])));
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].input(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    padding: 0.7rem 0.8rem;\n    border: none;\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-top-right-radius: 0.3rem;\n    border-bottom-right-radius: 0.3rem;\n    margin-left: 0.4rem;\n"])));
-var Cards = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    width: 100%;\n    top: 12rem;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1.5rem;\n\n    @media screen and (max-width: 1000px) {\n        grid-template-columns: repeat(2, 1fr);\n    }\n\n    @media screen and (max-width: 700px) {\n        grid-template-columns: 1fr;\n    }\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 3rem 1rem;\n    min-height: 100vh;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
+var Message = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    letter-spacing: 1.8px;\n    position: absolute;\n    top: 1rem;\n    right: 1rem;\n    background-color: var(--primary);\n    color: var(--white);\n    padding: 0.3rem 0.8rem;\n    font-weight: 600;\n    border-radius: 0.1rem;\n    transition: all 0.5s ease;\n"])));
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: 0 auto;\n"])));
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    padding-bottom: 1.5rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n    @media screen and (max-width: 800px) {\n        flex-direction: column;\n    }\n"])));
+var Left = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
+var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n\n    @media screen and (max-width: 500px) {\n        justify-content: center;\n    }\n"])));
+var Categories = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h2(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    opacity: 0.8;\n    font-size: 0.9rem;\n    border: 1px solid var(--primary);\n    color: var(--primary);\n    font-weight: 600;\n    padding: 0.3rem 2rem;\n    border-radius: 5rem;\n    transition: all 0.5s ease;\n\n    &:hover {\n        opacity: 1;\n    }\n"])));
+var Select = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].select(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n\n    @media screen and (max-width: 500px) {\n        display: none;\n    }\n"])));
+var Option = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].option(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
+var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h2(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
+var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    margin-top: 2rem;\n"])));
+var Search = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #e9e9e9;\n    min-width: 20vw;\n    border-radius: 0.3rem;\n    padding-left: 0.5rem;\n"])));
+var Input = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].input(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    padding: 0.7rem 0.8rem;\n    border: none;\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-top-right-radius: 0.3rem;\n    border-bottom-right-radius: 0.3rem;\n    margin-left: 0.4rem;\n"])));
+var Cards = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    width: 100%;\n    top: 12rem;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1.5rem;\n\n    @media screen and (max-width: 1000px) {\n        grid-template-columns: repeat(2, 1fr);\n    }\n\n    @media screen and (max-width: 700px) {\n        grid-template-columns: 1fr;\n    }\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Polls);
 
 /***/ }),
@@ -13625,10 +13635,10 @@ function r(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else i
 
 /***/ }),
 
-/***/ "./resources/js/assets/header.jpg":
-/*!****************************************!*\
-  !*** ./resources/js/assets/header.jpg ***!
-  \****************************************/
+/***/ "./resources/js/assets/header.webp":
+/*!*****************************************!*\
+  !*** ./resources/js/assets/header.webp ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -13636,7 +13646,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/header.jpg?294435737a01e6dc51ddc8fadf8d5463");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/header.webp?92eecd507752a690da9357c6fbe89081");
+
+/***/ }),
+
+/***/ "./resources/js/assets/logo.png":
+/*!**************************************!*\
+  !*** ./resources/js/assets/logo.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?559e99de08a863d828fd730c6897a122");
 
 /***/ }),
 

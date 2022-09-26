@@ -8,11 +8,13 @@ import Card from "../components/client/Card";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 
-import image from "../assets/header.jpg";
+import image from "../assets/header.webp";
+import logo from "../assets/logo.png";
 
 import Loader from "../components/common/Loader";
 import { Inertia } from "@inertiajs/inertia";
 import Countdown from "../components/client/Countdown";
+import { Link } from "@inertiajs/inertia-react";
 
 const Polls = ({ participants, categories, category, subcategories }) => {
     const { flash } = usePage().props;
@@ -44,7 +46,13 @@ const Polls = ({ participants, categories, category, subcategories }) => {
                 <Wrapper>
                     <Header>
                         <Left>
-                            <Title>Champ Awards</Title>
+                            <Link href="/" className="brand">
+                                <Logo
+                                    src={logo}
+                                    alt="Champ Awards"
+                                    width="50"
+                                />
+                            </Link>
                         </Left>
                         <Countdown />
                     </Header>
@@ -141,6 +149,8 @@ const Container = styled.div`
     }
 `;
 
+const Logo = styled.img``;
+
 const Message = styled.div`
     letter-spacing: 1.8px;
     position: absolute;
@@ -176,12 +186,6 @@ const Left = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-`;
-
-const Title = styled.h1`
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--white);
 `;
 
 const HeaderWrapper = styled.div`

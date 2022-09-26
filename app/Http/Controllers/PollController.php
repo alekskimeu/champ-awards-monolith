@@ -14,7 +14,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class PollController extends Controller
 {
-    public function index() {
+    public function vote() {
         return Inertia::render(
             'Polls',
             [
