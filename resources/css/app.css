@@ -33,7 +33,7 @@ p,
 a,
 button,
 span {
-    line-height: 1.4;
+    line-height: 1.5;
     letter-spacing: 2px;
 }
 
@@ -61,10 +61,21 @@ body {
     -o-transition: all 0.5s ease;
 }
 
+.nav-link:hover {
+    opacity: 0.8;
+}
+
 .brand {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--white);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
 }
 
 .sidebar-link {
@@ -247,18 +258,42 @@ body {
 }
 
 .social-media-icon {
-    background-color: #575757;
-    font-size: 1.4rem;
-    color: var(--white);
-    padding: 0.3rem 0.4rem 0.1rem 0.5rem;
     border-radius: 0.3rem;
     -webkit-border-radius: 0.3rem;
     -moz-border-radius: 0.3rem;
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
+    background-color: #575757;
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 0.3rem 0.4rem 0.1rem 0.5rem;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.contact-icon:hover {
+    opacity: 1;
+}
+
+.contact-icon:active {
+    transform: scale(0.98);
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    -o-transform: scale(0.98);
 }
 
 .footer-link {
     color: var(--white);
     opacity: 0.9;
+    font-size: 1.2rem;
 }

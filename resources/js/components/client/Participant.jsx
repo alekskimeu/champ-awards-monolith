@@ -37,8 +37,8 @@ const Card = styled.div`
     cursor: pointer;
     transition: all 0.5s ease;
 
-    &:active {
-        background-color: var(--secondary);
+    &:hover {
+        opacity: 0.8;
     }
 `;
 

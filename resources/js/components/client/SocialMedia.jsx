@@ -34,6 +34,10 @@ const Wrapper = styled.div`
     gap: 1rem;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const Title = styled.h3`

@@ -1,22 +1,24 @@
 import image from "../assets/medal.png";
+import talent from "../assets/talent.png";
+import students from "../assets/students.png";
+import coach from "../assets/coach.png";
 
 export const purposes = [
     {
-        image: image,
-        title: "Check This Out",
-        description:
-            "The world breaks everyone, and afterwards, many are strong at the broken places.",
+        image: talent,
+        title: "Talent",
+        description: "Recognize and reward outstanding Talents among students",
     },
     {
-        image: image,
-        title: "Check This Out",
+        image: students,
+        title: "Students",
         description:
-            "The world breaks everyone, and afterwards, many are strong at the broken places.",
+            "To recognize and reward the significant contribution made by individuals students.",
     },
     {
-        image: image,
-        title: "Check This Out",
+        image: coach,
+        title: "Teachers",
         description:
-            "The world breaks everyone, and afterwards, many are strong at the broken places.",
+            "To honor, award and convey gratitude to teachers and coaches for their excellent teaching performance.",
     },
 ];

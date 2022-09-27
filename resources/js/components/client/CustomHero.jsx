@@ -6,6 +6,7 @@ import Image from "./Image";
 import Countdown from "./Countdown";
 
 import ladies from "../../assets/ladies.webp";
+import SocialMedia from "./SocialMedia";
 
 const CustomHero = ({ title, description }) => {
     return (
@@ -14,7 +15,18 @@ const CustomHero = ({ title, description }) => {
                 <Content>
                     <Title>{title}</Title>
                     <Description>{description}</Description>
-                    <Countdown />
+                    <Cta>
+                        <a href="" className="contact-icon">
+                            <i className="fas fa-phone"></i> +255-685-652-130
+                        </a>
+                        <a
+                            href="mailto:michael.nandwa@arushameru.sc.tz"
+                            className="contact-icon"
+                        >
+                            <i className="fas fa-envelope"></i>{" "}
+                            michael.nandwa@arushameru.sc.tz
+                        </a>
+                    </Cta>
                 </Content>
                 <Image image={ladies} />
             </Hero>
@@ -23,7 +35,7 @@ const CustomHero = ({ title, description }) => {
 };
 
 const Container = styled.section`
-    padding: 8rem 1rem;
+    padding: 8rem 2rem;
     background-color: var(--secondary);
 `;
 
@@ -35,6 +47,12 @@ const Hero = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
 `;
 
 const Content = styled.div`
@@ -60,10 +78,19 @@ const Span = styled.span`
 `;
 
 const Cta = styled.div`
-    margin-top: 1.5rem;
     display: flex;
     gap: 2rem;
     align-items: center;
+
+    @media screen and (max-width: 1340px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+        align-items: center;
+    }
 `;
 
 export default CustomHero;

@@ -15,27 +15,26 @@ import Footer from "../components/client/Footer";
 import Image from "../components/client/Image";
 import image from "../assets/header.webp";
 import ladies from "../assets/ladies.webp";
+import Layout from "../components/client/Layout";
 
 const Home = () => {
     return (
         <>
-            <Head>
-                <title>Home</title>
-                <meta
-                    name="description"
-                    content="Vote for Champ Awards finalists"
-                />
-            </Head>
-            <Wrapper>
-                <Header />
+            <Layout>
+                <Head>
+                    <title>Home</title>
+                    <meta
+                        name="description"
+                        content="Vote for Champ Awards finalists"
+                    />
+                </Head>
                 <Hero />
-            </Wrapper>
-            <Container>
-                <Purposes />
-                <GetInvolved />
-                <SocialMedia />
-                <Footer />
-            </Container>
+                <Container>
+                    <Purposes />
+                    <GetInvolved />
+                    <SocialMedia />
+                </Container>
+            </Layout>
         </>
     );
 };

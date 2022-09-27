@@ -7,10 +7,11 @@ import styled from "styled-components";
 
 import { packages } from "../data/packages";
 import Package from "../components/client/Package";
+import Layout from "../components/client/Layout";
 
 const Sponsor = () => {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>Sponsor our event</title>
                 <meta name="description" content="Champ Awards finalists" />
@@ -28,14 +29,12 @@ const Sponsor = () => {
                     ))}
                 </Wrapper>
             </Packages>
-        </>
+        </Layout>
     );
 };
 
-const Container = styled.section``;
-
 const Packages = styled.section`
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +44,10 @@ const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 3rem;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export default Sponsor;

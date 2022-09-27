@@ -13,8 +13,8 @@ const Purposes = () => {
             <Content>
                 <Title>Champ Awards</Title>
                 <Description>
-                    The world breaks everyone, and afterwards, many are strong
-                    at the broken places.
+                    Celebrate students in music, acting, sports, and other
+                    fields of entertainment.
                 </Description>
             </Content>
             {purposes.map((purpose) => (
@@ -44,15 +44,36 @@ const Container = styled.section`
         left: 0;
         right: 0;
         background-image: linear-gradient(
-                360deg,
+                0deg,
                 rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0.85)
+                rgba(0, 0, 0, 0.7)
             ),
             url(${image});
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         border-radius: 0.8rem;
+
+        @media screen and (max-width: 1600px) {
+            border-radius: 0;
+        }
+
+        @media screen and (max-width: 1400px) {
+            background-image: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 1),
+                    rgba(0, 0, 0, 0.8)
+                ),
+                url(${image});
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 1600px) {
+        padding: 17rem 2rem 5rem 2rem;
     }
 `;
 

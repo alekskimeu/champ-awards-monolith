@@ -1,5 +1,6 @@
 export const packages = [
     {
+        color: "#e1ad33",
         title: "Main sponsors",
         amount: "800USD",
         benefits: [
@@ -12,6 +13,7 @@ export const packages = [
         ],
     },
     {
+        color: "#F96666",
         title: "Gold sponsors",
         amount: "400USD",
         benefits: [
@@ -22,6 +24,7 @@ export const packages = [
         ],
     },
     {
+        color: "#562B08",
         title: "Silver sponsors",
         amount: "200USD",
         benefits: [
@@ -30,16 +33,9 @@ export const packages = [
             "Also receive recognition.",
         ],
     },
+
     {
-        title: "Silver sponsors",
-        amount: "200USD",
-        benefits: [
-            "Appear on the event posters.",
-            "Can bring any advertisement materials to the event.",
-            "Also receive recognition.",
-        ],
-    },
-    {
+        color: "#A084CA",
         title: "Bronze sponsors",
         amount: "No Cash",
         benefits: [

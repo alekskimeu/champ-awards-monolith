@@ -10,8 +10,8 @@ const GetInvolved = () => {
             <Content>
                 <Title>Get Involved</Title>
                 <Description>
-                    The world breaks everyone, and afterwards, many are strong
-                    at the broken places.
+                    We are giving interested corporate and individual partners
+                    an opportunity to come on board.
                 </Description>
                 <Cta>
                     <Link href="/vote" className="vote-link">
@@ -27,7 +27,7 @@ const GetInvolved = () => {
 };
 
 const Container = styled.section`
-    padding: 8rem 1rem;
+    padding: 8rem 2rem;
     background-color: #f5f5f5;
 `;
 
@@ -63,6 +63,10 @@ const Cta = styled.div`
     align-items: center;
     gap: 2rem;
     margin-top: 1rem;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
 export default GetInvolved;

@@ -11,6 +11,7 @@ import image from "../assets/header.webp";
 import logo from "../assets/logo.png";
 import AwardsCategories from "../components/client/AwardsCategories";
 import Header from "../components/client/Header";
+import Layout from "../components/client/Layout";
 
 const Finalists = ({ categories, awards, participants }) => {
     const { flash } = usePage().props;
@@ -27,7 +28,7 @@ const Finalists = ({ categories, awards, participants }) => {
     };
 
     return (
-        <>
+        <Layout>
             <Head>
                 <title>Finalists</title>
                 <meta name="description" content="Champ Awards finalists" />
@@ -78,37 +79,15 @@ const Finalists = ({ categories, awards, participants }) => {
                     </PollContainer>
                 </Wrapper>
             </Container>
-        </>
+        </Layout>
     );
 };
 
 const Container = styled.div`
-    padding: 8rem 1rem;
+    padding: 8rem 2rem;
     min-height: 100vh;
-    position: relative;
     background-color: var(--secondary);
-
-    &::after {
-        position: absolute;
-        content: "";
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-image: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.9),
-                rgba(0, 0, 0, 0.9)
-            ),
-            url(${image});
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-    }
 `;
-
-const Logo = styled.img``;
 
 const Message = styled.div`
     letter-spacing: 1.8px;
@@ -221,6 +200,18 @@ const CardsWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
+
+    @media screen and (max-width: 1400px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export default Finalists;

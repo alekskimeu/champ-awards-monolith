@@ -12,9 +12,6 @@ const Footer = () => {
                     <Link href="/" className="footer-link">
                         Home
                     </Link>
-                    <Link href="/about" className="footer-link">
-                        About
-                    </Link>
                     <Link href="/sponsor" className="footer-link">
                         Sponsor
                     </Link>
@@ -31,8 +28,12 @@ const Footer = () => {
 };
 
 const Container = styled.footer`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 2rem 1rem 1rem 1rem;
     background-color: var(--secondary);
+    min-height: 3rem;
 `;
 
 const Wrapper = styled.div`
@@ -41,11 +42,15 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
 const Links = styled.div`
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
 `;
 

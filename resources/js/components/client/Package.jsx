@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const Package = ({ item }) => {
     return (
-        <Container>
-            <Header>
+        <Container style={{ border: `2px solid ${item.color}` }}>
+            <Header style={{ backgroundColor: `${item.color}` }}>
                 <Title>{item.title}</Title>
                 <Amount>{item.amount}</Amount>
             </Header>
@@ -21,13 +21,11 @@ const Package = ({ item }) => {
 };
 
 const Container = styled.div`
-    border: 2px solid var(--primary);
     border-radius: 0.3rem;
     box-shadow: 4px 8px 24px rgba(231, 231, 231);
 `;
 
 const Header = styled.div`
-    background-color: var(--primary);
     padding: 0.5rem 0.8rem;
     display: flex;
     justify-content: space-between;
@@ -47,7 +45,8 @@ const Amount = styled.h4`
 `;
 
 const Content = styled.div`
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--white);
 `;
 
 const Benefits = styled.ul`
