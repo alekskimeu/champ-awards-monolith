@@ -26,7 +26,7 @@ const Content = styled.div`
     margin-left: 15vw;
     flex: 1;
     min-height: 100vh;
-    background-color: var(--secondary-bg);
+    background-color: var(--white);
 `;
 
 export default Layout;

@@ -26,8 +26,8 @@ const Purposes = () => {
 
 const Container = styled.section`
     max-width: 1600px;
-    margin: 0 auto 5rem auto;
-    padding: 3rem 3rem 5rem 3rem;
+    margin: 5rem auto;
+    padding: 17rem 3rem 5rem 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
@@ -44,9 +44,9 @@ const Container = styled.section`
         left: 0;
         right: 0;
         background-image: linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.9),
-                rgba(0, 0, 0, 0.9)
+                360deg,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0.85)
             ),
             url(${image});
         background-repeat: no-repeat;

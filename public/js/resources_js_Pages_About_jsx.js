@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Home_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_About_jsx"],{
 
 /***/ "./node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js":
 /*!*******************************************************************************!*\
@@ -685,10 +685,10 @@ function stylis_min (W) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Home.jsx":
-/*!*************************************!*\
-  !*** ./resources/js/Pages/Home.jsx ***!
-  \*************************************/
+/***/ "./resources/js/Pages/About.jsx":
+/*!**************************************!*\
+  !*** ./resources/js/Pages/About.jsx ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -699,19 +699,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
-/* harmony import */ var _components_client_Purposes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/client/Purposes */ "./resources/js/components/client/Purposes.jsx");
-/* harmony import */ var _components_client_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/client/Button */ "./resources/js/components/client/Button.jsx");
-/* harmony import */ var _components_client_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/client/Header */ "./resources/js/components/client/Header.jsx");
-/* harmony import */ var _components_client_Hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/client/Hero */ "./resources/js/components/client/Hero.jsx");
-/* harmony import */ var _components_client_GetInvolved__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/client/GetInvolved */ "./resources/js/components/client/GetInvolved.jsx");
-/* harmony import */ var _components_client_SocialMedia__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/client/SocialMedia */ "./resources/js/components/client/SocialMedia.jsx");
-/* harmony import */ var _components_client_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/client/Footer */ "./resources/js/components/client/Footer.jsx");
-/* harmony import */ var _components_client_Image__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/client/Image */ "./resources/js/components/client/Image.jsx");
-/* harmony import */ var _assets_header_webp__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/header.webp */ "./resources/js/assets/header.webp");
-/* harmony import */ var _assets_ladies_webp__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/ladies.webp */ "./resources/js/assets/ladies.webp");
-var _templateObject, _templateObject2;
+/* harmony import */ var _components_client_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/client/Header */ "./resources/js/components/client/Header.jsx");
+/* harmony import */ var _components_client_Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/client/Hero */ "./resources/js/components/client/Hero.jsx");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+var _templateObject;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -721,25 +712,15 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
-
-
-
-
-
-
-
-
-var Home = function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
+var About = function About() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "About us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
     name: "description",
-    content: "Vote for Champ Awards finalists"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Header__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Hero__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Purposes__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_GetInvolved__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_SocialMedia__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
+    content: "Champ Awards finalists"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null));
 };
 
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    height: 80vh;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: var(--secondary);\n"])));
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_13__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
 
@@ -868,103 +849,6 @@ var Unit = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templa
 var Amount = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    font-size: 2rem;\n    color: var(--black);\n    font-weight: 700;\n\n    @media screen and (max-width: 624px) {\n        font-size: 1.2rem;\n    }\n"])));
 var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    opacity: 0.7;\n    font-weight: 600;\n    font-size: 1rem;\n    color: var(--black);\n\n    @media screen and (max-width: 624px) {\n        font-size: 0.8rem;\n    }\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Countdown);
-
-/***/ }),
-
-/***/ "./resources/js/components/client/Footer.jsx":
-/*!***************************************************!*\
-  !*** ./resources/js/components/client/Footer.jsx ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/header.jpg */ "./resources/js/assets/header.jpg");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-
-
-var Footer = function Footer() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Links, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
-    className: "footer-link"
-  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/about",
-    className: "footer-link"
-  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/sponsor",
-    className: "footer-link"
-  }, "Sponsor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/vote",
-    className: "footer-link"
-  }, "Vote")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Copyright, null, "\xA9", new Date().getFullYear(), " Champ Awards")));
-};
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].footer(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 2rem 1rem 1rem 1rem;\n    background-color: var(--secondary);\n"])));
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: auto;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n"])));
-var Links = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n    align-items: center;\n"])));
-var Copyright = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    color: var(--white);\n    opacity: 0.8;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
-
-/***/ }),
-
-/***/ "./resources/js/components/client/GetInvolved.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/components/client/GetInvolved.jsx ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button */ "./resources/js/components/client/Button.jsx");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _assets_header_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/header.jpg */ "./resources/js/assets/header.jpg");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-
-
-
-var GetInvolved = function GetInvolved() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Get Involved"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "The world breaks everyone, and afterwards, many are strong at the broken places."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cta, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    href: "/vote",
-    className: "vote-link"
-  }, "Vote"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-    href: "/",
-    className: "btn-sponsor"
-  }, "Sponsor", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-    className: "fas fa-arrow-right-long"
-  })))));
-};
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 8rem 1rem;\n    background-color: #f5f5f5;\n"])));
-var Content = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 1300px;\n    margin: auto;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 1rem;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: var(--secondary);\n    max-width: 600px;\n    margin: auto;\n    text-align: center;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    font-size: 1.3rem;\n    color: var(--black);\n    opacity: 0.8;\n    max-width: 600px;\n    margin: auto;\n    text-align: center;\n"])));
-var Cta = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 2rem;\n    margin-top: 1rem;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GetInvolved);
 
 /***/ }),
 
@@ -1115,196 +999,6 @@ var HeroImage = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_t
 
 /***/ }),
 
-/***/ "./resources/js/components/client/Purpose.jsx":
-/*!****************************************************!*\
-  !*** ./resources/js/components/client/Purpose.jsx ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-var Purpose = function Purpose(_ref) {
-  var purpose = _ref.purpose;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
-    src: purpose.image,
-    alt: purpose.title,
-    width: "40",
-    height: "40"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, purpose.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, purpose.description));
-};
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    border-radius: 0.5rem;\n    padding: 2rem 1.5rem;\n    border: 1px solid rgba(231, 231, 231, 0.1);\n"])));
-var Image = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 100%;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h2(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    font-size: 1.2rem;\n    opacity: 0.8;\n    font-weight: 600;\n    margin-top: 0.6rem;\n    width: fit-content;\n    text-transform: capitalize;\n    color: var(--white);\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        bottom: -0.2rem;\n        left: 0;\n        width: 100%;\n        border: none;\n        background-color: rgba(231, 231, 231, 0.4);\n        height: 1px;\n        opacity: 0.4;\n    }\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    margin-top: 1rem;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Purpose);
-
-/***/ }),
-
-/***/ "./resources/js/components/client/Purposes.jsx":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/client/Purposes.jsx ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _Purpose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Purpose */ "./resources/js/components/client/Purpose.jsx");
-/* harmony import */ var _data_purpose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data/purpose */ "./resources/js/data/purpose.js");
-/* harmony import */ var _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/header.webp */ "./resources/js/assets/header.webp");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-
-
-
-var Purposes = function Purposes() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Content, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "The world breaks everyone, and afterwards, many are strong at the broken places.")), _data_purpose__WEBPACK_IMPORTED_MODULE_2__.purposes.map(function (purpose) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Purpose__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      purpose: purpose,
-      key: purpose.index
-    });
-  }));
-};
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: 5rem auto;\n    padding: 17rem 3rem 5rem 3rem;\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    align-items: center;\n    gap: 2rem;\n    border-radius: 0.5rem;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                360deg,\n                rgba(0, 0, 0, 1),\n                rgba(0, 0, 0, 0.85)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n        border-radius: 0.8rem;\n    }\n"])), _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__["default"]);
-var Content = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    color: var(--white);\n    font-weight: 600;\n    margin-bottom: 1rem;\n    font-size: 1.3rem;\n    opacity: 0.8;\n"])));
-var Description = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    color: var(--white);\n    opacity: 0.7;\n    font-size: 1.2rem;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Purposes);
-
-/***/ }),
-
-/***/ "./resources/js/components/client/SocialMedia.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/components/client/SocialMedia.jsx ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4;
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-var SocialMedia = function SocialMedia() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Find us online:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "",
-    className: "social-media-icon"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-    className: "fab fa-facebook"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "",
-    className: "social-media-icon"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-    className: "fab fa-instagram"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "",
-    className: "social-media-icon"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("i", {
-    className: "fab fa-twitter"
-  })))));
-};
-
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 5rem 1rem;\n"])));
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 1300px;\n    margin: auto;\n    display: flex;\n    gap: 1rem;\n    align-items: center;\n    justify-content: center;\n"])));
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h3(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    font-weight: 500;\n"])));
-var Icons = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1.5rem;\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SocialMedia);
-
-/***/ }),
-
-/***/ "./resources/js/data/purpose.js":
-/*!**************************************!*\
-  !*** ./resources/js/data/purpose.js ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "purposes": () => (/* binding */ purposes)
-/* harmony export */ });
-/* harmony import */ var _assets_medal_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/medal.png */ "./resources/js/assets/medal.png");
-
-var purposes = [{
-  image: _assets_medal_png__WEBPACK_IMPORTED_MODULE_0__["default"],
-  title: "Check This Out",
-  description: "The world breaks everyone, and afterwards, many are strong at the broken places."
-}, {
-  image: _assets_medal_png__WEBPACK_IMPORTED_MODULE_0__["default"],
-  title: "Check This Out",
-  description: "The world breaks everyone, and afterwards, many are strong at the broken places."
-}, {
-  image: _assets_medal_png__WEBPACK_IMPORTED_MODULE_0__["default"],
-  title: "Check This Out",
-  description: "The world breaks everyone, and afterwards, many are strong at the broken places."
-}];
-
-/***/ }),
-
-/***/ "./resources/js/assets/header.jpg":
-/*!****************************************!*\
-  !*** ./resources/js/assets/header.jpg ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/header.jpg?294435737a01e6dc51ddc8fadf8d5463");
-
-/***/ }),
-
-/***/ "./resources/js/assets/header.webp":
-/*!*****************************************!*\
-  !*** ./resources/js/assets/header.webp ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/header.webp?92eecd507752a690da9357c6fbe89081");
-
-/***/ }),
-
 /***/ "./resources/js/assets/ladies.webp":
 /*!*****************************************!*\
   !*** ./resources/js/assets/ladies.webp ***!
@@ -1332,21 +1026,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?559e99de08a863d828fd730c6897a122");
-
-/***/ }),
-
-/***/ "./resources/js/assets/medal.png":
-/*!***************************************!*\
-  !*** ./resources/js/assets/medal.png ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/medal.png?b4da14b585c28396ba353b812b36c382");
 
 /***/ }),
 

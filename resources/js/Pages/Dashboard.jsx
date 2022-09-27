@@ -136,7 +136,7 @@ const Cards = styled.div`
 
 const Title = styled.h2`
 	font-size: 1.2rem;
-    color: var(--white);
+    color: var(--black);
 `;
 
 const Button = styled.button`

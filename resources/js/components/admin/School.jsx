@@ -53,7 +53,7 @@ const Container = styled.div`
     background-color: var(--primary-bg);
     border-radius: 0.3rem;
     padding: 1.2rem;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 1.5rem;
 `;
 
@@ -93,7 +93,7 @@ const Button = styled.button`
     transition: all 0.5s ease;
 
     &:first-child {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 
     &:last-child {

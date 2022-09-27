@@ -2110,7 +2110,7 @@ __webpack_require__.r(__webpack_exports__);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
 (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.createInertiaApp)({
   title: function title(_title) {
-    return "".concat(_title, " - Champ Awards");
+    return "Champ Awards - ".concat(_title);
   },
   resolve: function resolve(name) {
     return __webpack_require__("./resources/js/Pages lazy recursive ^\\.\\/.*$")("./".concat(name));
@@ -40394,6 +40394,14 @@ var map = {
 		"./resources/js/Pages/Dashboard.jsx",
 		"resources_js_Pages_Dashboard_jsx"
 	],
+	"./Finalists": [
+		"./resources/js/Pages/Finalists.jsx",
+		"resources_js_Pages_Finalists_jsx"
+	],
+	"./Finalists.jsx": [
+		"./resources/js/Pages/Finalists.jsx",
+		"resources_js_Pages_Finalists_jsx"
+	],
 	"./Home": [
 		"./resources/js/Pages/Home.jsx",
 		"resources_js_Pages_Home_jsx"
@@ -40441,6 +40449,14 @@ var map = {
 	"./Schools.jsx": [
 		"./resources/js/Pages/Schools.jsx",
 		"resources_js_Pages_Schools_jsx"
+	],
+	"./Sponsor": [
+		"./resources/js/Pages/Sponsor.jsx",
+		"resources_js_Pages_Sponsor_jsx"
+	],
+	"./Sponsor.jsx": [
+		"./resources/js/Pages/Sponsor.jsx",
+		"resources_js_Pages_Sponsor_jsx"
 	]
 };
 function webpackAsyncContext(req) {
@@ -40591,7 +40607,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Award_jsx":1,"resources_js_Pages_Awards_jsx":1,"resources_js_Pages_Categories_jsx":1,"resources_js_Pages_Dashboard_jsx":1,"resources_js_Pages_Home_jsx":1,"resources_js_Pages_Login_jsx":1,"resources_js_Pages_Participants_jsx":1,"resources_js_Pages_Polls_jsx":1,"resources_js_Pages_Register_jsx":1,"resources_js_Pages_Schools_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Award_jsx":1,"resources_js_Pages_Awards_jsx":1,"resources_js_Pages_Categories_jsx":1,"resources_js_Pages_Dashboard_jsx":1,"resources_js_Pages_Finalists_jsx":1,"resources_js_Pages_Home_jsx":1,"resources_js_Pages_Login_jsx":1,"resources_js_Pages_Participants_jsx":1,"resources_js_Pages_Polls_jsx":1,"resources_js_Pages_Register_jsx":1,"resources_js_Pages_Schools_jsx":1,"resources_js_Pages_Sponsor_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

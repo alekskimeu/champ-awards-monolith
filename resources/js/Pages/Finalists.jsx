@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { usePage } from "@inertiajs/inertia-react";
+import React, { useState } from "react";
+import Countdown from "../components/client/Countdown";
 import { Head } from "@inertiajs/inertia-react";
+import { usePage } from "@inertiajs/inertia-react";
 
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import { Link } from "@inertiajs/inertia-react";
+
 import styled from "styled-components";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 
 import image from "../assets/header.webp";
 import logo from "../assets/logo.png";
+import AwardsCategories from "../components/client/AwardsCategories";
+import Header from "../components/client/Header";
 
-import Loader from "../components/common/Loader";
-import { Inertia } from "@inertiajs/inertia";
-import Countdown from "../components/client/Countdown";
-import { Link } from "@inertiajs/inertia-react";
-
-const Polls = ({ participants, categories, category, subcategories }) => {
+const Finalists = ({ categories, awards, participants }) => {
     const { flash } = usePage().props;
-
-    const [search, setSearch] = useState("");
     const [users, setUsers] = useState(participants);
 
     const filterSubcategories = (e) => {
@@ -34,30 +29,13 @@ const Polls = ({ participants, categories, category, subcategories }) => {
     return (
         <>
             <Head>
-                <title>Champ Awards</title>
-                <meta
-                    name="description"
-                    content="Vote for Champ Awards finalists"
-                />
+                <title>Finalists</title>
+                <meta name="description" content="Champ Awards finalists" />
             </Head>
+            <Header />
             <Container>
-                {flash.message && <Message>{flash.message}</Message>}
                 <Wrapper>
-                    <Header>
-                        <Left>
-                            <Link href="/" className="brand">
-                                <Logo
-                                    src={logo}
-                                    alt="Champ Awards"
-                                    width="50"
-                                />
-                            </Link>
-                        </Left>
-                        <Countdown />
-                    </Header>
-
                     <PollContainer>
-                        {/* <Subtitle>Vote for your favorite contestant</Subtitle> */}
                         <HeaderWrapper>
                             <Categories>
                                 {categories.map((category) => (
@@ -73,41 +51,30 @@ const Polls = ({ participants, categories, category, subcategories }) => {
                                 >
                                     All
                                 </Option>
-                                {subcategories.map((subcategory) => (
+                                {awards.map((award) => (
                                     <Option
                                         style={{ backgroundColor: "white" }}
-                                        key={subcategory.id}
-                                        value={subcategory.id}
+                                        key={award.id}
+                                        value={award.id}
                                     >
-                                        {subcategory.name}
+                                        {award.name}
                                     </Option>
                                 ))}
                             </Select>
                         </HeaderWrapper>
-                        <Cards>
-                            {users ? (
-                                users
-                                    .filter((user) =>
-                                        user.firstName
-                                            .concat(user.lastName)
-                                            .toLowerCase()
-                                            .includes(search.toLowerCase())
-                                    )
-                                    .map((user) => (
-                                        <Card
-                                            user={user}
-                                            key={user.index}
-                                            category={subcategories.filter(
-                                                (subcategory) =>
-                                                    subcategory.id ===
-                                                    user.award_id
-                                            )}
-                                        />
-                                    ))
-                            ) : (
-                                <Loader />
-                            )}
-                        </Cards>
+                        <CardsWrapper>
+                            {categories.map((category) => (
+                                <AwardsCategories
+                                    key={category.id}
+                                    category={category}
+                                    awards={awards.filter(
+                                        (award) =>
+                                            category.id === award.category_id
+                                    )}
+                                    participants={users}
+                                />
+                            ))}
+                        </CardsWrapper>
                     </PollContainer>
                 </Wrapper>
             </Container>
@@ -116,9 +83,10 @@ const Polls = ({ participants, categories, category, subcategories }) => {
 };
 
 const Container = styled.div`
-    padding: 3rem 1rem;
+    padding: 8rem 1rem;
     min-height: 100vh;
     position: relative;
+    background-color: var(--secondary);
 
     &::after {
         position: absolute;
@@ -158,19 +126,6 @@ const Message = styled.div`
 const Wrapper = styled.div`
     max-width: 1600px;
     margin: 0 auto;
-`;
-
-const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(231, 231, 231, 0.2);
-
-    @media screen and (max-width: 800px) {
-        flex-direction: column;
-    }
 `;
 
 const Left = styled.div`
@@ -262,31 +217,10 @@ const Search = styled.div`
     padding-left: 0.5rem;
 `;
 
-const Input = styled.input`
-    padding: 0.7rem 0.8rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    width: 100%;
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-    margin-left: 0.4rem;
-`;
-
-const Cards = styled.div`
-    width: 100%;
-    top: 12rem;
+const CardsWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (max-width: 700px) {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
 `;
 
-export default Polls;
+export default Finalists;

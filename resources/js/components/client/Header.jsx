@@ -18,10 +18,10 @@ const Header = () => {
                     <Link href="/" className="nav-link">
                         Home
                     </Link>
-                    <Link href="/" className="nav-link">
-                        About
+                    <Link href="/finalists" className="nav-link">
+                        Finalists
                     </Link>
-                    <Link href="/" className="nav-link">
+                    <Link href="/sponsor" className="nav-link">
                         Sponsor
                     </Link>
                 </Menu>
@@ -62,7 +62,7 @@ const Logo = styled.img``;
 const Menu = styled.nav`
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 `;
 
 export default Header;

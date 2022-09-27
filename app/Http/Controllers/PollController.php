@@ -14,7 +14,8 @@ use Laravel\Socialite\Facades\Socialite;
 
 class PollController extends Controller
 {
-    public function vote() {
+    public function results()
+    {
         return Inertia::render(
             'Polls',
             [
@@ -33,6 +34,18 @@ class PollController extends Controller
             [
                 'participants' => Participant::where('category_id', $category[0]->id)->get(),
                 'category' => $category, 'categories' => Category::all()
+            ]
+        );
+    }
+
+    public function finalists()
+    {
+        return Inertia::render(
+            'Finalists',
+            [
+                'categories' => Category::all(),
+                'participants' => DB::table('participants')->orderBy('votes', 'desc')->get(),
+                'awards' => Award::all()
             ]
         );
     }
@@ -70,5 +83,4 @@ class PollController extends Controller
             return redirect('/')->with(['message' => 'Voted successfully!']);
         }
     }
-
 }

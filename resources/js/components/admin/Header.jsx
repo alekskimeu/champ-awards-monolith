@@ -26,7 +26,7 @@ const Header = () => {
 const Container = styled.div`
     padding: 1rem 3rem;
     height: 5rem;
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;

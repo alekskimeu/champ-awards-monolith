@@ -28,7 +28,7 @@ const GetInvolved = () => {
 
 const Container = styled.section`
     padding: 8rem 1rem;
-    background-color: var(--secondary);
+    background-color: #f5f5f5;
 `;
 
 const Content = styled.div`
@@ -43,7 +43,7 @@ const Content = styled.div`
 
 const Title = styled.h1`
     font-size: 1.6rem;
-    color: var(--primary);
+    color: var(--secondary);
     max-width: 600px;
     margin: auto;
     text-align: center;
@@ -51,8 +51,8 @@ const Title = styled.h1`
 
 const Description = styled.p`
     font-size: 1.3rem;
-    color: var(--white);
-    opacity: 0.9;
+    color: var(--black);
+    opacity: 0.8;
     max-width: 600px;
     margin: auto;
     text-align: center;

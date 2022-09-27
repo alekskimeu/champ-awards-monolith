@@ -3,17 +3,23 @@ import styled from "styled-components";
 import { Link } from "@inertiajs/inertia-react";
 
 import Image from "./Image";
+import Countdown from "./Countdown";
+
+import ladies from "../../assets/ladies.webp";
 
 const Hero = () => {
     return (
         <Container>
             <Content>
-                <Title>CHAMP AWARDS {new Date().getFullYear()}</Title>
+                <Title>CHAMP AWARDS</Title>
                 <Description>
-                    The world breaks everyone, and afterwards, many are strong
-                    at the broken places. The world breaks everyone, and
-                    afterwards, many are strong at the broken places.
+                    The Annual{" "}
+                    <Span>CHAMP AWARDS {new Date().getFullYear()}</Span> edition
+                    will be happening on <Span>8th October</Span>
+                    . <br />
+                    In the meantime, be sure to vote for your favorite finalist!
                 </Description>
+                <Countdown />
                 <Cta>
                     <Link href="/vote" className="hero-btn">
                         Vote
@@ -24,40 +30,46 @@ const Hero = () => {
                     </Link>
                 </Cta>
             </Content>
+            <Image image={ladies} />
         </Container>
     );
 };
 
 const Container = styled.div`
-    padding: 3rem 1rem 8rem 1rem;
-    position: relative;
+    padding: 8rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    max-width: 1300px;
+    margin: auto;
 `;
 
 const Content = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    padding-bottom: 3rem;
 `;
 
 const Title = styled.h1`
     color: var(--primary);
-    max-width: 800px;
-    text-align: center;
+    font-size: 1.8rem;
 `;
 
 const Description = styled.h2`
-    color: var(--white);
-    opacity: 0.8;
+    color: #e0e0e0;
     font-weight: 500;
     margin-bottom: 1rem;
-    max-width: 800px;
-    text-align: center;
+`;
+
+const Span = styled.span`
+    color: var(--primary);
+    font-weight: 700;
 `;
 
 const Cta = styled.div`
+    margin-top: 1.5rem;
     display: flex;
     gap: 2rem;
     align-items: center;

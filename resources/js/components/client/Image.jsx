@@ -11,18 +11,13 @@ const Image = ({ image }) => {
 
 const ImageContainer = styled.div`
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    top: -10rem;
-    position: relative;
+    border-radius: 0.5rem;
 `;
 
 const HeroImage = styled.img`
     max-width: 100%;
-    height: 400px;
-    border-radius: 0.3rem;
+    max-height: 500px;
+    border-radius: 0.5rem;
     object-fit: cover;
 `;
 

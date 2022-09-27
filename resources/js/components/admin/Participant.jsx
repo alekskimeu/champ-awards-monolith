@@ -72,26 +72,26 @@ const Container = styled.div`
     background-color: var(--primary-bg);
     border-radius: 0.3rem;
     padding: 1.2rem;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 1.5rem;
 `;
 
 const Header = styled.div`
-	display: flex;
-	gap: 1.5rem;
-	position: relative;
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
 `;
 
 const Image = styled.img`
-	border-radius: 50%;
-	border: 2px solid var(--white);
-	padding: 0.1rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    padding: 0.1rem;
 `;
 
 const Content = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
 `;
 
 const Name = styled.h1`
@@ -101,61 +101,61 @@ const Name = styled.h1`
 `;
 
 const Age = styled.p`
-	opacity: 0.6;
-	font-weight: 600;
-	font-size: 1rem;
+    opacity: 0.6;
+    font-weight: 600;
+    font-size: 1rem;
 `;
 
 const Gender = styled.p`
-	opacity: 0.6;
-	font-weight: 600;
-	font-size: 1rem;
+    opacity: 0.6;
+    font-weight: 600;
+    font-size: 1rem;
 `;
 
 const Action = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 `;
 
 const Button = styled.button`
-	display: flex;
-	align-items: center;
-	border: none;
-	gap: 0.5rem;
-	cursor: pointer;
-	width: fit-content;
-	margin-top: 0.5rem;
-	padding: 0.4rem 0.6rem;
-	font-weight: 500;
-	font-size: 0.8rem;
-	border-radius: 0.3rem;
-	color: var(--white);
-	transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    color: var(--white);
+    transition: all 0.5s ease;
 
-	&:first-child {
-		background-color: var(--primary);
-	}
+    &:first-child {
+        background-color: var(--secondary);
+    }
 
-	&:last-child {
-		background-color: var(--danger);
-	}
+    &:last-child {
+        background-color: var(--danger);
+    }
 
-	&:hover {
-		opacity: 0.9;
-	}
+    &:hover {
+        opacity: 0.9;
+    }
 `;
 
 const Category = styled.p`
-	position: absolute;
-	right: 0;
-	font-size: .7rem;
-	opacity: .6;
-	font-weight: 600;
-	border: 2px solid var(--primary);
-	padding: 0.2rem 1rem .1rem;
-	border-radius: 1rem;
-	color: var(--primary);
-`
+    position: absolute;
+    right: 0;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    font-weight: 600;
+    border: 2px solid var(--secondary);
+    padding: 0.2rem 1rem 0.1rem;
+    border-radius: 1rem;
+    color: var(--secondary);
+`;
 
 export default Participant;

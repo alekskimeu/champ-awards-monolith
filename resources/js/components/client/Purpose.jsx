@@ -19,7 +19,7 @@ const Purpose = ({ purpose }) => {
 const Container = styled.div`
     border-radius: 0.5rem;
     padding: 2rem 1.5rem;
-    border: 1px solid rgba(225, 173, 51, 0.4);
+    border: 1px solid rgba(231, 231, 231, 0.1);
 `;
 
 const Image = styled.img`
@@ -43,7 +43,7 @@ const Title = styled.h2`
         left: 0;
         width: 100%;
         border: none;
-        background-color: rgba(225, 173, 51, 0.8);
+        background-color: rgba(231, 231, 231, 0.4);
         height: 1px;
         opacity: 0.4;
     }

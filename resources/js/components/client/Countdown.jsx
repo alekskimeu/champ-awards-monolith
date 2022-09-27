@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const Countdown = ({date}) => {
+const Countdown = ({ date }) => {
     const [countdownDate, setCountdownDate] = useState(
         new Date("12/25/2022").getTime()
     );
@@ -82,8 +82,7 @@ const Container = styled.div`
 `;
 
 const Unit = styled.div`
-    background-color: #e4e3e3;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
+    background-color: var(--white);
     padding: 0.5rem 0.6rem;
     display: flex;
     flex-direction: column;
@@ -101,6 +100,8 @@ const Unit = styled.div`
 
 const Amount = styled.h1`
     font-size: 2rem;
+    color: var(--black);
+    font-weight: 700;
 
     @media screen and (max-width: 624px) {
         font-size: 1.2rem;
@@ -111,6 +112,7 @@ const Description = styled.p`
     opacity: 0.7;
     font-weight: 600;
     font-size: 1rem;
+    color: var(--black);
 
     @media screen and (max-width: 624px) {
         font-size: 0.8rem;

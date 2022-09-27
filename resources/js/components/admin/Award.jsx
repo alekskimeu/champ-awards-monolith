@@ -82,7 +82,7 @@ const Container = styled.div`
     background-color: var(--primary-bg);
     border-radius: 0.3rem;
     padding: 1.2rem;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 1.5rem;
 `;
 
@@ -103,14 +103,12 @@ const Name = styled.h1`
     font-size: 1.1rem;
     font-weight: 600;
     opacity: 0.8;
-    color: var(--white);
 `;
 
 const Participants = styled.p`
     opacity: 0.6;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--white);
 `;
 
 const Action = styled.div`
@@ -143,7 +141,7 @@ const Button = styled.button`
     transition: all 0.5s ease;
 
     &:first-child {
-        background-color: var(--primary);
+        background-color: var(--secondary);
     }
 
     &:last-child {

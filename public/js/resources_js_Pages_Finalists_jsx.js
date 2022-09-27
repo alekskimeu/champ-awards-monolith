@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Polls_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Finalists_jsx"],{
 
 /***/ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js":
 /*!***********************************************************************!*\
@@ -2818,64 +2818,10 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/material/esm/Box/Box.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@mui/material/esm/Box/Box.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/createBox.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _className__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../className */ "./node_modules/@mui/utils/esm/ClassNameGenerator/ClassNameGenerator.js");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles */ "./node_modules/@mui/material/esm/styles/createTheme.js");
-
-
-
-
-const defaultTheme = (0,_styles__WEBPACK_IMPORTED_MODULE_0__["default"])();
-const Box = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  defaultTheme,
-  defaultClassName: 'MuiBox-root',
-  generateClassName: _className__WEBPACK_IMPORTED_MODULE_2__["default"].generate
-});
- true ? Box.propTypes
-/* remove-proptypes */
-= {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-
-  /**
-   * @ignore
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node),
-
-  /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */
-  component: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().elementType),
-
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_3___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object)])
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Box);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/esm/CircularProgress/CircularProgress.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@mui/material/esm/CircularProgress/CircularProgress.js ***!
-  \*****************************************************************************/
+/***/ "./node_modules/@mui/material/esm/LinearProgress/LinearProgress.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@mui/material/esm/LinearProgress/LinearProgress.js ***!
+  \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2887,26 +2833,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/chainPropTypes.js");
 /* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js");
 /* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/system */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/colorManipulator.js");
 /* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@mui/material/esm/utils/capitalize.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/esm/styles/useThemeProps.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/esm/styles/styled.js");
-/* harmony import */ var _circularProgressClasses__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./circularProgressClasses */ "./node_modules/@mui/material/esm/CircularProgress/circularProgressClasses.js");
+/* harmony import */ var _styles_useTheme__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../styles/useTheme */ "./node_modules/@mui/material/esm/styles/useTheme.js");
+/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/esm/styles/styled.js");
+/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/esm/styles/useThemeProps.js");
+/* harmony import */ var _linearProgressClasses__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./linearProgressClasses */ "./node_modules/@mui/material/esm/LinearProgress/linearProgressClasses.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
-const _excluded = ["className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"];
+const _excluded = ["className", "color", "value", "valueBuffer", "variant"];
 
 let _ = t => t,
     _t,
     _t2,
     _t3,
-    _t4;
+    _t4,
+    _t5,
+    _t6;
 
 
 
@@ -2919,30 +2868,55 @@ let _ = t => t,
 
 
 
-const SIZE = 44;
-const circularRotateKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t || (_t = _`
+
+const TRANSITION_DURATION = 4; // seconds
+
+const indeterminate1Keyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t || (_t = _`
   0% {
-    transform: rotate(0deg);
+    left: -35%;
+    right: 100%;
+  }
+
+  60% {
+    left: 100%;
+    right: -90%;
   }
 
   100% {
-    transform: rotate(360deg);
+    left: 100%;
+    right: -90%;
   }
 `));
-const circularDashKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t2 || (_t2 = _`
+const indeterminate2Keyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t2 || (_t2 = _`
   0% {
-    stroke-dasharray: 1px, 200px;
-    stroke-dashoffset: 0;
+    left: -200%;
+    right: 100%;
   }
 
-  50% {
-    stroke-dasharray: 100px, 200px;
-    stroke-dashoffset: -15px;
+  60% {
+    left: 107%;
+    right: -8%;
   }
 
   100% {
-    stroke-dasharray: 100px, 200px;
-    stroke-dashoffset: -125px;
+    left: 107%;
+    right: -8%;
+  }
+`));
+const bufferKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t3 || (_t3 = _`
+  0% {
+    opacity: 1;
+    background-position: 0 -23px;
+  }
+
+  60% {
+    opacity: 0;
+    background-position: 0 -23px;
+  }
+
+  100% {
+    opacity: 1;
+    background-position: -200px -23px;
   }
 `));
 
@@ -2950,74 +2924,163 @@ const useUtilityClasses = ownerState => {
   const {
     classes,
     variant,
-    color,
-    disableShrink
+    color
   } = ownerState;
   const slots = {
-    root: ['root', variant, `color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`],
-    svg: ['svg'],
-    circle: ['circle', `circle${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(variant)}`, disableShrink && 'circleDisableShrink']
+    root: ['root', `color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`, variant],
+    dashed: ['dashed', `dashedColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`],
+    bar1: ['bar', `barColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`, (variant === 'indeterminate' || variant === 'query') && 'bar1Indeterminate', variant === 'determinate' && 'bar1Determinate', variant === 'buffer' && 'bar1Buffer'],
+    bar2: ['bar', variant !== 'buffer' && `barColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`, variant === 'buffer' && `color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(color)}`, (variant === 'indeterminate' || variant === 'query') && 'bar2Indeterminate', variant === 'buffer' && 'bar2Buffer']
   };
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_7__["default"])(slots, _circularProgressClasses__WEBPACK_IMPORTED_MODULE_8__.getCircularProgressUtilityClass, classes);
+  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_7__["default"])(slots, _linearProgressClasses__WEBPACK_IMPORTED_MODULE_8__.getLinearProgressUtilityClass, classes);
 };
 
-const CircularProgressRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_9__["default"])('span', {
-  name: 'MuiCircularProgress',
+const getColorShade = (theme, color) => {
+  if (color === 'inherit') {
+    return 'currentColor';
+  }
+
+  if (theme.vars) {
+    return theme.vars.palette.LinearProgress[`${color}Bg`];
+  }
+
+  return theme.palette.mode === 'light' ? (0,_mui_system__WEBPACK_IMPORTED_MODULE_9__.lighten)(theme.palette[color].main, 0.62) : (0,_mui_system__WEBPACK_IMPORTED_MODULE_9__.darken)(theme.palette[color].main, 0.5);
+};
+
+const LinearProgressRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_10__["default"])('span', {
+  name: 'MuiLinearProgress',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const {
       ownerState
     } = props;
-    return [styles.root, styles[ownerState.variant], styles[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.color)}`]];
+    return [styles.root, styles[`color${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.color)}`], styles[ownerState.variant]];
   }
 })(({
   ownerState,
   theme
 }) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  display: 'inline-block'
-}, ownerState.variant === 'determinate' && {
-  transition: theme.transitions.create('transform')
-}, ownerState.color !== 'inherit' && {
-  color: (theme.vars || theme).palette[ownerState.color].main
-}), ({
-  ownerState
-}) => ownerState.variant === 'indeterminate' && (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.css)(_t3 || (_t3 = _`
-      animation: ${0} 1.4s linear infinite;
-    `), circularRotateKeyframe));
-const CircularProgressSVG = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_9__["default"])('svg', {
-  name: 'MuiCircularProgress',
-  slot: 'Svg',
-  overridesResolver: (props, styles) => styles.svg
-})({
-  display: 'block' // Keeps the progress centered
-
-});
-const CircularProgressCircle = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_9__["default"])('circle', {
-  name: 'MuiCircularProgress',
-  slot: 'Circle',
+  position: 'relative',
+  overflow: 'hidden',
+  display: 'block',
+  height: 4,
+  zIndex: 0,
+  // Fix Safari's bug during composition of different paint.
+  '@media print': {
+    colorAdjust: 'exact'
+  },
+  backgroundColor: getColorShade(theme, ownerState.color)
+}, ownerState.color === 'inherit' && ownerState.variant !== 'buffer' && {
+  backgroundColor: 'none',
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'currentColor',
+    opacity: 0.3
+  }
+}, ownerState.variant === 'buffer' && {
+  backgroundColor: 'transparent'
+}, ownerState.variant === 'query' && {
+  transform: 'rotate(180deg)'
+}));
+const LinearProgressDashed = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_10__["default"])('span', {
+  name: 'MuiLinearProgress',
+  slot: 'Dashed',
   overridesResolver: (props, styles) => {
     const {
       ownerState
     } = props;
-    return [styles.circle, styles[`circle${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.variant)}`], ownerState.disableShrink && styles.circleDisableShrink];
+    return [styles.dashed, styles[`dashedColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.color)}`]];
+  }
+})(({
+  ownerState,
+  theme
+}) => {
+  const backgroundColor = getColorShade(theme, ownerState.color);
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    position: 'absolute',
+    marginTop: 0,
+    height: '100%',
+    width: '100%'
+  }, ownerState.color === 'inherit' && {
+    opacity: 0.3
+  }, {
+    backgroundImage: `radial-gradient(${backgroundColor} 0%, ${backgroundColor} 16%, transparent 42%)`,
+    backgroundSize: '10px 10px',
+    backgroundPosition: '0 -23px'
+  });
+}, (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.css)(_t4 || (_t4 = _`
+    animation: ${0} 3s infinite linear;
+  `), bufferKeyframe));
+const LinearProgressBar1 = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_10__["default"])('span', {
+  name: 'MuiLinearProgress',
+  slot: 'Bar1',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.bar, styles[`barColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.color)}`], (ownerState.variant === 'indeterminate' || ownerState.variant === 'query') && styles.bar1Indeterminate, ownerState.variant === 'determinate' && styles.bar1Determinate, ownerState.variant === 'buffer' && styles.bar1Buffer];
   }
 })(({
   ownerState,
   theme
 }) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  stroke: 'currentColor'
+  width: '100%',
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
+  top: 0,
+  transition: 'transform 0.2s linear',
+  transformOrigin: 'left',
+  backgroundColor: ownerState.color === 'inherit' ? 'currentColor' : (theme.vars || theme).palette[ownerState.color].main
 }, ownerState.variant === 'determinate' && {
-  transition: theme.transitions.create('stroke-dashoffset')
-}, ownerState.variant === 'indeterminate' && {
-  // Some default value that looks fine waiting for the animation to kicks in.
-  strokeDasharray: '80px, 200px',
-  strokeDashoffset: 0 // Add the unit to fix a Edge 16 and below bug.
-
+  transition: `transform .${TRANSITION_DURATION}s linear`
+}, ownerState.variant === 'buffer' && {
+  zIndex: 1,
+  transition: `transform .${TRANSITION_DURATION}s linear`
 }), ({
   ownerState
-}) => ownerState.variant === 'indeterminate' && !ownerState.disableShrink && (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.css)(_t4 || (_t4 = _`
-      animation: ${0} 1.4s ease-in-out infinite;
-    `), circularDashKeyframe));
+}) => (ownerState.variant === 'indeterminate' || ownerState.variant === 'query') && (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.css)(_t5 || (_t5 = _`
+      width: auto;
+      animation: ${0} 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    `), indeterminate1Keyframe));
+const LinearProgressBar2 = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_10__["default"])('span', {
+  name: 'MuiLinearProgress',
+  slot: 'Bar2',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.bar, styles[`barColor${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__["default"])(ownerState.color)}`], (ownerState.variant === 'indeterminate' || ownerState.variant === 'query') && styles.bar2Indeterminate, ownerState.variant === 'buffer' && styles.bar2Buffer];
+  }
+})(({
+  ownerState,
+  theme
+}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  width: '100%',
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
+  top: 0,
+  transition: 'transform 0.2s linear',
+  transformOrigin: 'left'
+}, ownerState.variant !== 'buffer' && {
+  backgroundColor: ownerState.color === 'inherit' ? 'currentColor' : (theme.vars || theme).palette[ownerState.color].main
+}, ownerState.color === 'inherit' && {
+  opacity: 0.3
+}, ownerState.variant === 'buffer' && {
+  backgroundColor: getColorShade(theme, ownerState.color),
+  transition: `transform .${TRANSITION_DURATION}s linear`
+}), ({
+  ownerState
+}) => (ownerState.variant === 'indeterminate' || ownerState.variant === 'query') && (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.css)(_t6 || (_t6 = _`
+      width: auto;
+      animation: ${0} 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s infinite;
+    `), indeterminate2Keyframe));
 /**
  * ## ARIA
  *
@@ -3026,74 +3089,87 @@ const CircularProgressCircle = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_9__["d
  * attribute to `true` on that region until it has finished loading.
  */
 
-const CircularProgress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function CircularProgress(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__["default"])({
+const LinearProgress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function LinearProgress(inProps, ref) {
+  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_11__["default"])({
     props: inProps,
-    name: 'MuiCircularProgress'
+    name: 'MuiLinearProgress'
   });
 
   const {
     className,
     color = 'primary',
-    disableShrink = false,
-    size = 40,
-    style,
-    thickness = 3.6,
-    value = 0,
+    value,
+    valueBuffer,
     variant = 'indeterminate'
   } = props,
         other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
 
   const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
     color,
-    disableShrink,
-    size,
-    thickness,
-    value,
     variant
   });
 
   const classes = useUtilityClasses(ownerState);
-  const circleStyle = {};
-  const rootStyle = {};
+  const theme = (0,_styles_useTheme__WEBPACK_IMPORTED_MODULE_12__["default"])();
   const rootProps = {};
+  const inlineStyles = {
+    bar1: {},
+    bar2: {}
+  };
 
-  if (variant === 'determinate') {
-    const circumference = 2 * Math.PI * ((SIZE - thickness) / 2);
-    circleStyle.strokeDasharray = circumference.toFixed(3);
-    rootProps['aria-valuenow'] = Math.round(value);
-    circleStyle.strokeDashoffset = `${((100 - value) / 100 * circumference).toFixed(3)}px`;
-    rootStyle.transform = 'rotate(-90deg)';
+  if (variant === 'determinate' || variant === 'buffer') {
+    if (value !== undefined) {
+      rootProps['aria-valuenow'] = Math.round(value);
+      rootProps['aria-valuemin'] = 0;
+      rootProps['aria-valuemax'] = 100;
+      let transform = value - 100;
+
+      if (theme.direction === 'rtl') {
+        transform = -transform;
+      }
+
+      inlineStyles.bar1.transform = `translateX(${transform}%)`;
+    } else if (true) {
+      console.error('MUI: You need to provide a value prop ' + 'when using the determinate or buffer variant of LinearProgress .');
+    }
   }
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(CircularProgressRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  if (variant === 'buffer') {
+    if (valueBuffer !== undefined) {
+      let transform = (valueBuffer || 0) - 100;
+
+      if (theme.direction === 'rtl') {
+        transform = -transform;
+      }
+
+      inlineStyles.bar2.transform = `translateX(${transform}%)`;
+    } else if (true) {
+      console.error('MUI: You need to provide a valueBuffer prop ' + 'when using the buffer variant of LinearProgress.');
+    }
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(LinearProgressRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
     className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className),
-    style: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-      width: size,
-      height: size
-    }, rootStyle, style),
     ownerState: ownerState,
-    ref: ref,
     role: "progressbar"
-  }, rootProps, other, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(CircularProgressSVG, {
-      className: classes.svg,
+  }, rootProps, {
+    ref: ref
+  }, other, {
+    children: [variant === 'buffer' ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(LinearProgressDashed, {
+      className: classes.dashed,
+      ownerState: ownerState
+    }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(LinearProgressBar1, {
+      className: classes.bar1,
       ownerState: ownerState,
-      viewBox: `${SIZE / 2} ${SIZE / 2} ${SIZE} ${SIZE}`,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(CircularProgressCircle, {
-        className: classes.circle,
-        style: circleStyle,
-        ownerState: ownerState,
-        cx: SIZE,
-        cy: SIZE,
-        r: (SIZE - thickness) / 2,
-        fill: "none",
-        strokeWidth: thickness
-      })
-    })
+      style: inlineStyles.bar1
+    }), variant === 'determinate' ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(LinearProgressBar2, {
+      className: classes.bar2,
+      ownerState: ownerState,
+      style: inlineStyles.bar2
+    })]
   }));
 });
- true ? CircularProgress.propTypes
+ true ? LinearProgress.propTypes
 /* remove-proptypes */
 = {
   // ----------------------------- Warning --------------------------------
@@ -3104,12 +3180,12 @@ const CircularProgress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forward
   /**
    * Override or extend the styles applied to the component.
    */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object),
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object),
 
   /**
    * @ignore
    */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string),
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string),
 
   /**
    * The color of the component.
@@ -3117,83 +3193,56 @@ const CircularProgress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forward
    * [palette customization guide](https://mui.com/material-ui/customization/palette/#adding-new-colors).
    * @default 'primary'
    */
-  color: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOf(['inherit', 'primary', 'secondary', 'error', 'info', 'success', 'warning']), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string)]),
-
-  /**
-   * If `true`, the shrink animation is disabled.
-   * This only works if variant is `indeterminate`.
-   * @default false
-   */
-  disableShrink: (0,_mui_utils__WEBPACK_IMPORTED_MODULE_12__["default"])((prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool), props => {
-    if (props.disableShrink && props.variant && props.variant !== 'indeterminate') {
-      return new Error('MUI: You have provided the `disableShrink` prop ' + 'with a variant other than `indeterminate`. This will have no effect.');
-    }
-
-    return null;
-  }),
-
-  /**
-   * The size of the component.
-   * If using a number, the pixel unit is assumed.
-   * If using a string, you need to provide the CSS unit, e.g '3rem'.
-   * @default 40
-   */
-  size: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_11___default().number), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string)]),
-
-  /**
-   * @ignore
-   */
-  style: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['inherit', 'primary', 'secondary']), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().string)]),
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_11___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_11___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object)]),
+  sx: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_13___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_13___default().object)]),
 
   /**
-   * The thickness of the circle.
-   * @default 3.6
-   */
-  thickness: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().number),
-
-  /**
-   * The value of the progress indicator for the determinate variant.
+   * The value of the progress indicator for the determinate and buffer variants.
    * Value between 0 and 100.
-   * @default 0
    */
-  value: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().number),
+  value: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().number),
+
+  /**
+   * The value for the buffer variant.
+   * Value between 0 and 100.
+   */
+  valueBuffer: (prop_types__WEBPACK_IMPORTED_MODULE_13___default().number),
 
   /**
    * The variant to use.
-   * Use indeterminate when there is no progress value.
+   * Use indeterminate or query when there is no progress value.
    * @default 'indeterminate'
    */
-  variant: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOf(['determinate', 'indeterminate'])
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_13___default().oneOf(['buffer', 'determinate', 'indeterminate', 'query'])
 } : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CircularProgress);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LinearProgress);
 
 /***/ }),
 
-/***/ "./node_modules/@mui/material/esm/CircularProgress/circularProgressClasses.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@mui/material/esm/CircularProgress/circularProgressClasses.js ***!
-  \************************************************************************************/
+/***/ "./node_modules/@mui/material/esm/LinearProgress/linearProgressClasses.js":
+/*!********************************************************************************!*\
+  !*** ./node_modules/@mui/material/esm/LinearProgress/linearProgressClasses.js ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "getCircularProgressUtilityClass": () => (/* binding */ getCircularProgressUtilityClass)
+/* harmony export */   "getLinearProgressUtilityClass": () => (/* binding */ getLinearProgressUtilityClass)
 /* harmony export */ });
 /* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js");
 /* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js");
 
-function getCircularProgressUtilityClass(slot) {
-  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiCircularProgress', slot);
+function getLinearProgressUtilityClass(slot) {
+  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiLinearProgress', slot);
 }
-const circularProgressClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiCircularProgress', ['root', 'determinate', 'indeterminate', 'colorPrimary', 'colorSecondary', 'svg', 'circle', 'circleDeterminate', 'circleIndeterminate', 'circleDisableShrink']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (circularProgressClasses);
+const linearProgressClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiLinearProgress', ['root', 'colorPrimary', 'colorSecondary', 'determinate', 'indeterminate', 'buffer', 'query', 'dashed', 'dashedColorPrimary', 'dashedColorSecondary', 'bar', 'barColorPrimary', 'barColorSecondary', 'bar1Indeterminate', 'bar1Determinate', 'bar1Buffer', 'bar2Indeterminate', 'bar2Buffer']);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (linearProgressClasses);
 
 /***/ }),
 
@@ -4236,6 +4285,37 @@ const styled = (0,_mui_system__WEBPACK_IMPORTED_MODULE_0__["default"])({
 
 /***/ }),
 
+/***/ "./node_modules/@mui/material/esm/styles/useTheme.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@mui/material/esm/styles/useTheme.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useTheme)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/useTheme.js");
+/* harmony import */ var _defaultTheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./defaultTheme */ "./node_modules/@mui/material/esm/styles/defaultTheme.js");
+
+
+
+function useTheme() {
+  const theme = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__["default"])(_defaultTheme__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+  if (true) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue(theme);
+  }
+
+  return theme;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@mui/material/esm/styles/useThemeProps.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@mui/material/esm/styles/useThemeProps.js ***!
@@ -5190,68 +5270,6 @@ function compose(...styles) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (compose);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/system/esm/createBox.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@mui/system/esm/createBox.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ createBox)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_styled_engine__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/styled-engine */ "./node_modules/@mui/styled-engine/index.js");
-/* harmony import */ var _styleFunctionSx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styleFunctionSx */ "./node_modules/@mui/system/esm/styleFunctionSx/styleFunctionSx.js");
-/* harmony import */ var _styleFunctionSx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styleFunctionSx */ "./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js");
-/* harmony import */ var _useTheme__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./useTheme */ "./node_modules/@mui/system/esm/useTheme.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-const _excluded = ["className", "component"];
-
-
-
-
-
-
-function createBox(options = {}) {
-  const {
-    defaultTheme,
-    defaultClassName = 'MuiBox-root',
-    generateClassName,
-    styleFunctionSx = _styleFunctionSx__WEBPACK_IMPORTED_MODULE_5__["default"]
-  } = options;
-  const BoxRoot = (0,_mui_styled_engine__WEBPACK_IMPORTED_MODULE_6__["default"])('div', {
-    shouldForwardProp: prop => prop !== 'theme' && prop !== 'sx' && prop !== 'as'
-  })(styleFunctionSx);
-  const Box = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Box(inProps, ref) {
-    const theme = (0,_useTheme__WEBPACK_IMPORTED_MODULE_7__["default"])(defaultTheme);
-
-    const _extendSxProp = (0,_styleFunctionSx__WEBPACK_IMPORTED_MODULE_8__["default"])(inProps),
-          {
-      className,
-      component = 'div'
-    } = _extendSxProp,
-          other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_extendSxProp, _excluded);
-
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(BoxRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      as: component,
-      ref: ref,
-      className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(className, generateClassName ? generateClassName(defaultClassName) : defaultClassName),
-      theme: theme
-    }, other));
-  });
-  return Box;
-}
 
 /***/ }),
 
@@ -6670,77 +6688,6 @@ function style(options) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ extendSxProp)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/deepmerge.js");
-/* harmony import */ var _getThemeValue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../getThemeValue */ "./node_modules/@mui/system/esm/getThemeValue.js");
-
-
-const _excluded = ["sx"];
-
-
-
-const splitProps = props => {
-  const result = {
-    systemProps: {},
-    otherProps: {}
-  };
-  Object.keys(props).forEach(prop => {
-    if (_getThemeValue__WEBPACK_IMPORTED_MODULE_2__.propToStyleFunction[prop]) {
-      result.systemProps[prop] = props[prop];
-    } else {
-      result.otherProps[prop] = props[prop];
-    }
-  });
-  return result;
-};
-
-function extendSxProp(props) {
-  const {
-    sx: inSx
-  } = props,
-        other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
-
-  const {
-    systemProps,
-    otherProps
-  } = splitProps(other);
-  let finalSx;
-
-  if (Array.isArray(inSx)) {
-    finalSx = [systemProps, ...inSx];
-  } else if (typeof inSx === 'function') {
-    finalSx = (...args) => {
-      const result = inSx(...args);
-
-      if (!(0,_mui_utils__WEBPACK_IMPORTED_MODULE_3__.isPlainObject)(result)) {
-        return systemProps;
-      }
-
-      return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, systemProps, result);
-    };
-  } else {
-    finalSx = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, systemProps, inSx);
-  }
-
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps, {
-    sx: finalSx
-  });
-}
-
-/***/ }),
-
 /***/ "./node_modules/@mui/system/esm/styleFunctionSx/styleFunctionSx.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@mui/system/esm/styleFunctionSx/styleFunctionSx.js ***!
@@ -7102,27 +7049,6 @@ function capitalize(string) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/utils/esm/chainPropTypes.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@mui/utils/esm/chainPropTypes.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ chainPropTypes)
-/* harmony export */ });
-function chainPropTypes(propType1, propType2) {
-  if (false) {}
-
-  return function validate(...args) {
-    return propType1(...args) || propType2(...args);
-  };
-}
-
-/***/ }),
-
 /***/ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@mui/utils/esm/composeClasses/composeClasses.js ***!
@@ -7357,10 +7283,10 @@ function resolveProps(defaultProps, props) {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Polls.jsx":
-/*!**************************************!*\
-  !*** ./resources/js/Pages/Polls.jsx ***!
-  \**************************************/
+/***/ "./resources/js/Pages/Finalists.jsx":
+/*!******************************************!*\
+  !*** ./resources/js/Pages/Finalists.jsx ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -7370,14 +7296,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _assets_header_webp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/header.webp */ "./resources/js/assets/header.webp");
-/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/logo.png */ "./resources/js/assets/logo.png");
-/* harmony import */ var _components_common_Loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/common/Loader */ "./resources/js/components/common/Loader.jsx");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/client/Countdown */ "./resources/js/components/client/Countdown.jsx");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
+/* harmony import */ var _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/header.webp */ "./resources/js/assets/header.webp");
+/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/logo.png */ "./resources/js/assets/logo.png");
+/* harmony import */ var _components_client_AwardsCategories__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/client/AwardsCategories */ "./resources/js/components/client/AwardsCategories.jsx");
+/* harmony import */ var _components_client_Header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/client/Header */ "./resources/js/components/client/Header.jsx");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -7404,25 +7330,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+var Finalists = function Finalists(_ref) {
+  var categories = _ref.categories,
+      awards = _ref.awards,
+      participants = _ref.participants;
+  var flash = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.usePage)().props.flash;
 
-
-
-var Polls = function Polls(_ref) {
-  var participants = _ref.participants,
-      categories = _ref.categories,
-      category = _ref.category,
-      subcategories = _ref.subcategories;
-  var flash = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.flash;
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(participants),
       _useState2 = _slicedToArray(_useState, 2),
-      search = _useState2[0],
-      setSearch = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(participants),
-      _useState4 = _slicedToArray(_useState3, 2),
-      users = _useState4[0],
-      setUsers = _useState4[1];
+      users = _useState2[0],
+      setUsers = _useState2[1];
 
   var filterSubcategories = function filterSubcategories(e) {
     var id = e.target.value;
@@ -7436,17 +7353,10 @@ var Polls = function Polls(_ref) {
     }
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Champ Awards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Finalists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("meta", {
     name: "description",
-    content: "Vote for Champ Awards finalists"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, flash.message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Message, null, flash.message), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
-    className: "brand"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Logo, {
-    src: _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__["default"],
-    alt: "Champ Awards",
-    width: "50"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Countdown__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, categories.map(function (category) {
+    content: "Champ Awards finalists"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_Header__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Wrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PollContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeaderWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Categories, null, categories.map(function (category) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, {
       key: category.id
     }, category.name);
@@ -7457,44 +7367,122 @@ var Polls = function Polls(_ref) {
       backgroundColor: "white"
     },
     value: 0
-  }, "All"), subcategories.map(function (subcategory) {
+  }, "All"), awards.map(function (award) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Option, {
       style: {
         backgroundColor: "white"
       },
-      key: subcategory.id,
-      value: subcategory.id
-    }, subcategory.name);
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, null, users ? users.filter(function (user) {
-    return user.firstName.concat(user.lastName).toLowerCase().includes(search.toLowerCase());
-  }).map(function (user) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Card, {
-      user: user,
-      key: user.index,
-      category: subcategories.filter(function (subcategory) {
-        return subcategory.id === user.award_id;
-      })
+      key: award.id,
+      value: award.id
+    }, award.name);
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CardsWrapper, null, categories.map(function (category) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_client_AwardsCategories__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      key: category.id,
+      category: category,
+      awards: awards.filter(function (award) {
+        return category.id === award.category_id;
+      }),
+      participants: users
     });
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_common_Loader__WEBPACK_IMPORTED_MODULE_4__["default"], null))))));
+  }))))));
 };
 
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 3rem 1rem;\n    min-height: 100vh;\n    position: relative;\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_webp__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 8rem 1rem;\n    min-height: 100vh;\n    position: relative;\n    background-color: var(--secondary);\n\n    &::after {\n        position: absolute;\n        content: \"\";\n        z-index: -1;\n        top: 0;\n        bottom: 0;\n        left: 0;\n        right: 0;\n        background-image: linear-gradient(\n                0deg,\n                rgba(0, 0, 0, 0.9),\n                rgba(0, 0, 0, 0.9)\n            ),\n            url(", ");\n        background-repeat: no-repeat;\n        background-position: center center;\n        background-size: cover;\n    }\n"])), _assets_header_webp__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var Logo = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([""])));
 var Message = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    letter-spacing: 1.8px;\n    position: absolute;\n    top: 1rem;\n    right: 1rem;\n    background-color: var(--primary);\n    color: var(--white);\n    padding: 0.3rem 0.8rem;\n    font-weight: 600;\n    border-radius: 0.1rem;\n    transition: all 0.5s ease;\n"])));
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: 0 auto;\n"])));
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    padding-bottom: 1.5rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n\n    @media screen and (max-width: 800px) {\n        flex-direction: column;\n    }\n"])));
-var Left = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
-var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n\n    @media screen and (max-width: 500px) {\n        justify-content: center;\n    }\n"])));
-var Categories = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
-var Category = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    opacity: 0.8;\n    font-size: 0.9rem;\n    border: 1px solid var(--primary);\n    color: var(--primary);\n    font-weight: 600;\n    padding: 0.3rem 2rem;\n    border-radius: 5rem;\n    transition: all 0.5s ease;\n\n    &:hover {\n        opacity: 1;\n    }\n"])));
-var Select = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].select(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n\n    @media screen and (max-width: 500px) {\n        display: none;\n    }\n"])));
-var Option = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].option(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
-var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
-var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    margin-top: 2rem;\n"])));
-var Search = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #e9e9e9;\n    min-width: 20vw;\n    border-radius: 0.3rem;\n    padding-left: 0.5rem;\n"])));
-var Input = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].input(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    padding: 0.7rem 0.8rem;\n    border: none;\n    outline: none;\n    font-size: 1rem;\n    width: 100%;\n    border-top-right-radius: 0.3rem;\n    border-bottom-right-radius: 0.3rem;\n    margin-left: 0.4rem;\n"])));
-var Cards = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    width: 100%;\n    top: 12rem;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 1.5rem;\n\n    @media screen and (max-width: 1000px) {\n        grid-template-columns: repeat(2, 1fr);\n    }\n\n    @media screen and (max-width: 700px) {\n        grid-template-columns: 1fr;\n    }\n"])));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Polls);
+var Left = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
+var HeaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    margin-bottom: 2.5rem;\n\n    @media screen and (max-width: 500px) {\n        justify-content: center;\n    }\n"])));
+var Categories = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: flex;\n    gap: 1rem;\n\n    @media screen and (max-width: 624px) {\n        display: none;\n    }\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    opacity: 0.8;\n    font-size: 0.9rem;\n    border: 1px solid var(--primary);\n    color: var(--primary);\n    font-weight: 600;\n    padding: 0.3rem 2rem;\n    border-radius: 5rem;\n    transition: all 0.5s ease;\n\n    &:hover {\n        opacity: 1;\n    }\n"])));
+var Select = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].select(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n\n    @media screen and (max-width: 500px) {\n        display: none;\n    }\n"])));
+var Option = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].option(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    outline: none;\n    border: none;\n    cursor: pointer;\n    padding: 0.5rem;\n    border-radius: 0.3rem;\n    font-weight: 600;\n"])));
+var Subtitle = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    width: fit-content;\n    font-size: 1.2rem;\n    opacity: 0.7;\n    color: var(--white);\n    text-align: center;\n    margin: 0 auto 1rem auto;\n    padding-bottom: 0.1rem;\n    border-bottom: 1px solid rgba(231, 231, 231, 0.2);\n"])));
+var PollContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    margin-top: 2rem;\n"])));
+var Search = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #e9e9e9;\n    min-width: 20vw;\n    border-radius: 0.3rem;\n    padding-left: 0.5rem;\n"])));
+var CardsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 3rem;\n"])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Finalists);
+
+/***/ }),
+
+/***/ "./resources/js/components/client/AwardsCategories.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/client/AwardsCategories.jsx ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Participant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Participant */ "./resources/js/components/client/Participant.jsx");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+var AwardsCategories = function AwardsCategories(_ref) {
+  var category = _ref.category,
+      awards = _ref.awards,
+      participants = _ref.participants;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, awards.map(function (award) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Cards, {
+      key: award.id
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CardHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(AwardName, null, award.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Category, null, category.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CardsContainer, null, participants.filter(function (participant) {
+      return participant.award_id === award.id;
+    }).map(function (participant) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Participant__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        participant: participant
+      });
+    })));
+  }));
+};
+
+var Cards = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
+var CardHeader = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    background-color: var(--primary);\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 0.5rem;\n    padding: 0.4rem 0.6rem;\n    border-top-right-radius: 0.3rem;\n    border-top-left-radius: 0.3rem;\n"])));
+var Category = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h3(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    color: var(--white);\n"])));
+var AwardName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].h4(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    color: var(--white);\n"])));
+var CardsContainer = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    gap: 1rem;\n    background-color: var(--white);\n    padding: 1.5rem;\n    border-bottom-right-radius: 0.3rem;\n    border-bottom-left-radius: 0.3rem;\n"])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AwardsCategories);
+
+/***/ }),
+
+/***/ "./resources/js/components/client/Button.jsx":
+/*!***************************************************!*\
+  !*** ./resources/js/components/client/Button.jsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Button = function Button(_ref) {
+  var url = _ref.url,
+      title = _ref.title;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+    href: url,
+    className: "btn-vote"
+  }, title, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("i", {
+    className: "fas fa-arrow-right-long"
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);
 
 /***/ }),
 
@@ -7594,9 +7582,9 @@ var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_t
 
 /***/ }),
 
-/***/ "./resources/js/components/common/Loader.jsx":
+/***/ "./resources/js/components/client/Header.jsx":
 /*!***************************************************!*\
-  !*** ./resources/js/components/common/Loader.jsx ***!
+  !*** ./resources/js/components/client/Header.jsx ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -7607,20 +7595,96 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/CircularProgress/CircularProgress.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button */ "./resources/js/components/client/Button.jsx");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/logo.png */ "./resources/js/assets/logo.png");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
-var Loader = function Loader() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    sx: {
-      display: "flex"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+
+
+
+
+var Header = function Header() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Navbar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Left, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    href: "/",
+    className: "brand"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Logo, {
+    src: _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+    alt: "Champ Awards",
+    width: "50"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Menu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    href: "/",
+    className: "nav-link"
+  }, "Home"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    href: "/finalists",
+    className: "nav-link"
+  }, "Finalists"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+    href: "/sponsor",
+    className: "nav-link"
+  }, "Sponsor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    url: "/vote",
+    title: "Vote"
+  })));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Loader);
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    position: fixed;\n    top: 0;\n    z-index: 1;\n    width: 100%;\n    height: 5rem;\n    background-color: var(--secondary);\n"])));
+var Navbar = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].nav(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    max-width: 1600px;\n    margin: 0 auto;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 2rem;\n    height: 100%;\n"])));
+var Left = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n"])));
+var Logo = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral([""])));
+var Menu = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].nav(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    display: flex;\n    align-items: center;\n    gap: 3rem;\n"])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/components/client/Participant.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/client/Participant.jsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material/LinearProgress */ "./node_modules/@mui/material/esm/LinearProgress/LinearProgress.js");
+/* harmony import */ var _assets_user_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/user.jpg */ "./resources/js/assets/user.jpg");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var Participant = function Participant(_ref) {
+  var participant = _ref.participant;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Card, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Image, {
+    src: "/storage/".concat(participant.photo),
+    alt: participant.firstName,
+    width: "50",
+    height: "50"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Details, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Name, null, participant.firstName, " ", participant.lastName, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Gender, null, participant.gender), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_LinearProgress__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    variant: "determinate",
+    value: participant.votes
+  })));
+};
+
+var Card = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    background-color: #f5f5f5;\n    border: 1px solid var(--secondary);\n    padding: 0.8rem 0.5rem;\n    border-radius: 0.5rem;\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n    cursor: pointer;\n    transition: all 0.5s ease;\n\n    &:active {\n        background-color: var(--secondary);\n    }\n"])));
+var Image = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    border-radius: 50%;\n    border: 2px solid var(--primary);\n    padding: 0.1rem;\n"])));
+var Details = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral([""])));
+var Name = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h3(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    font-size: 1.1rem;\n"])));
+var Gender = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral([""])));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Participant);
 
 /***/ }),
 
@@ -7667,6 +7731,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?559e99de08a863d828fd730c6897a122");
+
+/***/ }),
+
+/***/ "./resources/js/assets/user.jpg":
+/*!**************************************!*\
+  !*** ./resources/js/assets/user.jpg ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/user.jpg?b5273b07acd43d5d52cc996c81303c3e");
 
 /***/ }),
 

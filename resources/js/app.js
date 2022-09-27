@@ -1,12 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { createInertiaApp } from '@inertiajs/inertia-react'
-import { InertiaProgress } from '@inertiajs/progress'
+import React from "react";
+import { render } from "react-dom";
+import { createInertiaApp } from "@inertiajs/inertia-react";
+import { InertiaProgress } from "@inertiajs/progress";
 
-InertiaProgress.init()
+InertiaProgress.init();
 
 createInertiaApp({
-    title: (title) => `${title} - Champ Awards`,
+    title: (title) => `Champ Awards - ${title}`,
     resolve: (name) => import(`./Pages/${name}`),
     setup({ el, App, props }) {
         render(<App {...props} />, el);

@@ -12,11 +12,11 @@
     --white: #ffffff;
     --black: #000000;
     --primary: #e1ad33;
-    --secondary: #17403f;
+    --secondary: #111957;
     --danger: rgb(216, 24, 24);
 
-    --secondary-bg: #0e1220;
-    --primary-bg: #080c1b;
+    --secondary-bg: #ececec;
+    --primary-bg: #f5f5f5;
 
     --border: rgba(107, 107, 107, 0.2);
 
@@ -78,7 +78,7 @@ body {
     gap: 1rem;
     font-weight: 600;
     transition: all 0.5s ease;
-    color: var(--white);
+    color: var(--black);
 }
 
 .header-nav {
@@ -86,7 +86,7 @@ body {
     border-radius: 0.3rem;
     font-weight: 600;
     transition: all 0.5s ease;
-    color: var(--primary);
+    color: var(--secondary);
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -223,8 +223,9 @@ body {
 }
 
 .btn-sponsor {
-    color: var(--white);
+    color: var(--secondary);
     font-size: 1.2rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -260,20 +261,4 @@ body {
 .footer-link {
     color: var(--white);
     opacity: 0.9;
-}
-
-.footer-signature {
-    color: var(--white);
-    opacity: 1;
-    text-decoration: underline;
-    font-weight: 600;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-}
-
-.footer-signature:hover {
-    opacity: 0.8;
 }

@@ -12,40 +12,46 @@ import Modal from "./Modal";
 import CategoryForm from "./CategoryForm.jsx";
 
 const Category = ({ category }) => {
-	const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
 
-	const handleClose = () => {
-		setShow(false);
-	};
+    const handleClose = () => {
+        setShow(false);
+    };
 
-	const showModal = () => {
-		setShow(true);
-	};
+    const showModal = () => {
+        setShow(true);
+    };
 
-	const handleDelete = () => {
+    const handleDelete = () => {
         Inertia.delete(`/categories/${category.id}`);
     };
 
-	return (
-		<>
-			<Container>
-				<Name>{category.name}</Name>
-				<Description>{category.description.slice(0, 80)}...</Description>
-				<Action>
-					<Button onClick={showModal}>
-						<EditIcon />
-					</Button>
-					<Button onClick={handleDelete}>
-						<DeleteIcon />
-					</Button>
-				</Action>
-			</Container>
+    return (
+        <>
+            <Container>
+                <Name>{category.name}</Name>
+                <Description>
+                    {category.description.slice(0, 80)}...
+                </Description>
+                <Action>
+                    <Button onClick={showModal}>
+                        <EditIcon />
+                    </Button>
+                    <Button onClick={handleDelete}>
+                        <DeleteIcon />
+                    </Button>
+                </Action>
+            </Container>
 
-			<Modal show={show} handleClose={handleClose} title="Update Category">
-				{<CategoryForm category={category} />}
-			</Modal>
-		</>
-	);
+            <Modal
+                show={show}
+                handleClose={handleClose}
+                title="Update Category"
+            >
+                {<CategoryForm category={category} />}
+            </Modal>
+        </>
+    );
 };
 
 const Container = styled.div`
@@ -53,7 +59,7 @@ const Container = styled.div`
     background-color: var(--primary-bg);
     border-radius: 0.3rem;
     padding: 1.2rem;
-    color: var(--white);
+    color: var(--black);
     margin-bottom: 1.5rem;
 `;
 
@@ -65,44 +71,44 @@ const Name = styled.h1`
 `;
 
 const Description = styled.p`
-	opacity: 0.6;
-	font-weight: 500;
-	font-size: 1.1rem;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 1.1rem;
 `;
 
 const Action = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
 `;
 
 const Button = styled.button`
-	display: flex;
-	align-items: center;
-	border: none;
-	gap: 0.5rem;
-	cursor: pointer;
-	width: fit-content;
-	margin-top: 0.5rem;
-	padding: 0.3rem 0.4rem;
-	font-weight: 500;
-	font-size: 0.8rem;
-	border-radius: 0.3rem;
-	color: var(--white);
-	transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 0.5rem;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.4rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    color: var(--white);
+    transition: all 0.5s ease;
 
-	&:first-child {
-		background-color: var(--primary);
-	}
+    &:first-child {
+        background-color: var(--secondary);
+    }
 
-	&:last-child {
-		background-color: var(--danger);
-	}
+    &:last-child {
+        background-color: var(--danger);
+    }
 
-	&:hover {
-		opacity: 0.9;
-	}
+    &:hover {
+        opacity: 0.9;
+    }
 `;
 
 export default Category;

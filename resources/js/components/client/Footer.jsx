@@ -25,16 +25,6 @@ const Footer = () => {
                 <Copyright>
                     &copy;{new Date().getFullYear()} Champ Awards
                 </Copyright>
-                <Signature>
-                    <a
-                        href="https://alex-kimeu.com"
-                        target="_blank"
-                        className="footer-signature"
-                    >
-                        Alex
-                    </a>{" "}
-                    made it
-                </Signature>
             </Wrapper>
         </Container>
     );
@@ -60,11 +50,6 @@ const Links = styled.div`
 `;
 
 const Copyright = styled.p`
-    color: var(--white);
-    opacity: 0.8;
-`;
-
-const Signature = styled.p`
     color: var(--white);
     opacity: 0.8;
 `;

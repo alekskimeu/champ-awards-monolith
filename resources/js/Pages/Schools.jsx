@@ -98,7 +98,7 @@ const CardsHeader = styled.div`
 
 const Title = styled.h2`
     color: var(--white);
-    opacity: .9;
+    opacity: 0.9;
 `;
 
 const Button = styled.button`
@@ -113,7 +113,7 @@ const Button = styled.button`
     font-size: 1rem;
     border-radius: 0.3rem;
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     transition: all 0.5s ease;
 
     &:hover {

@@ -21,7 +21,8 @@ use App\Http\Controllers\PollController;
 */
 
 Route::inertia('/', 'Home');
-Route::get('/vote', [PollController::class, 'vote']);
+Route::inertia('/sponsor', 'Sponsor');
+Route::get('/finalists', [PollController::class, 'finalists']);
 Route::get('/categories/{name}', [PollController::class, 'category']);
 
 // Google Auth

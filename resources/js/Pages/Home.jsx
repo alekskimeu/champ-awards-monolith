@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <>
             <Head>
-                <title>Champ Awards</title>
+                <title>Home</title>
                 <meta
                     name="description"
                     content="Vote for Champ Awards finalists"
@@ -31,10 +31,6 @@ const Home = () => {
                 <Hero />
             </Wrapper>
             <Container>
-                <Images>
-                    <Image image={image} />
-                    <Image image={ladies} />
-                </Images>
                 <Purposes />
                 <GetInvolved />
                 <SocialMedia />
@@ -49,29 +45,9 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &::after {
-        position: absolute;
-        height: 80vh;
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        background-color: var(--secondary);
-        transform: skewY(-3deg);
-    }
+    background-color: var(--secondary);
 `;
 
 const Container = styled.div``;
-
-const Images = styled.div`
-    max-width: 1300px;
-    gap: 2rem;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-`;
 
 export default Home;

@@ -55,7 +55,6 @@ const Awards = ({ subcategories, participants, categories }) => {
                                         subcategory={subcategory}
                                         key={subcategory.id}
                                         participants={participants}
-                                        // subcategories={subcategories}
                                         categories={categories}
                                     />
                                 ))}
@@ -123,7 +122,7 @@ const Button = styled.button`
     font-size: 1rem;
     border-radius: 0.3rem;
     color: var(--white);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     transition: all 0.5s ease;
 
     &:hover {
