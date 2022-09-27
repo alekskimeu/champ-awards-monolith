@@ -18,7 +18,7 @@ const Sponsor = () => {
             </Head>
             <Header />
             <CustomHero
-                title="Sponsorship"
+                title="Get Involved"
                 description="We welcome you on board to participate by offering your kind support.
                 This is a great opportunity to give your brand visibility before, during and even after the event."
             />
@@ -34,11 +34,11 @@ const Sponsor = () => {
 };
 
 const Packages = styled.section`
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
 `;
 
 const Wrapper = styled.div`
-    max-width: 1300px;
+    max-width: 1600px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

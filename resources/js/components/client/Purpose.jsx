@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Purpose = ({ purpose }) => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
-        <Container>
+        <Container data-aos="fade-up" data-aos-duration="2000">
             <Image
                 src={purpose.image}
                 alt={purpose.title}
@@ -19,7 +24,7 @@ const Purpose = ({ purpose }) => {
 const Container = styled.div`
     border-radius: 0.5rem;
     padding: 2rem 1.5rem;
-    border: 1px solid rgba(231, 231, 231, 0.1);
+    border: 1px solid rgba(231, 231, 231, 0.2);
 `;
 
 const Image = styled.img`
@@ -50,8 +55,8 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-    font-size: 1.2rem;
-    opacity: 0.7;
+    font-size: 1.25rem;
+    opacity: 0.8;
     color: var(--white);
     margin-top: 1rem;
 `;

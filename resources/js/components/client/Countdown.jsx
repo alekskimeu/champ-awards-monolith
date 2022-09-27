@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Countdown = ({ date }) => {
     const [countdownDate, setCountdownDate] = useState(
-        new Date("12/25/2022").getTime()
+        new Date("10/08/2022").getTime()
     );
 
     const [state, setState] = useState({
@@ -83,13 +83,13 @@ const Container = styled.div`
 
 const Unit = styled.div`
     background-color: var(--white);
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
 
     @media screen and (max-width: 400px) {
         &:last-child {

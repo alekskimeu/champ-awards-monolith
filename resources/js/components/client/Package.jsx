@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Package = ({ item }) => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
-        <Container style={{ border: `2px solid ${item.color}` }}>
+        <Container
+            style={{ border: `2px solid ${item.color}` }}
+            data-aos="fade-up"
+            data-aos-duration="2000"
+        >
             <Header style={{ backgroundColor: `${item.color}` }}>
                 <Title>{item.title}</Title>
                 <Amount>{item.amount}</Amount>

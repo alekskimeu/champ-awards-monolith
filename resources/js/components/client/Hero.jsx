@@ -1,22 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "@inertiajs/inertia-react";
 
 import Image from "./Image";
 import Countdown from "./Countdown";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import ladies from "../../assets/ladies.webp";
 
 const Hero = () => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
         <Container>
             <Wrapper>
-                <Content>
-                    <Title>CHAMP AWARDS</Title>
+                <Content data-aos="fade-right" data-aos-duration="2000">
+                    <Title>CHAMP AWARDS {new Date().getFullYear()}</Title>
                     <Description>
-                        The Annual{" "}
-                        <Span>CHAMP AWARDS {new Date().getFullYear()}</Span>{" "}
-                        edition will be happening on <Span>8th October</Span>
+                        The Annual CHAMP AWARDS {new Date().getFullYear()}{" "}
+                        edition will be happening on <br />
+                        <Span>8th October 2022</Span>
                         <br />
                         In the meantime, be sure to vote for your favorite
                         finalist!
@@ -27,7 +33,7 @@ const Hero = () => {
                             Vote
                         </Link>
                         <Link href="#" className="learn-more">
-                            Learn more
+                            Get Involved
                             <i className="fas fa-arrow-right-long"></i>
                         </Link>
                     </Cta>
@@ -39,8 +45,8 @@ const Hero = () => {
 };
 
 const Container = styled.section`
-    padding: 11rem 2rem;
-    min-height: 80vh;
+    padding: 9rem 2rem;
+    min-height: 70vh;
     background-color: var(--secondary);
     display: flex;
     align-items: center;
@@ -61,6 +67,7 @@ const Wrapper = styled.div`
         grid-template-columns: 1fr;
         justify-content: center;
         text-align: center;
+        gap: 5rem;
     }
 `;
 

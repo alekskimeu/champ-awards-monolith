@@ -25,8 +25,9 @@ const Layout = ({ children }) => {
 };
 
 const Container = styled.div`
-    min-height: 100vh;
     position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
 `;
 
 const Wrapper = styled.div`

@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SocialMedia = () => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
         <Container>
-            <Wrapper>
+            <Wrapper data-aos="fade-up" data-aos-duration="2000">
                 <Title>Find us online:</Title>
                 <Icons>
-                    <a href="" className="social-media-icon">
+                    <a href="" className="social-media-icon" target="_blank">
                         <i className="fab fa-facebook"></i>
                     </a>
-                    <a href="" className="social-media-icon">
+                    <a
+                        href="https://www.instagram.com/champ_awards/"
+                        className="social-media-icon"
+                        target="_blank"
+                    >
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a href="" className="social-media-icon">
+                    <a href="" className="social-media-icon" target="_blank">
                         <i className="fab fa-twitter"></i>
                     </a>
                 </Icons>

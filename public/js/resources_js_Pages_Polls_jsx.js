@@ -7534,7 +7534,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Countdown = function Countdown(_ref) {
   var date = _ref.date;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date("12/25/2022").getTime()),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date("10/08/2022").getTime()),
       _useState2 = _slicedToArray(_useState, 2),
       countdownDate = _useState2[0],
       setCountdownDate = _useState2[1];
@@ -7587,7 +7587,7 @@ var Countdown = function Countdown(_ref) {
 };
 
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    align-items: center;\n    justify-content: center;\n    gap: 1rem;\n\n    @media screen and (max-width: 400px) {\n        grid-template-columns: repeat(3, 1fr);\n    }\n"])));
-var Unit = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    background-color: var(--white);\n    padding: 0.5rem 0.6rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    border-radius: 0.3rem;\n\n    @media screen and (max-width: 400px) {\n        &:last-child {\n            display: none;\n        }\n    }\n"])));
+var Unit = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    background-color: var(--white);\n    padding: 0.5rem;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    text-align: center;\n    border-radius: 0.2rem;\n\n    @media screen and (max-width: 400px) {\n        &:last-child {\n            display: none;\n        }\n    }\n"])));
 var Amount = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].h1(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    font-size: 2rem;\n    color: var(--black);\n    font-weight: 700;\n\n    @media screen and (max-width: 624px) {\n        font-size: 1.2rem;\n    }\n"])));
 var Description = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    opacity: 0.7;\n    font-weight: 600;\n    font-size: 1rem;\n    color: var(--black);\n\n    @media screen and (max-width: 624px) {\n        font-size: 0.8rem;\n    }\n"])));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Countdown);

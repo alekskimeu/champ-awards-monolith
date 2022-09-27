@@ -23,7 +23,7 @@ const Header = () => {
                             Finalists
                         </Link>
                         <Link href="/sponsor" className="nav-link">
-                            Sponsor
+                            Get Involved
                         </Link>
                     </Menu>
 
@@ -58,6 +58,10 @@ const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
 `;
 
 const Nav = styled.div`
@@ -69,6 +73,10 @@ const Nav = styled.div`
     max-width: 1600px;
     margin: auto;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 2rem;
+    }
 `;
 
 const Navbar = styled.nav`
@@ -81,13 +89,13 @@ const Navbar = styled.nav`
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
-        min-height: 100vh;
+        height: 100vh;
         background-color: var(--secondary);
         justify-content: center;
         left: ${(props) => (props.show ? 0 : -100)}%;
-        width: 100%;
         position: absolute;
         top: 0;
+        width: ${(props) => (props.show ? 100 : 0)}%;
     }
 `;
 
@@ -96,10 +104,12 @@ const Logo = styled.img``;
 const Menu = styled.nav`
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
+    margin-right: 2rem;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+        margin-right: 0;
     }
 `;
 

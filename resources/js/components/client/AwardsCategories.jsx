@@ -1,12 +1,22 @@
-import React, { ReactDOM } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Participant from "./Participant";
 
 const AwardsCategories = ({ category, awards, participants }) => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
         <>
             {awards.map((award) => (
-                <Cards key={award.id}>
+                <Cards
+                    key={award.id}
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                >
                     <CardHeader>
                         <AwardName>{award.name}</AwardName>
                         <Category>{category.name}</Category>

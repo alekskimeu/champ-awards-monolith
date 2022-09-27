@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Image = ({ image }) => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
-        <ImageContainer>
+        <ImageContainer data-aos="fade-up" data-aos-duration="2000">
             <HeroImage src={image} alt="Champ Awards" />
         </ImageContainer>
     );

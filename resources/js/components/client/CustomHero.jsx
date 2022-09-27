@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "@inertiajs/inertia-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Image from "./Image";
 import Countdown from "./Countdown";
@@ -9,10 +11,13 @@ import ladies from "../../assets/ladies.webp";
 import SocialMedia from "./SocialMedia";
 
 const CustomHero = ({ title, description }) => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
         <Container>
             <Hero>
-                <Content>
+                <Content data-aos="fade-right" data-aos-duration="2000">
                     <Title>{title}</Title>
                     <Description>{description}</Description>
                     <Cta>
@@ -35,23 +40,25 @@ const CustomHero = ({ title, description }) => {
 };
 
 const Container = styled.section`
-    padding: 8rem 2rem;
     background-color: var(--secondary);
+    padding: 9rem 2rem;
+    min-height: 70vh;
 `;
 
 const Hero = styled.div`
-    max-width: 1300px;
+    max-width: 1600px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
-    gap: 5rem;
+    gap: 10rem;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
         justify-content: center;
         text-align: center;
+        gap: 5rem;
     }
 `;
 

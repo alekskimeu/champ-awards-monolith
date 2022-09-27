@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Button from "./Button";
 import { Link } from "@inertiajs/inertia-react";
 import image from "../../assets/header.jpg";
 
 const GetInvolved = () => {
+    useEffect(() => {
+        AOS.init();
+    });
     return (
         <Container>
-            <Content>
+            <Content data-aos="fade-up" data-aos-duration="2000">
                 <Title>Get Involved</Title>
                 <Description>
                     We are giving interested corporate and individual partners
@@ -29,6 +34,7 @@ const GetInvolved = () => {
 const Container = styled.section`
     padding: 8rem 2rem;
     background-color: #f5f5f5;
+    position: relative;
 `;
 
 const Content = styled.div`

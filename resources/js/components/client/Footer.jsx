@@ -13,7 +13,7 @@ const Footer = () => {
                         Home
                     </Link>
                     <Link href="/sponsor" className="footer-link">
-                        Sponsor
+                        Get Involved
                     </Link>
                     <Link href="/vote" className="footer-link">
                         Vote
